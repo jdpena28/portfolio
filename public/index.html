@@ -15,7 +15,7 @@
   
         <div class="flex space-x-4">
           <!-- logo -->
-          <div class="flex items-center py-5 px-2 font-primary font-bold">
+          <div class="flex items-center py-5 px-2 font-primary font-bold select-none">
               jdpena
           </div>
         </div>
@@ -48,7 +48,7 @@
   </nav>
   <section id="Home" class="bg-primary container min-h-screen min-w-full flex justify-around items-center ">
       <div>
-        <div class="-ml-3 mb-1 md:ml-0">
+        <div class="mb-1 lg:-ml-5 m-0">
           <p class="font-primary text-sm text-highlight font-normal">Welcome to my Portfolio</p>
         </div>
         <div>
@@ -59,11 +59,16 @@
           <div class="w-96 my-5">
           <p class="font-secondary text-xs font-normal">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit fuga minima dolores quam impedit voluptate magni ex vero quasi dolorem? Aliquam aperiam libero dolore.</p>
           </div>
-          <button type="button" class="bg-secondary font-secondary font-semibold text-xs p-3 mr-6">Contact me</button>
-          <button type="button" class="border-2 border-purple-300 font-secondary font-semibold text-xs p-2.5">My Projects</button>
+          <button type="button" class="bg-secondary font-secondary font-semibold text-xs p-3.5 mr-6 hover:bg-yellow-200">Contact me</button>
+          <button type="button" class="border-2 border-purple-300 font-secondary font-semibold text-xs p-2.5 hover:ring-2 hover:ring-indigo-500">My Projects</button>
         </div>
       </div>
-      <div class="h-80 w-80 bg-contain bg-no-repeat rounded-bl-5xl after" style="background-image: url(https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80);"></div>
+      <!-- for the image -->
+      <div class="relative">
+        <div class="h-80 w-80 bg-tertiary absolute top-5 left-2 rounded-bl-5xl filter blur-md opacity-70 animate-updown "></div>
+        <div class="h-80 w-80 bg-contain bg-no-repeat rounded-bl-5xl filter drop-shadow-2xl " style="background-image: url(https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80);"></div>
+      </div>
+      
   </section>
   <script src="./index.js"></script>
 </body>

@@ -23,11 +23,32 @@ module.exports = {
         'secondary': '#FFF1C1',
         'tertiary': '#78B7BB',
         'highlight': '#808B97',
-      }
+      },
+      animation: {
+        updown: "updown 5s infinite",
+      },
+      keyframes: {
+        updown: {
+          "0%": {
+            transform: "translate(0px,0px)",
+          },
+          "33%": {
+            transform: "translate(10px,2px)",
+          },
+          "66%": {
+            transform: "translate(13px,5px)",
+          },
+          "100%": {
+            transform: "translate(0x,0px)",
+          }
+        }
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      ringWidth: ['hover', 'active'],
+    },
   },
   plugins: [],
+}
 }

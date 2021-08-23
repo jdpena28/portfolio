@@ -10000,6 +10000,42 @@ video {
   }
 }
 
+@-webkit-keyframes updown {
+  0% {
+    transform: translate(0px,0px);
+  }
+
+  33% {
+    transform: translate(10px,2px);
+  }
+
+  66% {
+    transform: translate(13px,5px);
+  }
+
+  100% {
+    transform: translate(0x,0px);
+  }
+}
+
+@keyframes updown {
+  0% {
+    transform: translate(0px,0px);
+  }
+
+  33% {
+    transform: translate(10px,2px);
+  }
+
+  66% {
+    transform: translate(13px,5px);
+  }
+
+  100% {
+    transform: translate(0x,0px);
+  }
+}
+
 .animate-none {
   -webkit-animation: none;
           animation: none;
@@ -10023,6 +10059,11 @@ video {
 .animate-bounce {
   -webkit-animation: bounce 1s infinite;
           animation: bounce 1s infinite;
+}
+
+.animate-updown {
+  -webkit-animation: updown 5s infinite;
+          animation: updown 5s infinite;
 }
 
 .cursor-auto {
@@ -41892,6 +41933,11 @@ video {
             animation: bounce 1s infinite;
   }
 
+  .sm\:animate-updown {
+    -webkit-animation: updown 5s infinite;
+            animation: updown 5s infinite;
+  }
+
   .sm\:cursor-auto {
     cursor: auto;
   }
@@ -73405,6 +73451,11 @@ video {
   .md\:animate-bounce {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
+  }
+
+  .md\:animate-updown {
+    -webkit-animation: updown 5s infinite;
+            animation: updown 5s infinite;
   }
 
   .md\:cursor-auto {
@@ -104922,6 +104973,11 @@ video {
             animation: bounce 1s infinite;
   }
 
+  .lg\:animate-updown {
+    -webkit-animation: updown 5s infinite;
+            animation: updown 5s infinite;
+  }
+
   .lg\:cursor-auto {
     cursor: auto;
   }
@@ -136437,6 +136493,11 @@ video {
             animation: bounce 1s infinite;
   }
 
+  .xl\:animate-updown {
+    -webkit-animation: updown 5s infinite;
+            animation: updown 5s infinite;
+  }
+
   .xl\:cursor-auto {
     cursor: auto;
   }
@@ -167950,6 +168011,11 @@ video {
   .\32xl\:animate-bounce {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
+  }
+
+  .\32xl\:animate-updown {
+    -webkit-animation: updown 5s infinite;
+            animation: updown 5s infinite;
   }
 
   .\32xl\:cursor-auto {
