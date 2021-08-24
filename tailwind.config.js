@@ -9,6 +9,10 @@ module.exports = {
       'tertiary': '#78B7BB',
       'highlight': '#808B97'
      }),
+     borderColor: theme => ({
+      ...theme('colors'),
+      'highlight': '#808B97',
+     }),
     extend: {
       fontFamily: {
         primary: ['Ubuntu', 'sans-serif'],
