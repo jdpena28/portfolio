@@ -21,10 +21,10 @@
         </div>
          <!-- primary nav -->
          <div class="hidden md:flex items-center space-x-1 font-primary font-semibold">
-            <a href="#" class="py-5 px-3 text-gray-700">Home</a>
-            <a href="#" class="py-5 px-3 text-gray-700">About</a>
-            <a href="#" class="py-5 px-3 text-gray-700">Projects</a>
-            <a href="#" class="py-5 px-3 text-gray-700">Contact</a>
+            <a href="#Home" class="py-5 px-3 text-gray-700 nav-link border-b-4 border-blue-500">Home</a>
+            <a href="#About" class="py-5 px-3 text-gray-700 nav-link">About</a>
+            <a href="#" class="py-5 px-3 text-gray-700 nav-link">Projects</a>
+            <a href="#" class="py-5 px-3 text-gray-700 nav-link">Contact</a>
           </div>
         <!-- mobile button goes here -->
         <div class="md:hidden flex items-center">
@@ -40,10 +40,10 @@
   
     <!-- mobile menu -->
     <div class="mobile-menu hidden md:hidden">
-      <a href="#" class="block py-2 px-4 text-sm">Home</a>
-      <a href="#" class="block py-2 px-4 text-sm">About</a>
-      <a href="#" class="block py-2 px-4 text-sm">Projects</a>
-      <a href="#" class="block py-2 px-4 text-sm">Contacts</a>
+      <a href="#" class="block py-2 px-4 text-sm font-primary">Home</a>
+      <a href="#" class="block py-2 px-4 text-sm font-primary">About</a>
+      <a href="#" class="block py-2 px-4 text-sm font-primary">Projects</a>
+      <a href="#" class="block py-2 px-4 text-sm font-primary">Contacts</a>
     </div>
   </nav>
   <section id="Home" class="bg-primary container min-h-screen min-w-full flex justify-around items-center ">
@@ -60,7 +60,7 @@
           <p class="font-secondary text-xs font-normal">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit fuga minima dolores quam impedit voluptate magni ex vero quasi dolorem? Aliquam aperiam libero dolore.</p>
           </div>
           <button type="button" class="bg-secondary font-secondary font-semibold text-xs p-3.5 mr-6 hover:bg-yellow-200">Contact me</button>
-          <button type="button" class="border-2 border-purple-300 font-secondary font-semibold text-xs p-2.5 hover:ring-2 hover:ring-indigo-500">My Projects</button>
+          <button type="button" class="border-2 border-purple-300 font-secondary font-semibold text-xs p-2.5 hover:bg-purple-300">My Projects</button>
         </div>
       </div>
       <!-- for the image -->
@@ -69,6 +69,12 @@
         <div class="h-80 w-80 bg-contain bg-no-repeat rounded-bl-5xl filter drop-shadow-2xl " style="background-image: url(https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80);"></div>
       </div>
       
+  </section>
+  <section id="About" class="bg-blue-300 container min-h-screen min-w-full">
+    <div>
+    <h2>About me <span>.</span></h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis est expedita, eius, deserunt voluptatem magni corrupti accusantium nesciunt repudiandae molestias fuga harum explicabo alias labore dolorem. Accusamus id deserunt necessitatibus suscipit atque, explicabo minus quod?</p>
+    </div>
   </section>
   <script src="./index.js"></script>
 </body>
