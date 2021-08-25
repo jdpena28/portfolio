@@ -20,7 +20,7 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '4.5rem',
-        '5xl': '5rem',
+        '5xl': '5.5rem',
       },
       textColor: {
         'primary': '#FBFBFB',
@@ -29,7 +29,7 @@ module.exports = {
         'highlight': '#808B97',
       },
       animation: {
-        updown: "updown 5s infinite",
+        updown: "updown 4s infinite",
       },
       keyframes: {
         updown: {
