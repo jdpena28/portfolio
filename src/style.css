@@ -1,5 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap');
 
 @tailwind base;
+
 @tailwind components;
+
 @tailwind utilities;
+
+@-webkit-keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(-60px);
+              transform: translateY(-60px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  @keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(-60px);
+              transform: translateY(-60px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  .slide-bottom {
+	-webkit-animation: slide-bottom 0.5s ease-in both;
+	        animation: slide-bottom 0.5s ease-in both;
+}
