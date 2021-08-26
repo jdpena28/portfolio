@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:tailwind": "tailwind build src/style.css -o public/style.css",
-    "tailwind:watch": "tailwind build src/style.css -o public/style.css --watch"
+    "build:tailwind": "tailwind build -i src/style.css -o public/style.css",
+    "tailwind:watch": "tailwind build -i src/style.css -o public/style.css --watch",
+    "build:postcss": "postcss -i src/style.css -o public/style.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^10.3.2",
+    "postcss-import": "^14.0.2",
     "tailwindcss": "^2.2.7"
   }
 }

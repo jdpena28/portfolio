@@ -3,6 +3,11 @@ module.exports = {
   purge: [
     './public/index.html'
   ],
+  plugins: [
+    require('postcss-import'),
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     backgroundColor: theme => ({
