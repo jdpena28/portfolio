@@ -6,9 +6,10 @@
 
 @tailwind utilities;
 
+/* animation slide to bottom  */
 @-webkit-keyframes slide-bottom {
     0% {
-      -webkit-transform: translateY(-60px);
+      -webkit-transforwm: translateY(-60px);
               transform: translateY(-60px);
     }
     100% {

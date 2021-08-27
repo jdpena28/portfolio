@@ -28,3 +28,6 @@ function onItemClick(event) {
 for (var i = 0; i < items.length; i++) {  
   items[i].addEventListener('click', onItemClick);
 }
+
+// Animate on Scroll initialized
+AOS.init();

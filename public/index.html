@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <title>Portfolio | John Henrich</title>
 </head>
 <body>
@@ -48,23 +49,24 @@
   </nav>
   <section id="Home" class="bg-primary container min-h-screen min-w-full flex justify-around items-center ">
       <div>
-        <div class="mb-1 lg:-ml-5 m-0 animate__slideInLeft">
-          <p class="font-primary text-sm text-highlight font-normal">Welcome to my Portfolio</p>
+        <div class="mb-1 lg:-ml-5 m-0">
+          <p class="font-primary text-sm text-highlight font-normal" data-aos="zoom-in" data-aos-delay="50">Welcome to my Portfolio</p>
         </div>
         <div>
-          <h1 class="font-primary text-5xl font-bold">Hi! I'm John Henrich</h1>
-          <h2 class="font-primary text-5xl font-bold">Aspiring .Net / Front-End</h2>
-          <h2 class="font-primary text-5xl font-bold text-tertiary">Developer</h2>
+          <h1 class="font-primary text-5xl font-bold" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">Hi! I'm John Henrich</h1>
+          <h2 class="font-primary text-5xl font-bold" data-aos="fade-right" data-aos-delay="110" data-aos-duration="1000">Aspiring .Net / Front-End</h2>
+          <h2 class="font-primary text-5xl font-bold text-tertiary" data-aos="fade-down-right" data-aos-delay="100" data-aos-duration="1000">Developer</h2>
           <!-- for the paragraph -->
           <div class="w-96 my-5">
-          <p class="font-secondary text-xs font-normal">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit fuga minima dolores quam impedit voluptate magni ex vero quasi dolorem? Aliquam aperiam libero dolore.</p>
+          <p class="font-secondary text-sm font-normal" data-aos="fade-right" data-aos-delay="115" data-aos-duration="1000">Hey there 👋 Glad to see you here at my Website 😊.
+            &ensp;I have just over a year of experience developing personal application as a hobby. My focused technology are <strong>.NET Core</strong> and also <strong>Front-End Developer</strong>. If you are interested into my technologies you can checkout my project 😉.</p>
           </div>
-          <button type="button" class="bg-secondary font-secondary font-semibold text-xs p-3.5 mr-6 hover:bg-yellow-200">Contact me</button>
-          <button type="button" class="border-2 border-purple-300 font-secondary font-semibold text-xs p-2.5 hover:bg-purple-300">My Projects</button>
+          <a href="#Contacts"><button type="button" class="bg-secondary font-secondary font-semibold text-xs p-3.5 mr-6 hover:bg-yellow-200" data-aos="zoom-in" data-aos-delay="120" data-aos-duration="1000">Contact me</button></a>
+          <a href="#Projects"><button type="button" class="border-2 border-purple-300 font-secondary font-semibold text-xs p-2.5 hover:bg-purple-300" data-aos="zoom-in" data-aos-delay="120" data-aos-duration="1000">My Projects</button></a>
         </div>
       </div>
       <!-- for the image -->
-      <div class="relative">
+      <div class="relative" data-aos="fade-left" data-aos-delay="110" data-aos-duration="1000" data-aos-once="false">
         <div class="h-80 w-80 bg-tertiary absolute top-5 left-2 rounded-bl-5xl filter blur-md opacity-70 animate-updown"></div>
         <div class="h-80 w-80
          bg-contain bg-no-repeat rounded-bl-5xl filter drop-shadow-2xl " style="background-image: url('./img/Portrait.jpg');max-width:95%;"></div>
@@ -73,54 +75,60 @@
   </section>
   <section id="About" class="bg-primary container min-h-screen min-w-full flex justify-around items-center">
     <div>
-    <h2 class="font-primary font-bold text-4xl mb-7 -ml-7">About me
+    <h2 class="font-primary font-bold text-4xl mb-7 -ml-7" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">About me
       <span><svg class="h-4 w-4 inline fill-current text-highlight mt-1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <path d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z"/>
       </svg></span>
     </h2>
-    
-    <p class="font-secondary font-normal text-sm w-96 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis est expedita, eius, deserunt voluptatem magni corrupti accusantium nesciunt repudiandae molestias fuga harum explicabo alias labore dolorem. Accusamus id deserunt necessitatibus suscipit atque, explicabo minus quod?</p>
+    <p class="font-secondary font-normal text-sm w-96 text-justify leading-6" data-aos="fade-right" data-aos-delay="110" data-aos-duration="1000">I am John Henrich Dela Peña currently studying at Bataan Peninsula State University taking course of Computer Science major in Network and Data Communication. Im also into Music 🎶 as Bassist and Rythm Guitarist 🎸. Expertse at .NET framework integrated with MSAccess and Oracle Database. Currently, learning Front-End Development. Aspiring to be one of the Developers soon... Such as thus Programming isn't about what you know; it's about what you can figure out.</p>
   </div>
       <div class="font-primary">
-      <h4 class="font-bold text-3xl text-tertiary mx-8">Tech Stacks</h4>  
-      <div class="flex items-center justify-between border-2 border-highlight h-12 w-60 my-1.5">
+      <h4 class="font-bold text-3xl text-tertiary mx-8" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">Tech Stacks</h4>  
+      <div class="flex items-center justify-between border-2 border-highlight h-12 w-60 my-1.5" data-aos="fade-left" data-aos-delay="105" data-aos-duration="1000">
         <object data="./img/tech-stacks/dotnet.svg" width="35" height="35" class="ml-5"></object><p class="mr-20 font-normal text-base">.Net Core</p>
       </div>
-      <div class="flex items-center justify-between border-2 border-highlight h-12 w-60 my-1.5">
+      <div class="flex items-center justify-between border-2 border-highlight h-12 w-60 my-1.5" data-aos="fade-left" data-aos-delay="105" data-aos-duration="1000">
         <object data="./img/tech-stacks/csharp.svg" width="35" height="35" class="ml-5"></object><p class="mr-20 font-normal text-base">C#</p>
       </div>
-      <div class="flex items-center justify-between border-2 border-highlight h-12 w-60 my-1.5">
+      <div class="flex items-center justify-between border-2 border-highlight h-12 w-60 my-1.5" data-aos="fade-left" data-aos-delay="105" data-aos-duration="1000">
         <object data="./img/tech-stacks/java.svg" width="35" height="35" class="ml-5"></object><p class="mr-20 font-normal text-base">Java</p>
       </div>
-      <div class="flex items-center justify-between border-2 border-highlight h-12 w-60 my-1.5">
+      <div class="flex items-center justify-between border-2 border-highlight h-12 w-60 my-1.5" data-aos="fade-left" data-aos-delay="105" data-aos-duration="1000">
         <object data="./img/tech-stacks/oracle.svg" width="35" height="35" class="ml-5"></object><p class="mr-20 font-normal text-base">Oracle</p>
       </div>
-      <div class="flex items-center justify-between border-2 border-highlight h-12 w-60 my-1.5">
+      <div class="flex items-center justify-between border-2 border-highlight h-12 w-60 my-1.5" data-aos="fade-left" data-aos-delay="105" data-aos-duration="1000">
         <object data="./img/tech-stacks/html5.svg" width="35" height="35" class="ml-5"></object><p class="mr-20 font-normal text-base">HTML5</p>
       </div>
-      <div class="flex items-center justify-between border-2 border-highlight h-12 w-60 my-1.5">
+      <div class="flex items-center justify-between border-2 border-highlight h-12 w-60 my-1.5" data-aos="fade-left" data-aos-delay="105" data-aos-duration="1000">
         <object data="./img/tech-stacks/css3.svg" width="35" height="35" class="ml-5"></object><p class="mr-20 font-normal text-base">CSS3</p>
       </div>
-      <div class="flex items-center justify-between border-2 border-highlight h-12 w-60 my-1.5">
+      <div class="flex items-center justify-between border-2 border-highlight h-12 w-60 my-1.5" data-aos="fade-left" data-aos-delay="105" data-aos-duration="1000">
         <object data="./img/tech-stacks/sass.svg" width="35" height="35" class="ml-5"></object><p class="mr-20 font-normal text-base">Sass</p>
       </div>
-      <div class="flex items-center justify-between border-2 border-highlight h-12 w-60 my-1.5">
+      <div class="flex items-center justify-between border-2 border-highlight h-12 w-60 my-1.5" data-aos="fade-left" data-aos-delay="105" data-aos-duration="1000">
         <object data="./img/tech-stacks/bootstrap.svg" width="35" height="35" class="ml-5"></object><p class="mr-20 font-primary font-normal text-base">Bootstrap</p>
       </div>
     </div>
   </section>
-  <section id="Projects" class="bg-primary container min-h-screen min-w-full flex justify-between items-center">
+  <section id="Projects" class="relative bg-primary container min-h-screen min-w-full grid grid-cols-3 grid-rows-2 justify-center justify-items-center">
+    <h2 class="font-primary font-bold text-4xl col-span-1" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">Projects
+      <span><svg class="h-4 w-4 inline fill-current text-secondary mt-1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <path d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z"/>
+      </svg></span>
+    </h2>
+  <div class="flex justify-between items-center col-span-3 self-start">
   <svg id="Capa_1" enable-background="new 0 0 512 512" height="100" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m76 390h360v30h-360z" fill="#4d5e80"/></g><path d="m256 390h180v30h-180z" fill="#3d4b66"/><g><path d="m421 150h30v347h-30z" fill="#3d4b66"/></g><g><path d="m61 150h30v347h-30z" fill="#4d5e80"/></g><g id="_x31_2-work_in_progress_1_"><g fill="#4d5e80"><path d="m447.4 180-35.081 86.775-77.419 63.225h-90l26.25-75 86.25-75z"/><path d="m267.4 180-32.354 83.139-80.146 66.861h-90l26.196-74.928 86.304-75.072z"/></g><g><path d="m211 101.455-30-60-30 60v-101.455h-30v150h39.258l20.742-41.455 20.742 41.455h39.258v-150h-30z" fill="#6cf"/><g fill="#59abff"><path d="m271 0h30v150h-30z"/><path d="m376 0h-45c0 11.515 0 157.508 0 150h30v-60h15c24.814 0 45-20.186 45-45s-20.186-45-45-45zm0 60h-15v-30h15c8.262 0 15 6.724 15 15s-6.738 15-15 15z"/></g></g></g><g><path d="m31 482h90v30h-90z" fill="#4d5e80"/></g><g><path d="m391 482h90v30h-90z" fill="#3d4b66"/></g><path d="m271.15 255-15.15 43.286v31.714h78.9l77.419-63.226 35.081-86.774h-90z" fill="#3d4b66"/><path d="m256 209.293 11.4-29.293h-11.4z" fill="#3d4b66"/><path d="m177.4 180-112.5 150h-33.9v-150z" fill="#ffdf40"/><path d="m357.4 180-112.5 150h-90l112.5-150z" fill="#ffdf40"/><g fill="#ffbe40"><path d="m481 180v150h-146.1l112.5-150z"/><path d="m256 315.2 101.4-135.2h-90l-11.4 15.2z"/></g></g></svg>
   <h6 class="font-primary font-black text-5xl text-center animate-bounce">Work in Progress</h6>
   <svg id="Capa_1" enable-background="new 0 0 512 512" height="100" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m76 390h360v30h-360z" fill="#4d5e80"/></g><path d="m256 390h180v30h-180z" fill="#3d4b66"/><g><path d="m421 150h30v347h-30z" fill="#3d4b66"/></g><g><path d="m61 150h30v347h-30z" fill="#4d5e80"/></g><g id="_x31_2-work_in_progress_1_"><g fill="#4d5e80"><path d="m447.4 180-35.081 86.775-77.419 63.225h-90l26.25-75 86.25-75z"/><path d="m267.4 180-32.354 83.139-80.146 66.861h-90l26.196-74.928 86.304-75.072z"/></g><g><path d="m211 101.455-30-60-30 60v-101.455h-30v150h39.258l20.742-41.455 20.742 41.455h39.258v-150h-30z" fill="#6cf"/><g fill="#59abff"><path d="m271 0h30v150h-30z"/><path d="m376 0h-45c0 11.515 0 157.508 0 150h30v-60h15c24.814 0 45-20.186 45-45s-20.186-45-45-45zm0 60h-15v-30h15c8.262 0 15 6.724 15 15s-6.738 15-15 15z"/></g></g></g><g><path d="m31 482h90v30h-90z" fill="#4d5e80"/></g><g><path d="m391 482h90v30h-90z" fill="#3d4b66"/></g><path d="m271.15 255-15.15 43.286v31.714h78.9l77.419-63.226 35.081-86.774h-90z" fill="#3d4b66"/><path d="m256 209.293 11.4-29.293h-11.4z" fill="#3d4b66"/><path d="m177.4 180-112.5 150h-33.9v-150z" fill="#ffdf40"/><path d="m357.4 180-112.5 150h-90l112.5-150z" fill="#ffdf40"/><g fill="#ffbe40"><path d="m481 180v150h-146.1l112.5-150z"/><path d="m256 315.2 101.4-135.2h-90l-11.4 15.2z"/></g></g></svg>
+  </div>
 </section>
-<footer id="Contacts" class="bg-highlight relative h-36 rounded-tl-5xl grid grid-cols-3 justify-items-center items-center">
+<footer id="Contacts" class="bg-highlight relative h-36 rounded-tl-5xl grid grid-cols-3 justify-items-center items-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
   <div class="text-white justify-self-center">
     <p class="font-secondary font-bold text-base">
       Want to work with me?
     </p>
     <p class="font-secondary text-xs w-64">
-      Lorem ipsum dolor sit, amet consectetur adipisicing esit.
+      I am taking freelance work you can contact me in my details below.
     </p>
     <object data="./img/icons/call.svg" height="15" width="15" class="inline mr-3"></object><p class="inline font-secondary font-light text-xs">+639468083171</p>
     <br>
@@ -155,6 +163,7 @@
     
   </div>
 </footer>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="./index.js"></script>
 </body>
 </html>
