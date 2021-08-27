@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <title>Portfolio | John Henrich</title>
 </head>
-<body>
+<body class="overflow-x-hidden mx-auto w-full">
    <!-- navbar goes here -->
 <nav class="bg-gray-100 sticky top-0 z-50 shadow-lg slide-bottom">
     <div class="max-w-6xl mx-auto px-4">
@@ -47,15 +47,15 @@
       <a href="#Contacts" class="block py-2 px-4 text-sm font-primary">Contacts</a>
     </div>
   </nav>
-  <section id="Home" class="bg-primary container min-h-screen min-w-full flex justify-around items-center ">
+  <section id="Home" class="bg-primary  min-h-screen w-full mx-auto flex justify-around items-center">
       <div>
-        <div class="mb-1 lg:-ml-5 m-0">
+        <div class="mb-1 lg:-ml-5 ml-0">
           <p class="font-primary text-sm text-highlight font-normal" data-aos="zoom-in" data-aos-delay="50">Welcome to my Portfolio</p>
         </div>
         <div>
-          <h1 class="font-primary text-5xl font-bold" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">Hi! I'm John Henrich</h1>
-          <h2 class="font-primary text-5xl font-bold" data-aos="fade-right" data-aos-delay="110" data-aos-duration="1000">Aspiring .Net / Front-End</h2>
-          <h2 class="font-primary text-5xl font-bold text-tertiary" data-aos="fade-down-right" data-aos-delay="100" data-aos-duration="1000">Developer</h2>
+          <h1 class="font-primary text-5xl font-bold name" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">Hi! I'm John Henrich</h1>
+          <h2 class="font-primary text-5xl font-bold name" data-aos="fade-right" data-aos-delay="110" data-aos-duration="1000">Aspiring .Net / Front-End</h2>
+          <h2 class="font-primary text-5xl font-bold text-tertiary name" data-aos="fade-down-right" data-aos-delay="100" data-aos-duration="1000">Developer</h2>
           <!-- for the paragraph -->
           <div class="w-96 my-5">
           <p class="font-secondary text-sm font-normal" data-aos="fade-right" data-aos-delay="115" data-aos-duration="1000">Hey there 👋 Glad to see you here at my Website 😊.
@@ -67,20 +67,20 @@
       </div>
       <!-- for the image -->
       <div class="relative" data-aos="fade-left" data-aos-delay="110" data-aos-duration="1000" data-aos-once="false">
-        <div class="h-80 w-80 bg-tertiary absolute top-5 left-2 rounded-bl-5xl filter blur-md opacity-70 animate-updown"></div>
-        <div class="h-80 w-80
+        <div class="h-80 w-80 portrait bg-tertiary absolute top-5 left-2 rounded-bl-5xl filter blur-md opacity-70 animate-updown"></div>
+        <div class="h-80 w-80 portrait
          bg-cover bg-no-repeat rounded-bl-5xl filter drop-shadow-2xl border-2 border-[#FFF1C1]" style="background-image: url('./img/Portraits.jpg');max-width:95%;"></div>
       </div>
       
   </section>
-  <section id="About" class="bg-primary container min-h-screen min-w-full flex justify-around items-center">
+  <section id="About" class="bg-primary  min-h-screen w-full mx-auto flex justify-around items-center">
     <div>
-    <h2 class="font-primary font-bold text-4xl mb-7 -ml-7" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">About me
+    <h2 class="font-primary font-bold text-4xl mb-7 -ml-4 lg:-ml-7" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">About me
       <span><svg class="h-4 w-4 inline fill-current text-highlight mt-1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <path d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z"/>
       </svg></span>
     </h2>
-    <p class="font-secondary font-normal text-sm w-96 text-justify leading-6" data-aos="fade-right" data-aos-delay="110" data-aos-duration="1000">I am John Henrich Dela Peña currently studying at Bataan Peninsula State University taking course of Computer Science major in Network and Data Communication. Im also into Music 🎶 as Bassist and Rythm Guitarist 🎸. Expertise at .NET framework integrated with MSAccess and Oracle Database. Currently, I am learning Front-End Development. Aspiring to be one of the Developers soon... Such as thus Programming isn't about what you know; it's about what you can figure out.</p>
+    <p class="font-secondary font-normal text-sm w-80 md:w-96 text-justify leading-6" data-aos="fade-right" data-aos-delay="110" data-aos-duration="1000">I am John Henrich Dela Peña currently studying at Bataan Peninsula State University taking course of Computer Science major in Network and Data Communication. Im also into Music 🎶 as Bassist and Rythm Guitarist 🎸. Expertise at .NET framework integrated with MSAccess and Oracle Database. Currently, I am learning Front-End Development. Aspiring to be one of the Developers soon... Such as thus Programming isn't about what you know; it's about what you can figure out.</p>
   </div>
       <div class="font-primary">
       <h4 class="font-bold text-3xl text-tertiary mx-8" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">Tech Stacks</h4>  
@@ -110,16 +110,14 @@
       </div>
     </div>
   </section>
-  <section id="Projects" class="relative bg-primary container min-h-screen min-w-full grid grid-cols-3 grid-rows-2 justify-items-center">
-    <h2 class="font-primary font-bold text-4xl col-span-1 self-center" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">Projects
+  <section id="Projects" class="relative bg-primary mx-auto min-h-screen w-full flex flex-col items-center justify-evenly">
+    <h2 class="font-primary font-bold text-4xl self-start ml-7 lg:ml-16" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">Projects
       <span><svg class="h-4 w-4 inline fill-current text-secondary mt-1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <path d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z"/>
       </svg></span>
     </h2>
-  <div class="flex justify-between items-center col-span-3 self-start">
-  <svg id="Capa_1" enable-background="new 0 0 512 512" height="100" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m76 390h360v30h-360z" fill="#4d5e80"/></g><path d="m256 390h180v30h-180z" fill="#3d4b66"/><g><path d="m421 150h30v347h-30z" fill="#3d4b66"/></g><g><path d="m61 150h30v347h-30z" fill="#4d5e80"/></g><g id="_x31_2-work_in_progress_1_"><g fill="#4d5e80"><path d="m447.4 180-35.081 86.775-77.419 63.225h-90l26.25-75 86.25-75z"/><path d="m267.4 180-32.354 83.139-80.146 66.861h-90l26.196-74.928 86.304-75.072z"/></g><g><path d="m211 101.455-30-60-30 60v-101.455h-30v150h39.258l20.742-41.455 20.742 41.455h39.258v-150h-30z" fill="#6cf"/><g fill="#59abff"><path d="m271 0h30v150h-30z"/><path d="m376 0h-45c0 11.515 0 157.508 0 150h30v-60h15c24.814 0 45-20.186 45-45s-20.186-45-45-45zm0 60h-15v-30h15c8.262 0 15 6.724 15 15s-6.738 15-15 15z"/></g></g></g><g><path d="m31 482h90v30h-90z" fill="#4d5e80"/></g><g><path d="m391 482h90v30h-90z" fill="#3d4b66"/></g><path d="m271.15 255-15.15 43.286v31.714h78.9l77.419-63.226 35.081-86.774h-90z" fill="#3d4b66"/><path d="m256 209.293 11.4-29.293h-11.4z" fill="#3d4b66"/><path d="m177.4 180-112.5 150h-33.9v-150z" fill="#ffdf40"/><path d="m357.4 180-112.5 150h-90l112.5-150z" fill="#ffdf40"/><g fill="#ffbe40"><path d="m481 180v150h-146.1l112.5-150z"/><path d="m256 315.2 101.4-135.2h-90l-11.4 15.2z"/></g></g></svg>
+  <div class="flex flex-row justify-center">
   <h6 class="font-primary font-black text-5xl text-center animate-bounce">Work in Progress</h6>
-  <svg id="Capa_1" enable-background="new 0 0 512 512" height="100" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m76 390h360v30h-360z" fill="#4d5e80"/></g><path d="m256 390h180v30h-180z" fill="#3d4b66"/><g><path d="m421 150h30v347h-30z" fill="#3d4b66"/></g><g><path d="m61 150h30v347h-30z" fill="#4d5e80"/></g><g id="_x31_2-work_in_progress_1_"><g fill="#4d5e80"><path d="m447.4 180-35.081 86.775-77.419 63.225h-90l26.25-75 86.25-75z"/><path d="m267.4 180-32.354 83.139-80.146 66.861h-90l26.196-74.928 86.304-75.072z"/></g><g><path d="m211 101.455-30-60-30 60v-101.455h-30v150h39.258l20.742-41.455 20.742 41.455h39.258v-150h-30z" fill="#6cf"/><g fill="#59abff"><path d="m271 0h30v150h-30z"/><path d="m376 0h-45c0 11.515 0 157.508 0 150h30v-60h15c24.814 0 45-20.186 45-45s-20.186-45-45-45zm0 60h-15v-30h15c8.262 0 15 6.724 15 15s-6.738 15-15 15z"/></g></g></g><g><path d="m31 482h90v30h-90z" fill="#4d5e80"/></g><g><path d="m391 482h90v30h-90z" fill="#3d4b66"/></g><path d="m271.15 255-15.15 43.286v31.714h78.9l77.419-63.226 35.081-86.774h-90z" fill="#3d4b66"/><path d="m256 209.293 11.4-29.293h-11.4z" fill="#3d4b66"/><path d="m177.4 180-112.5 150h-33.9v-150z" fill="#ffdf40"/><path d="m357.4 180-112.5 150h-90l112.5-150z" fill="#ffdf40"/><g fill="#ffbe40"><path d="m481 180v150h-146.1l112.5-150z"/><path d="m256 315.2 101.4-135.2h-90l-11.4 15.2z"/></g></g></svg>
   </div>
 </section>
 <footer id="Contacts" class="bg-highlight relative h-36 rounded-tl-5xl grid grid-cols-3 justify-items-center items-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">

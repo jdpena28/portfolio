@@ -31,3 +31,18 @@
 	-webkit-animation: slide-bottom 0.5s ease-in both;
 	        animation: slide-bottom 0.5s ease-in both;
 }
+
+@screen sm {
+  #Home {
+    @apply mt-5 flex-col gap-10 ml-3
+  }
+  .name {
+    @apply text-4xl 
+  }
+  .portrait {
+    @apply h-64 w-64 
+  }
+  #About {
+    @apply mt-24 flex-col gap-10
+  }
+}
