@@ -950,6 +950,10 @@ video {
   align-self: flex-start;
 }
 
+.self-center{
+  align-self: center;
+}
+
 .justify-self-center{
   justify-self: center;
 }
