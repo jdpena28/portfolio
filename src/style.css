@@ -40,9 +40,15 @@
     @apply text-4xl 
   }
   .portrait {
-    @apply h-64 w-64 
+    @apply h-64 w-64
   }
   #About {
     @apply mt-24 flex-col gap-10
+  }
+  #wip {
+    @apply text-4xl
+  }
+  #Contacts {
+    @apply rounded-none flex justify-around
   }
 }
