@@ -1,7 +1,7 @@
 module.exports = {
   mode:'jit',
   purge: [
-    './public/index.html'
+    './public/**/*.html',
   ],
   plugins: [
     require('postcss-import'),

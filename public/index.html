@@ -10,7 +10,7 @@
 </head>
 <body class="overflow-x-hidden mx-auto w-full">
    <!-- navbar goes here -->
-<nav class="bg-gray-100 sticky top-0 z-50 shadow-lg slide-bottom">
+<nav class="bg-gray-100 w-full sticky top-0 z-50 shadow-lg slide-bottom">
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex justify-between">
   
@@ -49,7 +49,7 @@
   </nav>
   <section id="Home" class="bg-primary  min-h-screen w-full mx-auto flex justify-around items-center">
       <div>
-        <div class="mb-1 lg:-ml-5 ml-0">
+        <div class="w-full mb-1 lg:-ml-5 ml-0">
           <p class="font-primary text-sm text-highlight font-normal" data-aos="zoom-in" data-aos-delay="50">Welcome to my Portfolio</p>
         </div>
         <div>
@@ -57,7 +57,7 @@
           <h2 class="font-primary text-5xl font-bold name" data-aos="fade-right" data-aos-delay="110" data-aos-duration="1000">Aspiring .Net / Front-End</h2>
           <h2 class="font-primary text-5xl font-bold text-tertiary name" data-aos="fade-down-right" data-aos-delay="100" data-aos-duration="1000">Developer</h2>
           <!-- for the paragraph -->
-          <div class="w-96 my-5">
+          <div class="w-96 my-5 sm:w-80">
           <p class="font-secondary text-sm font-normal" data-aos="fade-right" data-aos-delay="115" data-aos-duration="1000">Hey there 👋 Glad to see you here at my Website 😊.
             &ensp;I have just over a year of experience developing personal application as a hobby. My focused technology are <strong>.NET Core</strong> and also <strong>Front-End Developer</strong>. If you are interested into my technologies you can checkout my project 😉.</p>
           </div>
@@ -66,7 +66,7 @@
         </div>
       </div>
       <!-- for the image -->
-      <div class="relative" data-aos="fade-left" data-aos-delay="110" data-aos-duration="1000" data-aos-once="false">
+      <div class="relative" data-aos="fade-left" data-aos-delay="110" data-aos-duration="1000">
         <div class="h-80 w-80 portrait bg-tertiary absolute top-5 left-2 rounded-bl-5xl filter blur-md opacity-70 animate-updown"></div>
         <div class="h-80 w-80 portrait
          bg-cover bg-no-repeat rounded-bl-5xl filter drop-shadow-2xl border-2 border-[#FFF1C1]" style="background-image: url('./img/Portraits.jpg');max-width:95%;"></div>
@@ -110,18 +110,18 @@
       </div>
     </div>
   </section>
-  <section id="Projects" class="relative bg-primary mx-auto min-h-screen w-full flex flex-col items-center justify-evenly">
+  <section id="Projects" class="bg-primary mx-auto min-h-screen w-full flex flex-col items-center justify-evenly">
     <h2 class="font-primary font-bold text-4xl self-start ml-7 lg:ml-16" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">Projects
       <span><svg class="h-4 w-4 inline fill-current text-secondary mt-1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <path d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z"/>
       </svg></span>
     </h2>
   <div class="flex flex-row justify-center">
-  <h6 class="font-primary font-black text-5xl text-center animate-bounce">Work in Progress</h6>
+  <h6 class="font-primary font-black text-5xl text-center animate-bounce" id = "wip">Work in Progress</h6>
   </div>
 </section>
-<footer id="Contacts" class="bg-highlight relative h-36 rounded-tl-5xl grid grid-cols-3 justify-items-center items-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-  <div class="text-white justify-self-center">
+<footer id="Contacts" class="bg-highlight w-full relative h-36 rounded-tl-5xl grid grid-cols-3" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+  <div class="text-white place-self-center self-center sm:hidden">
     <p class="font-secondary font-bold text-base">
       Want to work with me?
     </p>
@@ -155,11 +155,7 @@
           </svg></a>
       </div>
   </div>
-  <p class="absolute bottom-2 font-primary font-medium text-white text-sm">Copyright © 2021 All Right Reserved</p>
-  <!-- for future purposes -->
-  <div class="hidden">
-    
-  </div>
+  <p class="absolute bottom-2 w-max mx-auto left-0 right-0 font-primary font-medium text-white text-sm">Copyright © 2021 All Right Reserved</p>
 </footer>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="./index.js"></script>
