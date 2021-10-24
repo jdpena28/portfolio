@@ -9,3 +9,5 @@ FE3F92 - Pink
 682AE9 - Violet
 DA8EBB - Light Pink (Project)
 FF9900 - Orange (Project)
+
+I am John Henrich Dela Peña currently studying at Bataan Peninsula State University taking course of Computer Science major in Network and Data Communication. Im also into Music 🎶 as Bassist and Rythm Guitarist 🎸. Expertise at .NET framework integrated with MSAccess and Oracle Database. Currently, I am learning Front-End Development. Aspiring to be one of the Developers soon... Such as thus Programming isn't about what you know; it's about what you can figure out.
