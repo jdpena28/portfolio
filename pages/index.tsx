@@ -1,14 +1,12 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import React from 'react'
 
-
-const Home: NextPage = () => {
+const App: React.FC = () => {
   return (
     <div>
-
+      <h1>Hello World</h1>
     </div>
   )
+
 }
 
-export default Home
+export default App
