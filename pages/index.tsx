@@ -1,9 +1,12 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
+import Home from '../components/Sections/Home'
 
 const App: React.FC = () => {
   return (
-    <div>
-      <h1>Hello World</h1>
+    <div className = "font-primary text-gray-200 bg-gray-900">
+        <Navbar/>
+        <Home/>
     </div>
   )
 
