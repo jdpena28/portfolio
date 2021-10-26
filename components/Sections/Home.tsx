@@ -4,7 +4,7 @@ import Button from '../Button'
 
 const Home = () => {
     return (
-        <section className = 'w-full h-screen relative' id = 'Home'>
+        <section className = 'w-full h-screen relative' id = 'home'>
             <h5 className='font-secondary opacity-[3%] text-9xl font-bold tracking-widest absolute top-[15%] left-11 z-[1] cursor-default'>home</h5>
             <div className="container h-full mx-auto flex justify-around items-center font-secondary">
                 <div className='text-right space-y-3'>

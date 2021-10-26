@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
     return (
-        <section className = 'w-full h-screen relative' id = 'Home'>
+        <section className = 'w-full h-screen relative' id = 'about'>
             <h5 className='font-secondary opacity-[3%] text-9xl font-bold tracking-widest absolute top-[20%] left-1 z-[1] cursor-default'>about</h5>
             <div className="container h-full mx-auto flex flex-col justify-center space-y-20">
                 <p className='w-[75%] ml-11 text-justify text-xl'>
