@@ -14,7 +14,7 @@ const NavLinks:React.FC<NavLinks> = ({path,title}) => {
 
 const Navbar:React.FC = () => {
 	return (
-		<nav className="sticky top-0 z-50">
+		<nav>
 			<div className='flex justify-between mx-12 text-lg p-5'>
 				<p>jdpena</p>
           <div className='flex gap-x-3 font-normal'>
