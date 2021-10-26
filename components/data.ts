@@ -16,14 +16,14 @@ export const techStacks = [
         techImg: [
             '/TechStacks/frameworks/dotnetcore.svg',
 			'/TechStacks/frameworks/react.svg',
-			'/TechStacks/frameworks/vue.svg',
-			'/TechStacks/frameworks/tailwind.svg',
+			'/TechStacks/frameworks/vuejs.svg',
+			'/TechStacks/frameworks/tailwindcss.svg',
 			'/TechStacks/frameworks/bootstrap.svg',
 			'/TechStacks/frameworks/sass.svg'
         ]
     },
 	{
-        techDesc: 'database&#38;others',
+        techDesc: 'database&others',
         techImg: [
             '/TechStacks/database&others/mysql.svg',
 			'/TechStacks/database&others/oracle.svg',
