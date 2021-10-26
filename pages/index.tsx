@@ -7,7 +7,7 @@ import Home from '../components/Sections/Home'
 
 const App: React.FC = () => {
 	return (
-		<div className='font-primary text-gray-200 bg-gray-900'>
+		<div className='font-primary text-gray-200 bg-gray-900 mx-12'>
 				<Navbar />
 				<Home />
 				<About />
