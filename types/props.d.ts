@@ -5,4 +5,5 @@ interface NavLinks {
 interface Stacks {
     stacksTitle: string
     stacksUrl: string[]
+    flex?:string
 }

@@ -13,6 +13,7 @@ export const techStacks = [
 	},
     {
         techDesc: 'frameworks',
+		flex: 'items-end',
         techImg: [
             '/TechStacks/frameworks/dotnetcore.svg',
 			'/TechStacks/frameworks/react.svg',
