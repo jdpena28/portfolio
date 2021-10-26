@@ -5,11 +5,11 @@ import Button from '../Button'
 const Home = () => {
     return (
         <section className = 'w-full h-screen relative' id = 'home'>
-            <h5 className='font-secondary opacity-[3%] text-9xl font-bold tracking-widest absolute top-[15%] left-11 z-[1] cursor-default'>home</h5>
+            <h3 className='font-secondary opacity-[3%] text-9xl font-bold tracking-widest absolute top-[15%] left-11 z-[1] cursor-default'>home</h3>
             <div className="container h-full mx-auto flex justify-around items-center font-secondary">
                 <div className='text-right space-y-3'>
                     <h1 className = 'text-6xl font-semibold'>John Henrich Dela Peña</h1>
-                    <h3 className='font-primary text-2xl text-gray-400'>//Aspiring .NET / Front-End Developer</h3>
+                    <h2 className='font-primary text-2xl text-gray-400'>//Aspiring .NET / Front-End Developer</h2>
                     <p className='text-xl'>I build Windows Applications <br /> and Serverless Websites</p>
                     <div className = 'flex justify-end gap-x-5'>
                         <Button btnClass = 'bg-pink-500' text = "Projects"/>
