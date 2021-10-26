@@ -7,11 +7,11 @@ import Stacks from '../Stacks'
 const About = () => {
 	return (
 		<section className='w-full min-h-screen pb-6 relative' id='about'>
-			<h3 className='font-secondary opacity-[3%] text-9xl font-bold tracking-widest absolute top-[20%] left-1 z-[1] cursor-default'>
+			<h3 className='font-secondary opacity-[3%] text-9xl font-bold tracking-widest absolute -top-5 left-1 z-[1] cursor-default'>
 				about
 			</h3>
-			<div className='container h-full mx-auto flex flex-col justify-center space-y-12'>
-				<p className='w-[75%] ml-11 text-justify text-xl'>
+			<div className='container h-full flex flex-col space-y-12'>
+				<p className='w-[75%] ml-11 text-justify text-xl mt-14'>
 					I am John Henrich Dela Peña currently studying at Bataan Peninsula
 					State University taking course of Computer Science major in Network
 					and Data Communication. Im also into Music 🎶 as Bassist and Rythm
