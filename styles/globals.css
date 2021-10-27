@@ -2,3 +2,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.purple {
+    color: #DA8EBB;
+}
+.yellow {
+    color: #FAED27;
+}

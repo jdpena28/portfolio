@@ -33,3 +33,21 @@ export const techStacks = [
         ]
     }
 ]
+
+export const project = [
+	{
+		src: '/Projects/Covid_Infoboard.jpg',
+		title: 'COVID19 PH Info - Board',
+		desc: 'An Informtaion Board for cases and other information of Covid-19 in the Philippines',
+		color: 'purple',
+		num:'01'
+	},
+	{
+		flex: 'justify-end',
+		src: '/Projects/Stick-your-Note-Desktop-View.png',
+		title:  'Stick your Note',
+		desc: "A React - App that let's you create a stick note as reminder",
+		color: 'yellow',
+		num:'02'
+	}
+]
