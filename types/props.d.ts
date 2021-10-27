@@ -14,4 +14,6 @@ interface EachProject {
     desc: string
     color: string
     num: string
+    titleClass?: string;
+    descClass?: string
 }

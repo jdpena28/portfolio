@@ -6,7 +6,7 @@ import Stacks from '../Stacks'
 
 const About = () => {
 	return (
-		<section className='w-full min-h-screen pb-6 relative' id='about'>
+		<section className='w-full min-h-screen relative' id='about'>
 			<h3 className='font-secondary opacity-[3%] text-9xl font-bold tracking-widest absolute -top-5 left-1 z-[1] cursor-default'>
 				about
 			</h3>

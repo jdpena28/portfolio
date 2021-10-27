@@ -40,14 +40,17 @@ export const project = [
 		title: 'COVID19 PH Info - Board',
 		desc: 'An Informtaion Board for cases and other information of Covid-19 in the Philippines',
 		color: 'purple',
-		num:'01'
+		num:'01',
+		titleClass: 'top-[20%] left-[23%]'
 	},
 	{
-		flex: 'justify-end',
+		flex: 'flex-row-reverse',
 		src: '/Projects/Stick-your-Note-Desktop-View.png',
 		title:  'Stick your Note',
 		desc: "A React - App that let's you create a stick note as reminder",
 		color: 'yellow',
-		num:'02'
+		num:'02',
+		titleClass: 'top-[20%] right-[30.5%] mix-blend-exclusion',
+		descClass:'text-right'
 	}
 ]
