@@ -1,7 +1,30 @@
 /** @format */
-
 import Image from 'next/image'
-import { TextField, Button } from '@mui/material'
+import { TextField, Button,styled } from '@mui/material'
+
+const ValidationTextField = styled(TextField)({
+	'& .MuiOutlinedInput-root': {
+	  '& fieldset': {
+		borderColor: 'white',
+	  },
+	  '&.Mui-focused fieldset': {
+		borderColor: 'white',
+	  },
+	  '&:hover fieldset': {
+		borderColor: 'white',
+	  },
+	},
+	'& input:valid:focus + fieldset': {
+	  borderLeftWidth: 4,
+	  padding: '4px !important', // override inline-style
+	},
+	' & label.Mui-focused': { 
+	  color: 'white'
+	},
+	' & label': {
+	  color: 'white'
+	},
+  });
 
 const Contact = () => {
 	return (
@@ -15,13 +38,13 @@ const Contact = () => {
 						<Image src={'/contact-us.svg'} layout='fill' />
 					</div>
 					<form className='flex flex-col gap-y-3'>
-						<TextField
+						<ValidationTextField
 							className='w-72'
 							label='Email'
 							variant='outlined'
 							required
 						/>
-						<TextField className='w-72' label='Name' variant='outlined' />
+						<ValidationTextField className='w-72' label='Name' variant='outlined' />
 						<TextField
 							className='w-72'
 							label='Message'
