@@ -1,6 +1,10 @@
 /** @format */
 import Image from 'next/image'
 import { TextField, Button,styled, OutlinedInputProps, TextFieldProps } from '@mui/material'
+import {GrMail} from 'react-icons/gr'
+import {RiContactsBookFill} from 'react-icons/ri'
+import {IoLocationSharp} from 'react-icons/io5'
+
 
 const ValidationTextField = styled(TextField)({
 	'& .MuiOutlinedInput-root': {
@@ -46,7 +50,7 @@ const ValidationTextField = styled(TextField)({
 		'box-shadow',
 	  ]),
 	  '&.Mui-focused': {
-		borderColor: '#f5f5f5'
+		borderColor: '#f8f8ff'
 	  },
 	},
   }));
@@ -58,11 +62,11 @@ const Contact = () => {
 				contact
 			</h3>
 			<div className='container mt-14 h-full mx-auto flex items-center justify-center'>
-				<div className='bg-gray-500 opacity-90 w-[75%] h-[69%] z-30 rounded-3xl relative'>
+				<div className='bg-gray-500 opacity-90 w-[75%] h-[69%] z-30 rounded-3xl relative flex justify-around'>
 					<div className='absolute -bottom-3 right-0 w-80 h-80 flipImg'>
 						<Image src={'/contact-us.svg'} layout='fill' />
 					</div>
-					<form className='flex flex-col gap-y-3'>
+					<form className='flex flex-col gap-y-3 my-auto'>
 						<ValidationTextField
 							className='w-72'
 							label='Email'
@@ -82,6 +86,12 @@ const Contact = () => {
 							Send
 						</Button>
 					</form>
+					<div className='mt-[4.8%]'>
+						<h4 className='text-2xl font-medium'>Interested in Working?</h4>
+						<GrMail size={18} className = 'inline ml-3'/><p className='inline text-sm'>&emsp;johnhenrich1128@gmail.com</p><br/>
+						<RiContactsBookFill size={18} className='inline ml-3'/><p className='inline text-sm'>&emsp;+639468083171</p><br/>
+						<IoLocationSharp size={18}  className='inline ml-3'/><p  className='inline text-sm'>&emsp;Limay, Bataan &#40;2103&#41; PHL</p>
+					</div>
 				</div>
 			</div>
 		</section>
