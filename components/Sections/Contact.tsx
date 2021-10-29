@@ -46,30 +46,6 @@ const ValidationTextField = styled(TextField)({
 	},
   });
 
-  const Multiline = styled((props: TextFieldProps) => (
-	<TextField
-	  InputProps={{ disableUnderline: true } as Partial<OutlinedInputProps>}
-	  {...props}
-	/>
-  ))(({ theme }) => ({
-	'& .MuiFilledInput-root': {
-	  border: '1px solid white',
-	  overflow: 'hidden',
-	  borderRadius: 4,
-	  backgroundColor: '#f8f8ff',
-	  transition: theme.transitions.create([
-		'border-color',
-		'background-color',
-		'box-shadow',
-	  ]),
-	  '&.Mui-focused': {
-		borderColor: '#f8f8ff'
-	  },
-	},
-  }));
-
-  
-
 const Contact = () => {
 	return (
 		<section className='w-full h-screen relative' id='contacts'>
