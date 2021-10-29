@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 font-family: 'Roboto Mono', monospace;
 font-family: 'Ubuntu', sans-serif;
@@ -10,4 +10,15 @@ FE3F92 - Pink
 DA8EBB - Light Pink (Project)
 FF9900 - Orange (Project)
 
+https://www.facebook.com/Jang.Henrich/
+https://www.linkedin.com/in/johnhenrichdelapena/
+https://www.instagram.com/jdpena28/
+https://github.com/jdpena28
+
+FaFacebookF
+GrLinkedinOption
+BsInstagram
+BsGithub
+
+&copy; 
 I am John Henrich Dela Peña currently studying at Bataan Peninsula State University taking course of Computer Science major in Network and Data Communication. Im also into Music 🎶 as Bassist and Rythm Guitarist 🎸. Expertise at .NET framework integrated with MSAccess and Oracle Database. Currently, I am learning Front-End Development. Aspiring to be one of the Developers soon... Such as thus Programming isn't about what you know; it's about what you can figure out.
