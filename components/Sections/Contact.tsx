@@ -5,6 +5,19 @@ import {GrMail} from 'react-icons/gr'
 import {RiContactsBookFill} from 'react-icons/ri'
 import {IoLocationSharp} from 'react-icons/io5'
 
+const Multilines = styled(TextField)({
+	'& .MuiFilledInput-root': {
+		border: '1px solid white',
+		overflow: 'hidden',
+		borderRadius: 4,
+		backgroundColor: '#f8f8ff',
+	  },
+	  '& .MuiFilledInput': {
+		borderColor: '#f8f8ff',
+		backgroundColor: '#f8f8ff',
+	  },
+})
+
 
 const ValidationTextField = styled(TextField)({
 	'& .MuiOutlinedInput-root': {
@@ -55,6 +68,8 @@ const ValidationTextField = styled(TextField)({
 	},
   }));
 
+  
+
 const Contact = () => {
 	return (
 		<section className='w-full h-screen relative' id='contacts'>
@@ -74,7 +89,7 @@ const Contact = () => {
 							required
 						/>
 						<ValidationTextField className='w-72' label='Name' variant='outlined' />
-						<Multiline
+						<Multilines
 							className='w-72'
 							label='Message'
 							multiline
@@ -87,7 +102,7 @@ const Contact = () => {
 						</Button>
 					</form>
 					<div className='mt-[4.8%]'>
-						<h4 className='text-2xl font-medium'>Interested in Working?</h4>
+						<h4 className='text-2xl font-medium mb-2'>Interested in Working?</h4>
 						<GrMail size={18} className = 'inline ml-3'/><p className='inline text-sm'>&emsp;johnhenrich1128@gmail.com</p><br/>
 						<RiContactsBookFill size={18} className='inline ml-3'/><p className='inline text-sm'>&emsp;+639468083171</p><br/>
 						<IoLocationSharp size={18}  className='inline ml-3'/><p  className='inline text-sm'>&emsp;Limay, Bataan &#40;2103&#41; PHL</p>
