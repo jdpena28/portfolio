@@ -1,19 +1,18 @@
 /** @format */
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
-import {BiMenuAltRight} from 'react-icons/bi'
+import { BiMenuAltRight } from 'react-icons/bi'
 
-
-const NavLinks: React.FC<NavLinks> = ({ path, title }) => {
+const NavLinks: React.FC<NavLinks> = ({ path, title,className }) => {
 	return (
-		<Link href = {path}>
-			<a>{title}</a>
+		<Link href={path}>
+			<a className = {className}>{title}</a>
 		</Link>
 	)
 }
 
 const Navbar: React.FC = () => {
-const [menu,setMenu] = useState<boolean>(false)
+	const [menu, setMenu] = useState<boolean>(true)
 	return (
 		<nav>
 			<div className='flex justify-between text-lg p-5'>
@@ -24,13 +23,20 @@ const [menu,setMenu] = useState<boolean>(false)
 					<NavLinks path={'/#project'} title={'Projects'} /> /
 					<NavLinks path={'/#contacts'} title={'Contacts'} />
 				</div>
-				<div className='hidden sm:block'>
-					<BiMenuAltRight className='cursor-pointer' onClick={()=>menu?setMenu(true):setMenu(false)} size={32} />
-					{menu?(
-						<h3>Hello Woerld</h3>
-					):<></>}
-				</div>
+				<BiMenuAltRight
+					className='cursor-pointer hidden sm:block'
+					onClick={() => (menu ? setMenu(false) : setMenu(true))}
+					size={32}
+				/>
 			</div>
+			{menu ? (
+				<div className="absolute flex flex-col text-center h-screen w-full text-lg">
+					<NavLinks path={'/#home'} title={'Home'} className='border-b-2 py-2 border-gray-800'/> 
+					<NavLinks path={'/#about'} title={'About'} className='border-b-2 py-2 border-gray-800'/> 
+					<NavLinks path={'/#project'} title={'Projects'} className='border-b-2 py-2 border-gray-800'/> 
+					<NavLinks path={'/#contacts'} title={'Contacts'} className = 'pt-2' />
+				</div>
+			): <></>}
 		</nav>
 	)
 }

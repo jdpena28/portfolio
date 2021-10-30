@@ -1,6 +1,7 @@
 interface NavLinks {
     path: string
     title: string
+    className?: string
 }
 interface Stacks {
     stacksTitle: string
