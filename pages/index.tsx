@@ -10,7 +10,7 @@ import Project from '../components/Sections/Project'
 
 const App: React.FC = () => {
 	return (
-		<div className='font-primary text-gray-200 bg-gray-900 mx-12 space-y-11'>
+		<div className='font-primary text-gray-200 bg-gray-900 mx-12 sm:mx-1 space-y-11'>
 			<Navbar />
 			<Home />
 			<About />
