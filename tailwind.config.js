@@ -8,6 +8,9 @@ module.exports = {
         primary: "'Roboto Mono', monospace",
         secondary: "'Ubuntu', sans-serif",
       },
+      screens: {
+        sm:{'max':'768px'},
+      }
     },
   },
   variants: {
