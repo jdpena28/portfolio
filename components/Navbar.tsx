@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
 				/>
 			</div>
 			{menu ? (
-				<div className="absolute flex flex-col text-center h-screen w-full text-lg">
+				<div className="absolute flex flex-col text-center w-full text-lg z-50">
 					<NavLinks path={'/#home'} title={'Home'} className='border-b-2 py-2 border-gray-800'/> 
 					<NavLinks path={'/#about'} title={'About'} className='border-b-2 py-2 border-gray-800'/> 
 					<NavLinks path={'/#project'} title={'Projects'} className='border-b-2 py-2 border-gray-800'/> 
