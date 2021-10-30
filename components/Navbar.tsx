@@ -1,7 +1,8 @@
 /** @format */
-import React from 'react'
+import React,{useState} from 'react'
 import Link from 'next/link'
 import {BiMenuAltRight} from 'react-icons/bi'
+
 
 const NavLinks: React.FC<NavLinks> = ({ path, title }) => {
 	return (
@@ -12,6 +13,7 @@ const NavLinks: React.FC<NavLinks> = ({ path, title }) => {
 }
 
 const Navbar: React.FC = () => {
+const [menu,setMenu] = useState<boolean>(false)
 	return (
 		<nav>
 			<div className='flex justify-between text-lg p-5'>
@@ -23,7 +25,10 @@ const Navbar: React.FC = () => {
 					<NavLinks path={'/#contacts'} title={'Contacts'} />
 				</div>
 				<div className='hidden sm:block'>
-					<BiMenuAltRight className='cursor-ponter' size={32} />
+					<BiMenuAltRight className='cursor-pointer' onClick={()=>menu?setMenu(true):setMenu(false)} size={32} />
+					{menu?(
+						<h3>Hello Woerld</h3>
+					):<></>}
 				</div>
 			</div>
 		</nav>
