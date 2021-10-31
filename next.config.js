@@ -4,8 +4,7 @@ module.exports = {
 }
 
 
-/* Social Media Redirects */
-
+/* Social Media Redirect */
 module.exports = {
   async redirects() {
     return [
