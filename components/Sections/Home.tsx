@@ -20,7 +20,7 @@ const Home = () => {
                     <div className = 'relative'>
                         <Image 
                         className = 'rounded-2xl z-30'
-                        src = '/portrait.jpg'
+                        src = '/portrait.webp'
                         alt = 'Portrait Photo of the Author'
                         width = {300}
                         height = {300}/>
