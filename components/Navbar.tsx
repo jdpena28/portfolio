@@ -12,7 +12,7 @@ const NavLinks: React.FC<NavLinks> = ({ path, title,className }) => {
 }
 
 const Navbar: React.FC = () => {
-	const [menu, setMenu] = useState<boolean>(true)
+	const [menu, setMenu] = useState<boolean>(false)
 	return (
 		<nav>
 			<div className='flex justify-between text-lg p-5'>
@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
 				/>
 			</div>
 			{menu ? (
-				<div className="absolute flex flex-col text-center w-full text-lg z-50">
+				<div className="hidden absolute sm:flex flex-col text-center w-[95%] mx-auto text-lg z-50">
 					<NavLinks path={'/#home'} title={'Home'} className='border-b-2 py-2 border-gray-800'/> 
 					<NavLinks path={'/#about'} title={'About'} className='border-b-2 py-2 border-gray-800'/> 
 					<NavLinks path={'/#project'} title={'Projects'} className='border-b-2 py-2 border-gray-800'/> 
