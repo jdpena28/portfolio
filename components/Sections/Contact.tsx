@@ -53,11 +53,11 @@ const Contact = () => {
 				contact
 			</h3>
 			<div className='container mt-14 h-full mx-auto flex items-center justify-center'>
-				<div className='bg-gray-500 opacity-90 w-[75%] h-[69%] z-30 rounded-3xl relative flex justify-around'>
-					<div className='absolute -bottom-3 right-0 w-80 h-80 flipImg'>
+				<div className='bg-gray-500 opacity-90 w-[75%] sm:w-full h-[69%] sm:h-full z-30 rounded-3xl relative flex sm:flex-col sm:justify-evenly sm:items-center justify-around'>
+					<div className='sm:hidden font-lightabsolute -bottom-3 right-0 w-80 h-80 flipImg'>
 						<Image src={'/contact-us.svg'} layout='fill' />
 					</div>
-					<form className='flex flex-col gap-y-3 my-auto'>
+					<form className='flex flex-col gap-y-3 my-auto sm:my-0'>
 						<ValidationTextField
 							className='w-72'
 							label='Email'
