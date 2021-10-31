@@ -10,7 +10,7 @@ const Project = () => {
 			<h3 className='font-secondary opacity-[3%] text-9xl font-bold tracking-widest absolute top-2 left-1 z-[1] cursor-default'>
 				projects
 			</h3>
-			<div className='container h-full flex flex-col space-y-12 pt-28'>
+			<div className='container h-full flex flex-col gap-y-32 pt-28'>
 				{project.map(e => {
 					return (
 						<EachProject

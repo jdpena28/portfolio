@@ -41,7 +41,7 @@ export const project = [
 		desc: 'An Informtaion Board for cases and other information of Covid-19 in the Philippines',
 		color: 'purple',
 		num:'01',
-		titleClass: 'top-[20%] left-[23%]'
+		titleClass: 'top-[20%] left-[30%]'
 	},
 	{
 		flex: 'flex-row-reverse',
@@ -50,7 +50,7 @@ export const project = [
 		desc: "A React - App that let's you create a stick note as reminder",
 		color: 'yellow',
 		num:'02',
-		titleClass: 'top-[20%] right-[30.5%] mix-blend-exclusion',
+		titleClass: 'top-[20%] right-[40.5%] mix-blend-exclusion',
 		descClass:'text-right'
 	}
 ]
