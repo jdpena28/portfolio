@@ -11,7 +11,7 @@ const About = () => {
 				about
 			</h3>
 			<div className='container h-full flex flex-col space-y-12'>
-				<p className='w-[75%] ml-11 text-justify text-xl mt-14'>
+				<p className='w-[75%] ml-11 sm:mx-auto text-justify sm:text-left text-xl sm:text-base mt-14'>
 					I am John Henrich Dela Peña currently studying at Bataan Peninsula
 					State University taking course of Computer Science major in Network
 					and Data Communication. Im also into Music 🎶 as Bassist and Rythm
@@ -20,7 +20,7 @@ const About = () => {
 					Aspiring to be one of the Developers soon... Such as thus Programming
 					isn't about what you know; it's about what you can figure out.
 				</p>
-				<h2 className='font-secondary text-4xl font-medium'>
+				<h2 className='font-secondary text-4xl sm:text-3xl font-medium'>
 					<span className='font-primary font-normal text-purple-600'>
 						`&#123;&#36;
 					</span>
