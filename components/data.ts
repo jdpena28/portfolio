@@ -51,6 +51,6 @@ export const project = [
 		color: 'yellow',
 		num:'02',
 		titleClass: 'top-[20%] right-[40.5%] mix-blend-exclusion',
-		descClass:'text-right'
+		descClass:'text-right sm:text-left'
 	}
 ]
