@@ -49,7 +49,7 @@ const ValidationTextField = styled(TextField)({
 const Contact = () => {
 	return (
 		<section className='w-full h-screen relative' id='contacts'>
-			<h3 className='font-secondary opacity-[3%] text-9xl font-bold tracking-widest absolute top-0 left-11 z-[1] cursor-default'>
+			<h3 className='font-secondary opacity-[3%] text-9xl sm:text-7xl font-bold tracking-widest absolute top-0 left-11 sm:left-3 z-[1] cursor-default'>
 				contact
 			</h3>
 			<div className='container mt-14 h-full mx-auto flex items-center justify-center'>

@@ -5,8 +5,8 @@ import Button from '../Button'
 const Home = () => {
     return (
         <section className = 'w-full h-screen relative' id = 'home'>
-            <h3 className='font-secondary opacity-[3%] text-9xl font-bold tracking-widest absolute top-[15%] sm:top-1 left-11 sm:left-3 z-[1] cursor-default'>home</h3>
-            <div className="container h-full mx-auto flex justify-around items-center font-secondary sm:flex-col-reverse">
+            <h3 className='font-secondary opacity-[3%] text-9xl sm:text-7xl font-bold tracking-widest absolute top-[15%]  sm:-top-7 left-11 sm:left-3 z-[1] cursor-default'>home</h3>
+            <div className="container h-full mx-auto flex justify-around items-center font-secondary sm:flex-col-reverse"> 
                 <div className='text-right sm:text-center space-y-3'>
                     <h1 className = 'text-6xl sm:text-4xl font-semibold'>John Henrich Dela Peña</h1>
                     <h2 className='font-primary text-2xl sm:text-xl text-gray-400'>//Aspiring .NET / Front-End Developer</h2>

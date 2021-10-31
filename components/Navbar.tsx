@@ -14,7 +14,7 @@ const NavLinks: React.FC<NavLinks> = ({ path, title,className }) => {
 const Navbar: React.FC = () => {
 	const [menu, setMenu] = useState<boolean>(false)
 	return (
-		<nav>
+		<nav className='sm:sticky top-0 z-50 bg-gray-900'>
 			<div className='flex justify-between text-lg p-5'>
 				<p>jdpena</p>
 				<div className='flex gap-x-3 font-normal sm:hidden'>
@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
 				/>
 			</div>
 			{menu ? (
-				<div className="hidden absolute sm:flex flex-col text-center w-[95%] mx-auto text-lg z-50">
+				<div className="hidden fixed sm:flex flex-col text-center w-[95%] h-screen mx-auto text-lg filter backdrop-filter backdrop-blur-md">
 					<NavLinks path={'/#home'} title={'Home'} className='border-b-2 py-2 border-gray-800'/> 
 					<NavLinks path={'/#about'} title={'About'} className='border-b-2 py-2 border-gray-800'/> 
 					<NavLinks path={'/#project'} title={'Projects'} className='border-b-2 py-2 border-gray-800'/> 
