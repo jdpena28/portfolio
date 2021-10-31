@@ -1,6 +1,6 @@
 /** @format */
 import Image from 'next/image'
-import { TextField, Button,styled, OutlinedInputProps, TextFieldProps } from '@mui/material'
+import { TextField, Button,styled} from '@mui/material'
 import {GrMail} from 'react-icons/gr'
 import {RiContactsBookFill} from 'react-icons/ri'
 import {IoLocationSharp} from 'react-icons/io5'
@@ -54,7 +54,7 @@ const Contact = () => {
 			</h3>
 			<div className='container mt-14 h-full mx-auto flex items-center justify-center'>
 				<div className='bg-gray-500 opacity-90 w-[75%] sm:w-full h-[69%] sm:h-full z-30 rounded-3xl relative flex sm:flex-col sm:justify-evenly sm:items-center justify-around'>
-					<div className='sm:hidden font-lightabsolute -bottom-3 right-0 w-80 h-80 flipImg'>
+					<div className='sm:hidden font-light absolute -bottom-3 right-0 w-80 h-80 flipImg'>
 						<Image src={'/contact-us.svg'} layout='fill' />
 					</div>
 					<form className='flex flex-col gap-y-3 my-auto sm:my-0'>
