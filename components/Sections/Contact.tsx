@@ -52,7 +52,7 @@ const Contact = () => {
 			<h3 className='font-secondary opacity-[3%] text-9xl sm:text-7xl font-bold tracking-widest absolute top-0 left-11 sm:left-3 z-[1] cursor-default'>
 				contact
 			</h3>
-			<div className='container mt-14 h-full mx-auto flex items-center justify-center'>
+			<div className='container mt-14 h-[90%] mx-auto flex items-center justify-center'>
 				<div className='bg-gray-500 opacity-90 w-[75%] sm:w-full h-[69%] sm:h-full z-30 rounded-3xl relative flex sm:flex-col sm:justify-evenly sm:items-center justify-around'>
 					<div className='sm:hidden font-light absolute -bottom-3 right-0 w-80 h-80 flipImg'>
 						<Image src={'/contact-us.svg'} layout='fill' />
