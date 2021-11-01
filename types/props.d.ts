@@ -2,6 +2,7 @@ interface NavLinks {
     path: string
     title: string
     className?: string
+    onClick?: () => void
 }
 interface Stacks {
     stacksTitle: string
