@@ -6,7 +6,10 @@ interface NavLinks {
 }
 interface Stacks {
     stacksTitle: string
-    stacksUrl: string[]
+    stacksUrl: {
+        url: string
+        tooltipTitle: string
+    }[]
     flex?:string
 }
 interface EachProject {

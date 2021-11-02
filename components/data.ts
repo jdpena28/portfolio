@@ -3,34 +3,79 @@
 export const techStacks = [
 	{
 		techDesc: 'languages',
-		techImg: [
-			'/TechStacks/languages/csharp.svg',
-			'/TechStacks/languages/java.svg',
-			'/TechStacks/languages/html5.svg',
-			'/TechStacks/languages/css3.svg',
-			'/TechStacks/languages/javascript.svg',
-		],
+		stacksURL: [
+			{
+				url: '/TechStacks/languages/csharp.svg',
+				tooltipTitle:'C#'
+			},
+			{
+				url: '/TechStacks/languages/java.svg',
+				tooltipTitle:'Java',
+			},
+			{
+				url: '/TechStacks/languages/html5.svg',
+				tooltipTitle:'HTML5',
+			},
+			{
+				url: '/TechStacks/languages/css3.svg',
+				tooltipTitle:'CSS3',
+			},
+			{
+				url: '/TechStacks/languages/javascript.svg',
+				tooltipTitle:'Javascript'
+			},
+		]
 	},
     {
         techDesc: 'frameworks',
 		flex: 'items-end',
-        techImg: [
-            '/TechStacks/frameworks/dotnetcore.svg',
-			'/TechStacks/frameworks/react.svg',
-			'/TechStacks/frameworks/vuejs.svg',
-			'/TechStacks/frameworks/tailwindcss.svg',
-			'/TechStacks/frameworks/bootstrap.svg',
-			'/TechStacks/frameworks/sass.svg'
-        ]
+        stacksURL: [
+			{
+				url: '/TechStacks/frameworks/dotnetcore.svg',
+				tooltipTitle:'.Net',
+			},
+			{
+				url: '/TechStacks/frameworks/react.svg',
+				tooltipTitle:'React',
+			},
+			{
+				url:'/TechStacks/frameworks/vuejs.svg',
+				tooltipTitle:'Vue',
+			},
+			{
+				url: '/TechStacks/frameworks/tailwindcss.svg',
+				tooltipTitle:'TailwindCSS',
+			},
+			{
+				url: '/TechStacks/frameworks/bootstrap.svg',
+				tooltipTitle:'Bootstrap',
+			},
+			{
+				url: '/TechStacks/frameworks/sass.svg',
+				tooltipTitle:'SASS',
+			},
+        ],
     },
 	{
         techDesc: 'database&others',
-        techImg: [
-            '/TechStacks/database&others/mysql.svg',
-			'/TechStacks/database&others/oracle.svg',
-			'/TechStacks/database&others/git.svg',
-			'/TechStacks/database&others/github.svg',		
-        ]
+        stacksURL: [
+			{
+				url: '/TechStacks/database&others/mysql.svg',
+				tooltipTitle:'MySQL',
+			},
+			{
+				url: '/TechStacks/database&others/oracle.svg',
+				tooltipTitle:'Oracle',
+			},
+			{
+				url: '/TechStacks/database&others/git.svg',
+				tooltipTitle:'Git',
+			},
+			{
+				url: '/TechStacks/database&others/github.svg',
+				tooltipTitle:'Github',
+			},		
+        ],
     }
 ]
 

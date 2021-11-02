@@ -31,7 +31,7 @@ const About = () => {
 				</h2>
 				<div className= 'space-y-16'>
 					{techStacks.map(e => {
-						return <Stacks stacksTitle={e.techDesc} stacksUrl={e.techImg} flex={e.flex} />
+						return <Stacks stacksTitle={e.techDesc} stacksUrl={e.stacksURL} flex={e.flex}/>
 					})}
 				</div>
 			</div>
