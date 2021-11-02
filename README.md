@@ -7,8 +7,8 @@ This is a the source code for my portfolio.
 &emsp;&emsp; ☑️ Create a Design for  Portfolio
 &emsp;&emsp; ☑️ Initalize and build  a Static  Portfolio Site
 &emsp;&emsp; ☑️ Support Mobile  Device
-&emsp;&emsp; 🟦 Navbar Blur Effect
-&emsp;&emsp; 🟦 Project Build Description Hover Effect and Build Stack Description
+&emsp;&emsp; ☑️ Navbar Blur Effect
+&emsp;&emsp; ☑️ Project Build Description Hover Effect and Build Stack Description
 &emsp;&emsp; 🟦 Form Functionality at Contact Section
 &emsp;&emsp; 🟦 Create a Parallex Effect when Scroll
 &emsp;&emsp; 🟦 Create a Animate on Scroll Effect
