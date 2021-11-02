@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { BiMenuAltRight } from 'react-icons/bi'
 
-const NavLinks: React.FC<NavLinks> = ({ path, title,className,onClick }) => {
+const NavLinks: React.FC<NavLinks> = ({ path, title,className, onClick }) => {
 	return (
 		<Link href={path}>
 			<a className = {className} onClick = {onClick}>{title}</a>
@@ -18,13 +18,13 @@ const Navbar: React.FC = () => {
 	}
 	return (
 		<nav className='sm:sticky top-0 z-50 bg-gray-900'>
-			<div className='flex justify-between text-lg p-5'>
+			<div className='flex justify-between text-lg pt-3'>
 				<p>jdpena</p>
 				<div className='flex gap-x-3 font-normal sm:hidden'>
-					<NavLinks path={'/#home'} title={'Home'}  /> /
-					<NavLinks path={'/#about'} title={'About'}  /> /
-					<NavLinks path={'/#project'} title={'Projects'}  /> /
-					<NavLinks path={'/#contacts'} title={'Contacts'}  />
+					<NavLinks path={'/#home'} title={'Home'} className = 'hover:bg-gray-600 bg-opacity-10 rounded-lg p-1' /> /
+					<NavLinks path={'/#about'} title={'About'} className = 'hover:bg-gray-600 bg-opacity-10 rounded-lg p-1' /> /
+					<NavLinks path={'/#project'} title={'Projects'} className = 'hover:bg-gray-600 bg-opacity-10 rounded-lg p-1'  /> /
+					<NavLinks path={'/#contacts'} title={'Contacts'} className = 'hover:bg-gray-600 bg-opacity-10 rounded-lg p-1'/>
 				</div>
 				<BiMenuAltRight
 					className='cursor-pointer hidden sm:block'
