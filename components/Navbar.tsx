@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
 			</div>
 			{menu ? (
 				<div className="hidden absolute sm:flex flex-col text-center w-[95%] h-screen mx-auto text-lg backdrop-filter backdrop-blur-md bg-gray-900 bg-opacity-30">
-					<div className='w-[95%] sm:flex flex-col mx-auto'>
+					<div className='w-full sm:flex flex-col mx-auto'>
 					<NavLinks path={'/#home'} title={'Home'} className='py-2' onClick={onClick}/> 
 					<NavLinks path={'/#about'} title={'About'} className='py-2' onClick={onClick}/> 
 					<NavLinks path={'/#project'} title={'Projects'} className='py-2' onClick={onClick}/> 
