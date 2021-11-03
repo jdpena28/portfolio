@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
 	}
 	return (
 		<nav className='sm:sticky top-0 z-50 bg-gray-900'>
-			<div className='flex justify-between text-lg pt-3'>
+			<div className='flex justify-between text-lg py-3'>
 				<p>jdpena</p>
 				<div className='flex gap-x-3 font-normal sm:hidden'>
 					<NavLinks path={'/#home'} title={'Home'} className = 'hover:bg-gray-600 bg-opacity-10 rounded-lg p-1' /> /
