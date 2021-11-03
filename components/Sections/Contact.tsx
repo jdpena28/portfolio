@@ -1,5 +1,6 @@
 /** @format */
 import Image from 'next/image'
+import {useRef} from 'react'
 import { TextField, Button,styled} from '@mui/material'
 import {GrMail} from 'react-icons/gr'
 import {RiContactsBookFill} from 'react-icons/ri'
@@ -10,10 +11,6 @@ const Multilines = styled(TextField)({
 		border: '1px solid white',
 		overflow: 'hidden',
 		borderRadius: 4,
-		backgroundColor: '#f8f8ff',
-	  },
-	  '& .MuiFilledInput': {
-		borderColor: '#f8f8ff',
 		backgroundColor: '#f8f8ff',
 	  },
 })
@@ -47,6 +44,7 @@ const ValidationTextField = styled(TextField)({
   });
 
 const Contact = () => {
+	const emailRef = useRef("")
 	return (
 		<section className='w-full h-screen relative' id='contacts'>
 			<h3 className='font-secondary opacity-[3%] text-9xl sm:text-7xl font-bold tracking-widest absolute top-0 left-11 sm:left-3 z-[1] cursor-default'>
@@ -62,6 +60,7 @@ const Contact = () => {
 							className='w-72'
 							label='Email'
 							variant='outlined'
+							type = 'email'
 							required
 						/>
 						<ValidationTextField className='w-72' label='Name' variant='outlined' />
@@ -73,6 +72,7 @@ const Contact = () => {
 							variant='filled'
 							required
 						/>
+						{/* (emailRef.current.value&&MessageRef.current.value)? 'w-72 cursor-not-allowed' : 'w-72 cursor-pointer' */}
 						<Button className = 'w-72' variant='contained' size='medium'>
 							Send
 						</Button>
