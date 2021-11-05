@@ -13,7 +13,7 @@ const Stacks:React.FC<Stacks> = ({stacksTitle,stacksUrl,flex}) => {
             <div className='flex gap-x-5 mt-4'>
                 {stacksUrl.map(e => {
                     return (
-                        <Tooltip TransitionComponent={Zoom} title = {e.tooltipTitle} key={id+=1}>
+                        <Tooltip TransitionComponent={Zoom} disableFocusListener title = {e.tooltipTitle} key={id+=1}>
                             <div>
                                 <Image  src = {e.url} height = {69} width = {69} />
                             </div>
