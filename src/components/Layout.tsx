@@ -9,8 +9,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 			<Head>
 				<link rel='icon' href='/favicon.png' />
 				{/* <!-- Primary Meta Tags --> */}
-				<title>John Henrich Dela Peña - Portfolio Website</title>
-				<meta name="title" content="John Henrich Dela Peña - Portfolio Website" />
+				<title>Portfolio | John Henrich Dela Peña</title>
+				<meta name="title" content="Portfolio | John Henrich Dela Peña" />
 				<meta name="description" content="A Self-Taught Student Aspiring Front-End / .Net Developer currently pursuing Computer Science Third Year. Proficient in making Serverless Website and Desktop Application." />
 
 				{/* <!-- Open Graph / Facebook --> */}
