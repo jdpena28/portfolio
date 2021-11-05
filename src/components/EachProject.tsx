@@ -9,16 +9,15 @@ const EachProject:React.FC<EachProject> = ({flex,title,desc,src,color,num,titleC
 	return (
 		<div>
 			<div className = {`relative sm:block flex items-center gap-x-6 sm:space-y-3 ${flex}`}>
-				<div className="relative z-20 h-[315px] w-[600px]" onMouseEnter={()=>setImgHover(true)} onMouseLeave={()=>setImgHover(false)}>
-					<Image src={src} layout='fill'/>					
+				<div className="relative z-20 h-full w-[full " onMouseEnter={()=>setImgHover(true)} onMouseLeave={()=>setImgHover(false)}>
+					<Image src={src} width={600} height={315}/>					
 					{imgHover && 
-	
-					<div className = 'absolute w-full h-full bg-gray-700 bg-opacity-60'>
-						<div className={`${hoverClass} w-full h-full flex items-end p-2 gap-x-7`}>
+					<div className = 'absolute top-0 w-full h-full bg-gray-700 bg-opacity-60'>
+						<div className={`${hoverClass} w-full h-full flex items-end justify-end sm:justify-between p-2  gap-x-7 sm:gap-x-0`}>
 							<p>{hoverDesc}</p>
 							<div className='flex gap-x-1'>
-								<a href={github}><VscGithub size ={30} /></a>
-								<a href={link}><BiLinkExternal size={30}/></a>
+								<a href={github}><VscGithub size ={26} /></a>
+								<a href={link}><BiLinkExternal size={26}/></a>
 							</div>
 						</div>
 					</div>

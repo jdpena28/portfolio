@@ -21,7 +21,7 @@ interface EachProject {
     num: string
     titleClass?: string
     descClass?: string
-    hoverClass: string
+    hoverClass?: string
     hoverDesc: string
     github: string
     link: string

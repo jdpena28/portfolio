@@ -87,10 +87,9 @@ export const project = [
 		color: 'purple',
 		num:'01',
 		titleClass: 'top-[20%] left-[30%]',
-		hoverClass: 'justify-end',
 		hoverDesc: 'React.js, Typescript, Tailwind, RestAPI',
 		github:'https://github.com/jdpena28/covid19PH-infoboard',
-		link:'covid19-ph-infoboard.vercel.app',
+		link:'https://covid19-ph-infoboard.vercel.app',
 	},
 	{
 		flex: 'flex-row-reverse',
@@ -101,9 +100,9 @@ export const project = [
 		num:'02',
 		titleClass: 'top-[20%] right-[40.5%] mix-blend-exclusion',
 		descClass:'text-right sm:text-left',
-		hoverClass: 'flex-row-reverse justify-end',
+		hoverClass: 'flex-row-reverse sm:flex-row',
 		hoverDesc: 'React.js, Typescript, Tailwind',
 		github:'https://github.com/jdpena28/stick-your-note',
-		link:'stick-your-note.vercel.app',
+		link:'https://stick-your-note.vercel.app',
 	}
 ]
