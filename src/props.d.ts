@@ -19,6 +19,10 @@ interface EachProject {
     desc: string
     color: string
     num: string
-    titleClass?: string;
+    titleClass?: string
     descClass?: string
+    hoverClass: string
+    hoverDesc: string
+    github: string
+    link: string
 }

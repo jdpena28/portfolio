@@ -86,7 +86,11 @@ export const project = [
 		desc: 'An Informtaion Board for cases and other information of Covid-19 in the Philippines',
 		color: 'purple',
 		num:'01',
-		titleClass: 'top-[20%] left-[30%]'
+		titleClass: 'top-[20%] left-[30%]',
+		hoverClass: 'justify-end',
+		hoverDesc: 'React.js, Typescript, Tailwind, RestAPI',
+		github:'https://github.com/jdpena28/covid19PH-infoboard',
+		link:'covid19-ph-infoboard.vercel.app',
 	},
 	{
 		flex: 'flex-row-reverse',
@@ -96,6 +100,10 @@ export const project = [
 		color: 'yellow',
 		num:'02',
 		titleClass: 'top-[20%] right-[40.5%] mix-blend-exclusion',
-		descClass:'text-right sm:text-left'
+		descClass:'text-right sm:text-left',
+		hoverClass: 'flex-row-reverse justify-end',
+		hoverDesc: 'React.js, Typescript, Tailwind',
+		github:'https://github.com/jdpena28/stick-your-note',
+		link:'stick-your-note.vercel.app',
 	}
 ]

@@ -23,6 +23,10 @@ const Project = () => {
                             num={e.num}
 							titleClass={e.titleClass}
 							descClass={e.descClass}
+							hoverClass={e.hoverClass}
+							hoverDesc={e.hoverDesc}
+							github={e.github}
+							link={e.link}
 							key = {num+=1}
 						/>
 					)
