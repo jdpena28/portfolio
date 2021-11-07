@@ -1,5 +1,6 @@
 /** @format */
 import React, { useState } from 'react'
+import {AnimatePresence,motion} from 'framer-motion'
 import Link from 'next/link'
 import { BiMenuAltRight } from 'react-icons/bi'
 
@@ -16,9 +17,29 @@ const Navbar: React.FC = () => {
 	const onClick = () => {
 		setMenu(false)
 	}
+
+	const variants = {
+		hidden: {
+			y: '-3vh'
+		},
+		visible: {
+			y: 0,
+			transition: {
+				type:'spring',
+				duration: .8,
+				ease: 'easeInOut',
+				bounce: .2,
+			}
+		},
+		exit: {
+			y:'-3vh',
+			opacity:0
+		}
+	}
+
 	return (
 		<nav className='sm:sticky top-0 z-50 bg-gray-900'>
-			<div className='flex justify-between text-lg py-3'>
+			<div className='flex justify-between text-lg py-3 z-[4]'>
 				<p>jdpena</p>
 				<div className='flex gap-x-3 font-normal sm:hidden'>
 					<NavLinks path={'/#home'} title={'Home'} className = 'hover:bg-gray-600 bg-opacity-10 rounded-lg p-1' /> /
@@ -32,16 +53,23 @@ const Navbar: React.FC = () => {
 					size={32}
 				/>
 			</div>
-			{menu ? (
-				<div className="hidden absolute sm:flex flex-col text-center w-full h-screen mx-auto text-lg backdrop-filter backdrop-blur-md bg-gray-900 bg-opacity-30">
+			<AnimatePresence>
+			{menu && (
+				<motion.div 
+				variants={variants}
+				initial="hidden"
+				animate="visible"
+				exit="exit"
+				className="hidden z-[3] absolute sm:flex flex-col text-center w-full h-screen mx-auto text-lg backdrop-filter backdrop-blur-md bg-gray-900 bg-opacity-30">
 					<div className='w-full sm:flex flex-col mx-auto'>
 					<NavLinks path={'/#home'} title={'Home'} className='py-2' onClick={onClick}/> 
 					<NavLinks path={'/#about'} title={'About'} className='py-2' onClick={onClick}/> 
 					<NavLinks path={'/#project'} title={'Projects'} className='py-2' onClick={onClick}/> 
 					<NavLinks path={'/#contacts'} title={'Contacts'} className = 'pt-2' onClick={onClick} />
 					</div>
-				</div>
-			): <></>}
+				</motion.div>
+			)}
+			</AnimatePresence>
 		</nav>
 	)
 }
