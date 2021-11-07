@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
 
 	const variants = {
 		hidden: {
-			y: '-3vh'
+			y: '-100vh'
 		},
 		visible: {
 			y: 0,
@@ -32,15 +32,15 @@ const Navbar: React.FC = () => {
 			}
 		},
 		exit: {
-			y:'-3vh',
+			y:'-100vh',
 			opacity:0
 		}
 	}
 
 	return (
 		<nav className='sm:sticky top-0 z-50 bg-gray-900'>
-			<div className='flex justify-between text-lg py-3 z-[4]'>
-				<p>jdpena</p>
+			<div className='flex justify-between text-lg py-3'>
+				<p className='z-[51]'>jdpena</p>
 				<div className='flex gap-x-3 font-normal sm:hidden'>
 					<NavLinks path={'/#home'} title={'Home'} className = 'hover:bg-gray-600 bg-opacity-10 rounded-lg p-1' /> /
 					<NavLinks path={'/#about'} title={'About'} className = 'hover:bg-gray-600 bg-opacity-10 rounded-lg p-1' /> /
@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
 					<NavLinks path={'/#contacts'} title={'Contacts'} className = 'hover:bg-gray-600 bg-opacity-10 rounded-lg p-1'/>
 				</div>
 				<BiMenuAltRight
-					className='cursor-pointer hidden sm:block'
+					className='cursor-pointer hidden sm:block z-[51]'
 					onClick={() => (menu ? setMenu(false) : setMenu(true))}
 					size={32}
 				/>
