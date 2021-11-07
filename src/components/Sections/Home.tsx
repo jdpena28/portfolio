@@ -12,8 +12,8 @@ const Home = () => {
                     <h2 className='font-primary text-2xl sm:text-xl text-gray-400'>//Aspiring .NET / Front-End Developer</h2>
                     <p className='text-xl sm:text-lg'>I build Windows Applications <br  className='sm:hidden' /> and Serverless Websites</p>
                     <div className = 'flex justify-end sm:justify-evenly gap-x-5 sm:gap-x-0'>
-                        <Button btnPath='#project' btnClass = 'bg-pink-500' text = "Projects"/>
-                        <Button btnPath='#contacts' btnClass = 'bg-blue-600' text = "Contacts"/>
+                        <Button btnPath='#project' btnClass = 'bg-pink-500 ring-pink-300' text = "Projects"/>
+                        <Button btnPath='#contacts' btnClass = 'bg-blue-600 rink-blue-400' text = "Contacts"/>
                     </div>
                 </div>
                 <div>
