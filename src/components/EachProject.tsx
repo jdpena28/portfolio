@@ -41,7 +41,7 @@ const EachProject:React.FC<EachProject> = ({flex,title,desc,src,color,num,titleC
 						exit ='exit'
 						key = {link}
 						className = 'absolute top-0 w-full h-full bg-gray-700 bg-opacity-60'>
-						<div className={`${hoverClass} w-full h-full flex items-end justify-end sm:justify-between p-2  gap-x-7 sm:gap-x-0`}>
+						<div className={`${hoverClass} w-full h-full flex items-end justify-end sm:justify-between p-2  gap-x-7 sm:gap-x-0 sm:text-sm`}>
 							<p>{hoverDesc}</p>
 							<div className='flex gap-x-1'>
 								<a href={github}><VscGithub size ={26} /></a>
