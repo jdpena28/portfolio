@@ -98,7 +98,7 @@ export const project = [
 		desc: "A React - App that let's you create a stick note as reminder",
 		color: 'yellow',
 		num:'02',
-		titleClass: 'top-[20%] right-[40.5%] mix-blend-exclusion',
+		titleClass: 'top-[20%] right-[40.3%] mix-blend-exclusion',
 		descClass:'text-right sm:text-left',
 		hoverClass: 'flex-row-reverse sm:flex-row',
 		hoverDesc: 'React.js, Typescript, Tailwind',
