@@ -15,7 +15,7 @@ const Stacks:React.FC<Stacks> = ({stacksTitle,stacksUrl,flex}) => {
                     return (
                         <Tooltip TransitionComponent={Zoom} disableFocusListener title = {e.tooltipTitle} key={id+=1}>
                             <div>
-                                <Image  src = {e.url} height = {69} width = {69} />
+                                <Image key={id++}  src = {e.url} height = {69} width = {69} />
                             </div>
                         </Tooltip>
                     )

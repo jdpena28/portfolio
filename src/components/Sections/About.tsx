@@ -5,6 +5,7 @@ import { techStacks } from '../data'
 import Stacks from '../Stacks'
 
 const About = () => {
+	let id = 20
 	return (
 		<section className='w-full min-h-screen relative' id='about'>
 			<h3 className='font-secondary opacity-[3%] text-9xl sm:text-7xl  font-bold tracking-widest absolute -top-5 left-1 z-[1] cursor-default'>
@@ -31,7 +32,7 @@ const About = () => {
 				</h2>
 				<div className= 'space-y-16'>
 					{techStacks.map(e => {
-						return <Stacks stacksTitle={e.techDesc} stacksUrl={e.stacksURL} flex={e.flex}/>
+						return <Stacks key={id++} stacksTitle={e.techDesc} stacksUrl={e.stacksURL} flex={e.flex}/>
 					})}
 				</div>
 			</div>
