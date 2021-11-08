@@ -77,7 +77,7 @@ const Contact = () => {
 							Send
 						</Button>
 					</form>
-					<div className='mt-5'>
+					<div className='mt-5 font-normal'>
 						<h4 className='text-2xl font-medium mb-2'>Interested in Working?</h4>
 						<GrMail size={18} className = 'inline ml-3'/><p className='inline text-sm'>&emsp;johnhenrich1128@gmail.com</p><br/>
 						<RiContactsBookFill size={18} className='inline ml-3'/><p className='inline text-sm'>&emsp;+639468083171</p><br/>

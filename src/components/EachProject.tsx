@@ -53,7 +53,7 @@ const EachProject:React.FC<EachProject> = ({flex,title,desc,src,color,num,titleC
 				</div>
                 <h4 className={`absolute sm:static z-30 font-secondary font-semibold text-5xl sm:text-3xl ${titleClass}`}>{title}</h4>
                 <p className={`sm:hidden absolute -bottom-3 z-20 underline text-8xl  font-secondary font-semibold ${color}`}>{num}</p>
-                <p className ={`text-xl font-light w-[30%] sm:w-full ${descClass}`}>{desc}</p>
+                <p className ={`text-xl sm:text-lg font-normal w-[30%] sm:w-full ${descClass}`}>{desc}</p>
 			</div>
 
 		</div>
