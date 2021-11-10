@@ -1,8 +1,8 @@
 /** @format */
-
 import React from 'react'
 import { techStacks } from '../data'
 import Stacks from '../Stacks'
+import { Parallax } from 'react-scroll-parallax'
 
 
 const About = () => {
@@ -12,7 +12,6 @@ const About = () => {
 			<h3 className='font-secondary opacity-[3%] text-9xl sm:text-7xl  font-bold tracking-widest absolute -top-5 left-1 z-[1] cursor-default'>
 				about
 			</h3>
-
 			<div className='container h-full flex flex-col space-y-12'>
 				<p className='w-[75%] ml-11 sm:mx-auto text-justify sm:text-left text-xl sm:text-base mt-14'>
 					I am John Henrich Dela Peña currently studying at Bataan Peninsula
