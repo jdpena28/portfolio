@@ -9,9 +9,14 @@ const About = () => {
 	let id = 20
 	return (
 		<section className='w-full min-h-screen relative' id='about'>
-			<h3 className='font-secondary opacity-[3%] text-9xl sm:text-7xl  font-bold tracking-widest absolute -top-5 left-1 z-[1] cursor-default'>
+			<Parallax
+			x={[-10, 3]}
+            >
+			<h3 className='font-secondary opacity-[3%] text-9xl sm:text-7xl  font-bold tracking-widest absolute -top-5  z-[1] cursor-default'>
 				about
 			</h3>
+			</Parallax>
+			
 			<div className='container h-full flex flex-col space-y-12'>
 				<p className='w-[75%] ml-11 sm:mx-auto text-justify sm:text-left text-xl sm:text-base mt-14'>
 					I am John Henrich Dela Peña currently studying at Bataan Peninsula

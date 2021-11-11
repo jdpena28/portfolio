@@ -1,6 +1,7 @@
 /** @format */
 import Image from 'next/image'
 import React, {useRef,useState} from 'react'
+import {Parallax} from 'react-scroll-parallax'
 
 import { TextField, Button,styled} from '@mui/material'
 import Snackbar from '@mui/material/Snackbar';
@@ -59,7 +60,6 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
   });
 //#endregion
 
-  
 
 
 const Contact = () => {
@@ -79,11 +79,18 @@ const Contact = () => {
   };
   //#endregion
 
+
+
+
 	return (
 		<section className='w-full h-screen relative' id='contacts'>
-			<h3 className='font-secondary opacity-[3%] text-9xl sm:text-7xl font-bold tracking-widest absolute top-0 left-11 sm:left-3 z-[1] cursor-default'>
+			<Parallax
+			x={[-10, 3]}
+            >
+			<h3 className='font-secondary opacity-[3%] text-9xl sm:text-7xl font-bold tracking-widest absolute top-0 sm:left-3 z-[1] cursor-default'>
 				contact
 			</h3>
+			</Parallax>
 			<div className='container mt-14 h-[90%] mx-auto flex items-center justify-center'>
 				<div className='bg-gray-500 opacity-90 w-[75%] sm:w-full h-[69%] sm:h-full z-30 rounded-3xl relative flex sm:flex-col sm:justify-evenly sm:items-center justify-around'>
 					<div className='sm:hidden font-light absolute -bottom-3 right-0 w-80 h-80 flipImg'>
