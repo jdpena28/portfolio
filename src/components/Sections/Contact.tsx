@@ -1,11 +1,17 @@
 /** @format */
 import Image from 'next/image'
-import {useRef} from 'react'
+import React, {useRef,useState} from 'react'
+
 import { TextField, Button,styled} from '@mui/material'
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert, { AlertProps } from '@mui/material/Alert';
+
+// React-Icons
 import {GrMail} from 'react-icons/gr'
 import {RiContactsBookFill} from 'react-icons/ri'
 import {IoLocationSharp} from 'react-icons/io5'
 
+//#region textfilled styles
 const Multilines = styled(TextField)({
 	'& .MuiFilledInput-root': {
 		border: '1px solid white',
@@ -42,9 +48,37 @@ const ValidationTextField = styled(TextField)({
 	  color: '#f8f8ff'
 	},
   });
+//#endregion
+
+//#region Alert & Snackbar Props
+const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
+	props,
+	ref,
+  ) {
+	return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+  });
+//#endregion
+
+  
+
 
 const Contact = () => {
-	const emailRef = useRef("")
+  //#region alert at snackbar
+  const [open, setOpen] = useState<boolean>(false)
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event?: React.SyntheticEvent, reason?: string) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
+  //#endregion
+
 	return (
 		<section className='w-full h-screen relative' id='contacts'>
 			<h3 className='font-secondary opacity-[3%] text-9xl sm:text-7xl font-bold tracking-widest absolute top-0 left-11 sm:left-3 z-[1] cursor-default'>
@@ -72,10 +106,14 @@ const Contact = () => {
 							variant='filled'
 							required
 						/>
-						{/* (emailRef.current.value&&MessageRef.current.value)? 'w-72 cursor-not-allowed' : 'w-72 cursor-pointer' */}
-						<Button className = 'w-72' variant='contained' size='medium'>
+						<Button className = 'w-72' variant='contained' size='medium' onClick = {handleClick}>
 							Send
 						</Button>
+						<Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+        					<Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
+          						Sorry this Function is not working right now :&#40;
+        					</Alert>
+      					</Snackbar>
 					</form>
 					<div className='mt-5 font-normal'>
 						<h4 className='text-2xl font-medium mb-2'>Interested in Working?</h4>
