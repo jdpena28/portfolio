@@ -15,7 +15,7 @@ const variants = {
     animateScale:() => ({
         scale:1,
         transition :{
-            duration: .8,
+            duration: .4,
             delay: .3,
             bounce: .1,
             ease: 'easeOut',

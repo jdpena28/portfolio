@@ -3,6 +3,7 @@
 export const techStacks = [
 	{
 		techDesc: 'languages',
+		aos: 'slide-right',
 		stacksURL: [
 			{
 				url: '/TechStacks/languages/csharp.svg',
@@ -29,6 +30,7 @@ export const techStacks = [
     {
         techDesc: 'frameworks',
 		flex: 'items-end',
+		aos: 'slide-left',
         stacksURL: [
 			{
 				url: '/TechStacks/frameworks/dotnetcore.svg',
@@ -58,6 +60,7 @@ export const techStacks = [
     },
 	{
         techDesc: 'database&others',
+		aos: 'slide-right',
         stacksURL: [
 			{
 				url: '/TechStacks/database&others/mysql.svg',

@@ -7,7 +7,6 @@ import {AnimatePresence, motion} from 'framer-motion'
 
 const EachProject:React.FC<EachProject> = ({flex,title,desc,src,color,num,titleClass,descClass,hoverClass,hoverDesc,github,link}) => {
 	const [imgHover,setImgHover] = useState<boolean>(false)
-
 	const variants = {
 		hidden: {
 				scale: 0

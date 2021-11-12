@@ -1,6 +1,6 @@
 import React from 'react'
 import {FaFacebookF,FaLinkedinIn,FaInstagram,FaGithub,FaRegCopyright} from 'react-icons/fa'
-import {MdCopyright} from 'react-icons/md'
+
 const Footer = () => {
     return (
         <footer className = 'flex sm:flex-col-reverse justify-between items-center p-4 border-t-2 border-white sm:text-center sm:gap-y-3 font-light'>

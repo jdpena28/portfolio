@@ -11,6 +11,7 @@ interface Stacks {
         tooltipTitle: string
     }[]
     flex?:string
+    aos?: string
 }
 interface EachProject {
     flex?: string
