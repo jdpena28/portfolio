@@ -4,10 +4,14 @@ import {AnimatePresence,motion} from 'framer-motion'
 import Link from 'next/link'
 import { BiMenuAltRight } from 'react-icons/bi'
 
-const NavLinks: React.FC<NavLinks> = ({ path, title,className, onClick }) => {
+const NavLinks: React.FC<NavLinks> = ({ path, title,className, onClick, time }) => {
 	return (
 		<Link href={path}>
-			<a className = {className} onClick = {onClick}>{title}</a>
+			<motion.a 
+			initial = {{y: -50}}
+			animate={{y:0}}
+			transition={{type:'spring', duration: .8, delay: time, bounce:.5}}
+			className = {className} onClick = {onClick}>{title} </motion.a>
 		</Link>
 	)
 }
@@ -42,10 +46,10 @@ const Navbar: React.FC = () => {
 			<div className='flex justify-between text-lg py-3'>
 				<p className='z-[51]'>jdpena</p>
 				<div className='flex gap-x-3 font-normal sm:hidden'>
-					<NavLinks path={'/#home'} title={'Home'} className = 'hover:bg-gray-600 bg-opacity-10 rounded-lg p-1' /> /
-					<NavLinks path={'/#about'} title={'About'} className = 'hover:bg-gray-600 bg-opacity-10 rounded-lg p-1' /> /
-					<NavLinks path={'/#project'} title={'Projects'} className = 'hover:bg-gray-600 bg-opacity-10 rounded-lg p-1'  /> /
-					<NavLinks path={'/#contacts'} title={'Contacts'} className = 'hover:bg-gray-600 bg-opacity-10 rounded-lg p-1'/>
+					<NavLinks path={'/#home'} title={'Home'} className = 'hover:bg-gray-600 bg-opacity-10 rounded-lg p-1' time={.5}/> 
+					<NavLinks path={'/#about'} title={'About'} className = 'hover:bg-gray-600 bg-opacity-10 rounded-lg p-1' time={.6} /> 
+					<NavLinks path={'/#project'} title={'Projects'} className = 'hover:bg-gray-600 bg-opacity-10 rounded-lg p-1' time={.7} /> 
+					<NavLinks path={'/#contacts'} title={'Contacts'} className = 'hover:bg-gray-600 bg-opacity-10 rounded-lg p-1' time={.8}/>
 				</div>
 				<BiMenuAltRight
 					className='cursor-pointer hidden sm:block z-[51]'

@@ -17,7 +17,7 @@ const About = () => {
 			</h3>
 			</Parallax>
 			
-			<div className='container h-full flex flex-col space-y-12'>
+			<div className='container h-full flex flex-col  space-y-12'>
 				<p className='w-[75%] ml-11 sm:mx-auto text-justify sm:text-left text-xl sm:text-base mt-14'>
 					I am John Henrich Dela Peña currently studying at Bataan Peninsula
 					State University taking course of Computer Science major in Network
