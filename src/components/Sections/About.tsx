@@ -9,7 +9,7 @@ import { Parallax } from 'react-scroll-parallax'
 const About = () => {
 	let id = 20
 	return (
-		<section className='w-full min-h-screen relative' id='about'>
+		<section className='w-full min-h-screen relative overflow-x-hidden' id='about'>
 			<Parallax
 			x={[-10, 3]}
             >
