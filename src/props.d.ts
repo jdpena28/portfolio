@@ -26,4 +26,6 @@ interface EachProject {
     hoverDesc: string
     github: string
     link: string
+    imgAOS: string
+    textAOS:string
 }

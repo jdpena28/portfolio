@@ -32,6 +32,8 @@ const Project = () => {
 							hoverDesc={e.hoverDesc}
 							github={e.github}
 							link={e.link}
+							imgAOS={e.imgAOS}
+							textAOS={e.textAOS}
 							key = {num+=1}
 						/>
 					)

@@ -93,6 +93,8 @@ export const project = [
 		hoverDesc: 'React.js, Typescript, Tailwind, RestAPI',
 		github:'https://github.com/jdpena28/covid19PH-infoboard',
 		link:'https://covid19-ph-infoboard.vercel.app',
+		imgAOS: 'fade-up-right',
+		textAOS: 'slide-right',
 	},
 	{
 		flex: 'flex-row-reverse',
@@ -107,5 +109,7 @@ export const project = [
 		hoverDesc: 'React.js, Typescript, Tailwind',
 		github:'https://github.com/jdpena28/stick-your-note',
 		link:'https://stick-your-note.vercel.app',
+		imgAOS: 'fade-up-left',
+		textAOS: 'slide-left',
 	}
 ]
