@@ -3,6 +3,7 @@ interface NavLinks {
     title: string
     className?: string
     onClick?: () => void
+    delay?: number
 }
 interface Stacks {
     stacksTitle: string
