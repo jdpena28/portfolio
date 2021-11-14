@@ -14,7 +14,7 @@ import { duration } from '@mui/material'
 const App: React.FC = () => {
 	useEffect(() => {
 		AOS.init({
-			once: false,
+			once: true,
 			duration: 800,
 		})
 	},[])

@@ -4,7 +4,7 @@ import {AnimatePresence,motion} from 'framer-motion'
 import Link from 'next/link'
 import { BiMenuAltRight } from 'react-icons/bi'
 
-const NavLinks: React.FC<NavLinks> = ({ path, title,className, onClick,delay}) => {
+const NavLinks: React.FC<NavLinks> = ({ path, title, onClick,delay}) => {
 	return (
 		<Link href={path}>
 			<motion.a 

@@ -84,9 +84,7 @@ const Contact = () => {
 
 	return (
 		<section className='w-full h-screen relative' id='contacts'>
-			<Parallax
-			x={[-10, 3]}
-            >
+			<Parallax x={[-10, 3]}>
 			<h3 className='font-secondary opacity-[3%] text-9xl sm:text-7xl font-bold tracking-widest absolute top-0 sm:left-3 z-[1] cursor-default'>
 				contact
 			</h3>
