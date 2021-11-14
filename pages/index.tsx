@@ -10,7 +10,7 @@ import Project from '../src/components/Sections/Project'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { duration } from '@mui/material'
+
 const App: React.FC = () => {
 	useEffect(() => {
 		AOS.init({

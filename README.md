@@ -12,7 +12,7 @@ This is a the source code for my portfolio.
 &emsp;&emsp; ☑️ Create on Hover effect on project to see the link and what techstack it is\
 &emsp;&emsp; 🟦 Form Functionality at Contact Section\
 &emsp;&emsp; ☑️ Create a Parallex Effect when Scroll\
-&emsp;&emsp; 🟦 Create a Animate on Scroll Effect\
+&emsp;&emsp; ☑️ Create a Animate on Scroll Effect\
 &emsp;&emsp; ☑️ Add Snackbar or Toast on Submit at Contact Forms\
 &emsp;&emsp; 🟦 Add database for storing messages\
 
