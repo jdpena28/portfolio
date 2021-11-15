@@ -41,22 +41,31 @@ const Contact = () => {
 			</Parallax>
 			<div 
 			data-aos='fade-up'
-			className='container mt-14 h-[90%] mx-auto flex items-center justify-center'>
+			className='container mt-14 h-full mx-auto flex items-center justify-center'>
 				<div className='bg-gray-500 opacity-90 w-[75%] sm:w-full h-[69%] sm:h-full z-30 rounded-3xl relative flex sm:flex-col sm:justify-evenly sm:items-center justify-around'>
 					<div className='sm:hidden font-light absolute -bottom-3 right-0 w-80 h-80 flipImg'>
 						<Image src={'/contact-us.svg'} layout='fill' />
 					</div>
-					<form className='flex flex-col gap-y-7 my-auto sm:my-0'>
-						<div className="w-72 relative group">
-							<input type="text" id="email" required className="w-full h-14 px-4 outline-none peer bg-transparent border-2 rounded-lg"/>
-							<label htmlFor="email" className="transform transition-all absolute top-0 left-0 font-secondary h-full flex items-center pl-2 text-base group-focus-within:-top-1 group-focus-within:left-3 group-focus-within:text-base peer-valid:text-base group-focus-within:h-1/2 peer-valid:h-1/2 group-focus-within:-translate-y-full peer-valid:-translate-y-full group-focus-within:pl-0 peer-valid:pl-0">Email*</label>
+					<form className='flex flex-col gap-y-1 my-auto sm:my-0 font-primary'>
+						<div className='flex flex-col gap-y-1'>
+							<label htmlFor="email" className='font-medium text-lg ml-1'>Email*</label>
+							<input 
+							className='w-72 sm:w-96 h-12 pl-2 outline-none text-white placeholder-gray-300 rounded-md bg-transparent border-[1px] border-white'
+							type="text" id='email' required placeholder='johndoe@email.com' />
 						</div>
-						<div className="w-72 relative group">
-							<input type="text" id="name"  className="w-full h-14 px-4 outline-none peer bg-transparent border-2 rounded-lg"/>
-							<label htmlFor="name" className="transform transition-all absolute top-0 bottom-0 my-auto left-0 font-secondary h-full flex  pl-2 text-base group-focus-within:-top-6 group-focus-within:left-3 group-focus-within:text-base peer-valid:text-base group-focus-within:h-1/2 peer-valid:h-1/2 group-focus-within:-translate-y-full  group-focus-within:pl-0 ">Name</label>
+						<div className='flex flex-col gap-y-1'>
+							<label htmlFor="name" className='font-medium text-lg ml-1'>Name</label>
+							<input 
+							className='w-72 sm:w-96  h-12 pl-2 outline-none text-white placeholder-gray-300 rounded-md bg-transparent border-[1px] border-white '
+							type="text" id='name' placeholder='John Doe Nutz' />
 						</div>
-					</form>
-					<div className='mt-5 font-normal'>
+						<div className='flex flex-col gap-y-1'>
+							<label htmlFor="message" className='font-medium text-lg ml-1'>Message*</label>
+							<textarea className='text-base text-black placeholder-gray-600 outline-none rounded-md p-1 text-size' placeholder='Your Message' name="message" id="message" required cols={25} rows={8}></textarea>
+						</div>
+						<button type="button" className='w-72 sm:w-96  bg-blue-500 text-white h-9 rounded-sm mt-3 transition-colors active:bg-blue-600 '>Submit</button>
+					</form> 
+					<div className='mt-6 font-normal'>
 						<h4 className='text-2xl font-medium mb-2'>Interested in Working?</h4>
 						<GrMail size={18} className = 'inline ml-3'/><p className='inline text-sm'>&emsp;johnhenrich1128@gmail.com</p><br/>
 						<RiContactsBookFill size={18} className='inline ml-3'/><p className='inline text-sm'>&emsp;+639468083171</p><br/>
