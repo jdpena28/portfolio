@@ -19,5 +19,6 @@ html {
 @layer utilities {
     .text-size::placeholder{
       font-size: 1rem;
+      font-weight: 300;
     }
   }

@@ -50,20 +50,20 @@ const Contact = () => {
 						<div className='flex flex-col gap-y-1'>
 							<label htmlFor="email" className='font-medium text-lg ml-1'>Email*</label>
 							<input 
-							className='w-72 sm:w-96 h-12 pl-2 outline-none text-white placeholder-gray-300 rounded-md bg-transparent border-[1px] border-white'
+							className='w-72 sm:w-96 h-12 pl-2 font-light outline-none text-white placeholder-gray-300 rounded-md bg-transparent border-[1px] border-white'
 							type="text" id='email' required placeholder='johndoe@email.com' />
 						</div>
 						<div className='flex flex-col gap-y-1'>
 							<label htmlFor="name" className='font-medium text-lg ml-1'>Name</label>
 							<input 
-							className='w-72 sm:w-96  h-12 pl-2 outline-none text-white placeholder-gray-300 rounded-md bg-transparent border-[1px] border-white '
-							type="text" id='name' placeholder='John Doe Nutz' />
+							className='w-72 sm:w-96  h-12 pl-2 font-light outline-none text-white placeholder-gray-300 rounded-md bg-transparent border-[1px] border-white '
+							type="text" id='name' placeholder='John Doe ' />
 						</div>
 						<div className='flex flex-col gap-y-1'>
 							<label htmlFor="message" className='font-medium text-lg ml-1'>Message*</label>
 							<textarea className='text-base text-black placeholder-gray-600 outline-none rounded-md p-1 text-size' placeholder='Your Message' name="message" id="message" required cols={25} rows={8}></textarea>
 						</div>
-						<button type="button" className='w-72 sm:w-96  bg-blue-500 text-white h-9 rounded-sm mt-3 transition-colors active:bg-blue-600 '>Submit</button>
+						<button type="button" className='w-72 sm:w-96  bg-blue-500 text-white h-9 font-medium rounded-sm mt-3 transition-colors active:bg-blue-600 '>Submit</button>
 					</form> 
 					<div className='mt-6 font-normal'>
 						<h4 className='text-2xl font-medium mb-2'>Interested in Working?</h4>
