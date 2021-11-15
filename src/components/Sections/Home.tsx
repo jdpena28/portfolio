@@ -5,7 +5,7 @@ import {motion} from 'framer-motion'
 
 const variants = {
     initialSlide:{
-        x: '-50vw',
+        x: '-100vw',
     },
     initialImg:{
         x: '150vw',

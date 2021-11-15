@@ -19,8 +19,7 @@ This is a the source code for my portfolio.
 
 #### Libraries Used
 * React Icons
-* Material-UI
-* Emotion.sh
+
 
 
 

@@ -3,62 +3,12 @@ import Image from 'next/image'
 import React, {useRef,useState} from 'react'
 import {Parallax} from 'react-scroll-parallax'
 
-import { TextField, Button,styled} from '@mui/material'
-import Snackbar from '@mui/material/Snackbar';
-import MuiAlert, { AlertProps } from '@mui/material/Alert';
-
 // React-Icons
 import {GrMail} from 'react-icons/gr'
 import {RiContactsBookFill} from 'react-icons/ri'
 import {IoLocationSharp} from 'react-icons/io5'
 
-//#region textfilled styles
-const Multilines = styled(TextField)({
-	'& .MuiFilledInput-root': {
-		border: '1px solid white',
-		overflow: 'hidden',
-		borderRadius: 4,
-		backgroundColor: '#f8f8ff',
-	  },
-})
 
-
-const ValidationTextField = styled(TextField)({
-	'& .MuiOutlinedInput-root': {
-	  '& fieldset': {
-		borderColor: '#f5f5f5',
-	  },
-	  '&.Mui-focused fieldset': {
-		borderColor: '#f8f8ff',
-	  },
-	  '&:hover fieldset': {
-		borderColor: '#f8f8ff',
-	  },
-	  '& input': {
-		  color: '#f8f8ff'
-	  },
-	},
-	'& input:valid:focus + fieldset': {
-	  borderLeftWidth: 4,
-	  padding: '4px !important', // override inline-style
-	},
-	' & label.Mui-focused': { 
-	  color: '#f8f8ff'
-	},
-	' & label': {
-	  color: '#f8f8ff'
-	},
-  });
-//#endregion
-
-//#region Alert & Snackbar Props
-const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
-	props,
-	ref,
-  ) {
-	return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
-  });
-//#endregion
 
 
 
@@ -96,31 +46,15 @@ const Contact = () => {
 					<div className='sm:hidden font-light absolute -bottom-3 right-0 w-80 h-80 flipImg'>
 						<Image src={'/contact-us.svg'} layout='fill' />
 					</div>
-					<form className='flex flex-col gap-y-3 my-auto sm:my-0'>
-						<ValidationTextField
-							className='w-72'
-							label='Email'
-							variant='outlined'
-							type = 'email'
-							required
-						/>
-						<ValidationTextField className='w-72' label='Name' variant='outlined' />
-						<Multilines
-							className='w-72'
-							label='Message'
-							multiline
-							rows={6}
-							variant='filled'
-							required
-						/>
-						<Button className = 'w-72' variant='contained' size='medium' onClick = {handleClick}>
-							Send
-						</Button>
-						<Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
-        					<Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
-          						Sorry this Function is not working right now :&#40;
-        					</Alert>
-      					</Snackbar>
+					<form className='flex flex-col gap-y-7 my-auto sm:my-0'>
+						<div className="w-72 relative group">
+							<input type="text" id="email" required className="w-full h-14 px-4 outline-none peer bg-transparent border-2 rounded-lg"/>
+							<label htmlFor="email" className="transform transition-all absolute top-0 left-0 font-secondary h-full flex items-center pl-2 text-base group-focus-within:-top-1 group-focus-within:left-3 group-focus-within:text-base peer-valid:text-base group-focus-within:h-1/2 peer-valid:h-1/2 group-focus-within:-translate-y-full peer-valid:-translate-y-full group-focus-within:pl-0 peer-valid:pl-0">Email*</label>
+						</div>
+						<div className="w-72 relative group">
+							<input type="text" id="name"  className="w-full h-14 px-4 outline-none peer bg-transparent border-2 rounded-lg"/>
+							<label htmlFor="name" className="transform transition-all absolute top-0 bottom-0 my-auto left-0 font-secondary h-full flex  pl-2 text-base group-focus-within:-top-6 group-focus-within:left-3 group-focus-within:text-base peer-valid:text-base group-focus-within:h-1/2 peer-valid:h-1/2 group-focus-within:-translate-y-full  group-focus-within:pl-0 ">Name</label>
+						</div>
 					</form>
 					<div className='mt-5 font-normal'>
 						<h4 className='text-2xl font-medium mb-2'>Interested in Working?</h4>
