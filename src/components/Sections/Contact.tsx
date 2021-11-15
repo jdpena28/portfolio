@@ -8,30 +8,13 @@ import {GrMail} from 'react-icons/gr'
 import {RiContactsBookFill} from 'react-icons/ri'
 import {IoLocationSharp} from 'react-icons/io5'
 
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 
 
 const Contact = () => {
-  //#region alert at snackbar
-  const [open, setOpen] = useState<boolean>(false)
-
-  const handleClick = () => {
-    setOpen(true);
-  };
-
-  const handleClose = (event?: React.SyntheticEvent, reason?: string) => {
-    if (reason === 'clickaway') {
-      return;
-    }
-
-    setOpen(false);
-  };
-  //#endregion
-
-
-
-
+	const notify = () => toast.error("Sorry this Function is not Working :<");
 	return (
 		<section className='w-full h-screen relative' id='contacts'>
 			<Parallax x={[-10, 3]}>
@@ -63,7 +46,16 @@ const Contact = () => {
 							<label htmlFor="message" className='font-medium text-lg ml-1'>Message*</label>
 							<textarea className='text-base text-black placeholder-gray-600 outline-none rounded-md p-1 text-size' placeholder='Your Message' name="message" id="message" required cols={25} rows={8}></textarea>
 						</div>
-						<button type="button" className='w-72 sm:w-96  bg-blue-500 text-white h-9 font-medium rounded-sm mt-3 transition-colors active:bg-blue-600 '>Submit</button>
+						<button type="button" onClick={notify} className='w-72 sm:w-96  bg-blue-500 text-white h-9 font-medium rounded-sm mt-3 transition-colors active:bg-blue-600 '>Submit</button>
+						<ToastContainer
+						position="bottom-center"
+						toastClassName={'sm:w-[75%] mx-auto'}
+						autoClose={2000}
+						closeOnClick
+						pauseOnFocusLoss
+						draggable
+						pauseOnHover
+						/>
 					</form> 
 					<div className='mt-6 font-normal'>
 						<h4 className='text-2xl font-medium mb-2'>Interested in Working?</h4>
