@@ -33,7 +33,7 @@ const EachProject:React.FC<EachProject> = ({flex,title,desc,src,color,num,titleC
 				onMouseEnter={()=>setImgHover(true)} onMouseLeave={()=>setImgHover(false)} 
 				onClick ={()=>imgHover?setImgHover(false):setImgHover(true)}>
 					<Image src={src} width={600} height={315}/>
-					<p className={`sm:hidden absolute -bottom-3 z-20 underline text-8xl  font-secondary font-semibold ${color}`}>{num}</p>
+					<p className={`sm:hidden absolute -bottom-3 z-20 underline text-8xl font-secondary font-semibold ${color}`}>{num}</p>
 					<AnimatePresence>			
 					{imgHover && 
 					<motion.div 
