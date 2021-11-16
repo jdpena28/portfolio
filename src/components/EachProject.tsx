@@ -7,6 +7,7 @@ import {AnimatePresence, motion} from 'framer-motion'
 
 const EachProject:React.FC<EachProject> = ({flex,title,desc,src,color,num,titleClass,descClass,hoverClass,hoverDesc,github,link,imgAOS,textAOS}) => {
 	const [imgHover,setImgHover] = useState<boolean>(false)
+
 	const variants = {
 		hidden: {
 				scale: 0
@@ -26,14 +27,13 @@ const EachProject:React.FC<EachProject> = ({flex,title,desc,src,color,num,titleC
 
 	return (
 		<div>
-			<div className = {`relative sm:block flex items-center gap-x-6 sm:space-y-3 ${flex} overflow-hidden`}>
+			<div className = {`relative sm:block flex items-center gap-x-6 sm:space-y-3 ${flex}`}>
 				<div 
 				data-aos={imgAOS}
-				className="relative z-20 h-full w-[full " 
+				className="relative z-20 h-full w-[full]" 
 				onMouseEnter={()=>setImgHover(true)} onMouseLeave={()=>setImgHover(false)} 
 				onClick ={()=>imgHover?setImgHover(false):setImgHover(true)}>
-					<Image src={src} width={600} height={315}/>
-					<p className={`sm:hidden absolute -bottom-3 z-20 underline text-8xl font-secondary font-semibold ${color}`}>{num}</p>
+					<Image src={src} width={600} height={315}/>		
 					<AnimatePresence>			
 					{imgHover && 
 					<motion.div 
@@ -53,13 +53,9 @@ const EachProject:React.FC<EachProject> = ({flex,title,desc,src,color,num,titleC
 					</motion.div>}
 					</AnimatePresence>
 				</div>
-                <h4 
-				data-aos = {textAOS}
-				className={`absolute sm:static z-30 font-secondary font-semibold text-5xl sm:text-3xl ${titleClass}`}>{title}</h4>
-                
-                <p 
-				data-aos = {textAOS}
-				className ={`text-xl sm:text-lg font-normal w-[30%] sm:w-full ${descClass}`}>{desc}</p>
+                <h4 data-aos = {textAOS} className={`absolute sm:static z-30 font-secondary font-semibold text-5xl sm:text-3xl ${titleClass}`}>{title}</h4>
+                <p data-aos={imgAOS} className={`sm:hidden absolute -bottom-3 z-20 underline text-8xl  font-secondary font-semibold ${color}`}>{num}</p>
+                <p data-aos = {textAOS} className ={`text-xl sm:text-lg font-normal w-[30%] sm:w-full ${descClass}`}>{desc}</p>
 			</div>
 
 		</div>
