@@ -8,6 +8,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<ParallaxProvider>
 			<Head>
+				<meta charSet='utf-8' />
+				<meta lang='en' />
 				<link rel='icon' href='/favicon.png' />
 				{/* <!-- Primary Meta Tags --> */}
 				<title>Portfolio | John Henrich Dela Peña</title>
