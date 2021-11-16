@@ -15,10 +15,13 @@ This is a the source code for my portfolio.
 &emsp;&emsp; ☑️ Create a Animate on Scroll Effect\
 &emsp;&emsp; ☑️ Add Snackbar or Toast on Submit at Contact Forms\
 &emsp;&emsp; 🟦 Add database for storing messages\
+&emsp;&emsp; 🟦 Add Custom ERROR 404 Page\
 
 
 #### Libraries Used
 * React Icons
+* Tippy.js
+* Toastify
 
 
 
