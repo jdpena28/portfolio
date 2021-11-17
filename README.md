@@ -16,6 +16,8 @@ This is a the source code for my portfolio.
 &emsp;&emsp; ☑️ Add Snackbar or Toast on Submit at Contact Forms\
 &emsp;&emsp; 🟦 Add database for storing messages\
 &emsp;&emsp; 🟦 Add Custom ERROR 404 Page\
+&emsp;&emsp; 🟦 Use firebase as Database\
+&emsp;&emsp; 🟦 Dedicated page for my Birthday\
 
 
 #### Libraries Used
