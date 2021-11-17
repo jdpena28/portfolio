@@ -31,7 +31,7 @@ const Contact = () => {
 					</div>
 					<form className='flex flex-col gap-y-1 my-auto sm:my-0 font-primary'>
 						<div className='flex flex-col gap-y-1'>
-							<label htmlFor="email" className='font-medium text-sm ml-1'>Email*</label>
+							<label htmlFor="email" className='font-medium  ml-1'>Email*</label>
 							<input 
 							className='w-72 h-10 pl-2 font-light text-sm outline-none text-white placeholder-gray-300 rounded-md bg-transparent border-[1px] border-white'
 							type="text" id='email' required placeholder='johndoe@email.com' />
@@ -43,7 +43,7 @@ const Contact = () => {
 							type="text" id='name' placeholder='John Doe ' />
 						</div>
 						<div className='flex flex-col gap-y-1'>
-							<label htmlFor="message" className='font-medium text-sm ml-1'>Message*</label>
+							<label htmlFor="message" className='font-medium  ml-1'>Message*</label>
 							<textarea className='text-black placeholder-gray-600 outline-none rounded-md p-1 text-size' placeholder='Your Message' name="message" id="message" required cols={25} rows={8}></textarea>
 						</div>
 						<button type="button" onClick={notify} className='w-72  bg-blue-500 text-white h-9 font-medium rounded-sm mt-3 transition-colors active:bg-blue-600 '>Submit</button>
@@ -57,7 +57,7 @@ const Contact = () => {
 						pauseOnHover
 						/>
 					</form> 
-					<div className='mt-6 sm:mt-0 font-normal'>
+					<div className='mt-8 sm:mt-0 font-normal'>
 						<h4 className='text-2xl font-medium mb-2'>Interested in Working?</h4>
 						<GrMail size={18} className = 'inline ml-3'/><p className='inline text-sm'>&emsp;johnhenrich1128@gmail.com</p><br/>
 						<RiContactsBookFill size={18} className='inline ml-3'/><p className='inline text-sm'>&emsp;+639468083171</p><br/>
