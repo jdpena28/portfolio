@@ -25,7 +25,7 @@ const Contact = () => {
 			<div 
 			data-aos='fade-up'
 			className='container mt-14 h-full mx-auto flex items-center justify-center'>
-				<div className='bg-gray-500 opacity-90 w-[75%] sm:w-full h-[69%] sm:h-[80%] z-30 rounded-3xl relative flex sm:flex-col sm:justify-evenly sm:items-center justify-around'>
+				<div className='bg-gray-500 opacity-90 w-[75%] sm:w-full h-[69%] sm:h-[full] z-30 rounded-3xl relative flex sm:flex-col sm:justify-evenly sm:items-center justify-around'>
 					<div className='sm:hidden font-light absolute -bottom-3 right-0 w-80 h-80 flipImg'>
 						<Image src={'/contact-us.svg'} layout='fill' />
 					</div>
@@ -33,20 +33,20 @@ const Contact = () => {
 						<div className='flex flex-col gap-y-1'>
 							<label htmlFor="email" className='font-medium  ml-1'>Email*</label>
 							<input 
-							className='w-72 h-10 pl-2 font-light text-sm outline-none text-white placeholder-gray-300 rounded-md bg-transparent border-[1px] border-white'
+							className='w-72 sm:w-96 h-10 pl-2 font-light text-sm outline-none text-white placeholder-gray-300 rounded-md bg-transparent border-[1px] border-white'
 							type="text" id='email' required placeholder='johndoe@email.com' />
 						</div>
 						<div className='flex flex-col gap-y-1'>
 							<label htmlFor="name" className='font-medium text-sm ml-1'>Name</label>
 							<input 
-							className='w-72  h-12 pl-2 font-light text-sm outline-none text-white placeholder-gray-300 rounded-md bg-transparent border-[1px] border-white '
+							className='w-72 sm:w-96  h-12 pl-2 font-light text-sm outline-none text-white placeholder-gray-300 rounded-md bg-transparent border-[1px] border-white '
 							type="text" id='name' placeholder='John Doe ' />
 						</div>
 						<div className='flex flex-col gap-y-1'>
 							<label htmlFor="message" className='font-medium  ml-1'>Message*</label>
 							<textarea className='text-black placeholder-gray-600 outline-none rounded-md p-1 text-size' placeholder='Your Message' name="message" id="message" required cols={25} rows={8}></textarea>
 						</div>
-						<button type="button" onClick={notify} className='w-72  bg-blue-500 text-white h-9 font-medium rounded-sm mt-3 transition-colors active:bg-blue-600 '>Submit</button>
+						<button type="button" onClick={notify} className='w-72 sm:w-96  bg-blue-500 text-white h-9 font-medium rounded-sm mt-3 transition-colors active:bg-blue-600 '>Submit</button>
 						<ToastContainer
 						position="bottom-center"
 						toastClassName={'sm:w-[90%] mx-auto'}
