@@ -7,7 +7,6 @@ import Contact from '../src/components/Sections/Contact'
 import Footer from '../src/components/Sections/Footer'
 import Home from '../src/components/Sections/Home'
 import Project from '../src/components/Sections/Project'
-
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -20,7 +19,7 @@ const App: React.FC = () => {
 	},[])
 
 	 return (
-		<div className='font-primary text-gray-200 bg-gray-900 mx-12 sm:mx-3 space-y-11'>
+		<div className='font-primary text-gray-200 mx-12 sm:mx-3 space-y-11'>
 			<Navbar />
 			<Home />
 			<About />
