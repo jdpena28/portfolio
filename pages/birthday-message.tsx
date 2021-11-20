@@ -5,13 +5,13 @@ const birthdayMessage = () => {
     return (
         <section className='h-screen mx-12 text-white font-secondary'>
             <Navbar/>
-            <div className='container flex '>
+            <div className='container flex items-center'>
                 <div>
                     <h5 className='text-3xl font-bold'>Hi👋, Thank you for the Greetings</h5>
-                    <p className='text-xl font-light w-[88%]'>I have some extra wishes for my <b>Birthday</b>. This will help me to attain my dream <u>Career</u></p>
+                    <p className='text-xl font-light w-[88%] mb-8'>I have some extra wishes for my <b>Birthday</b>. This will help me to attain my dream <u>Career</u></p>
                     <Image src='/Birthday/Gcash.png' width={260} height={329}/>
                 </div>
-                <div className='grid grid-cols-4 grid-rows-4 gap-3 w-full h-[87vh] text-center align-middle'>
+                <div className='grid grid-cols-4 grid-rows-4 gap-3 w-full h-[87vh] text-black font-medium'>
                     {/* gift-box */}
                     <div className='bg-[#36F88A] w-full h-full col-span-2 row-span-2 rounded-3xl flex justify-center items-center'>
                         <Image src="/Birthday/gift-box.png" width={165} height={181}/>
@@ -24,8 +24,9 @@ const birthdayMessage = () => {
                     <div className='bg-[#F7AFE7] w-full h-full col-start-3 row-start-2 col-span-1 rows-span-1 rounded-3xl flex justify-center items-center'>
                         <Image src="/Birthday/Webcam.png" width={84} height={73}/>
                     </div>
-                    <div className='bg-[#F7AFE7] w-full h-full col-start-4 row-start-2 col-span-1 rows-span-1 rounded-3xl flex justify-center items-center'>
-                        
+                    <div className='bg-[#F7AFE7] w-full h-full col-start-4 row-start-2 col-span-1 rows-span-1 rounded-3xl space-y-1'>
+                        <p className='text-lg pl-5 pt-3'>Xiaovv <br /> Webcam</p>
+                        <p className='text-lg pl-5'>₱749.00</p>
                     </div>
                     {/* Message */}
                     <div className='bg-[#682AE9] w-full h-full row-start-3 col-span-1 row-span-2 rounded-3xl flex justify-center items-center'>
