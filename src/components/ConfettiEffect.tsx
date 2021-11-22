@@ -14,7 +14,7 @@ const ConfettiEffect = () => {
     <Confetti
       className="!z-[54]"
       recycle={recycle}
-      width={width - 30}
+      width={width - 18}
       height={height}
       numberOfPieces={250}
     />
