@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 import ConfettiEffect from '../src/components/ConfettiEffect';
+import {AiFillHome} from 'react-icons/ai'
+import Link from 'next/link';
 
 
 const birthdayMessage = () => {
@@ -10,12 +12,19 @@ const birthdayMessage = () => {
     return (
         <>
            <ConfettiEffect/>
-            <section id='wishlist' className='h-screen mx-12 text-white font-secondary'>
-                <Navbar/>
-                <div className='container mx-auto flex sm:flex-col  items-center'>
+            <section id='wishlist' className='mx-12 sm:mx-3 text-white font-secondary'>
+                <div className='sm:hidden'>
+                    <Navbar/>
+                </div>
+                <nav className='hidden sm:block relative p-10'>
+                    <Link href='/'>
+                    <AiFillHome size={24} className='absolute top-1 right-2 cursor-pointer' />
+                    </Link>
+                </nav>
+                <div className='container mx-auto flex sm:flex-col sm:gap-y-12 sm:justify-between  items-center'>
                     <div className='sm:flex '>
                         <div>
-                            <h5 className='text-3xl sm:text-lg font-bold'>Hi👋, Thank you for the Greetings</h5>
+                            <h5 className='text-3xl sm:text-lg sm:w-[50%] font-bold'>Hi👋, Thank you for the Greetings</h5>
                             <p className='text-xl sm:text-base font-light w-[88%] mb-8'>I have some extra wishes for my <b>Birthday</b>. This will help me to attain my dream <u>Career</u></p>
                         </div>
                         <Image src='/Birthday/Gcash.png' width={260} height={329}/>
@@ -38,8 +47,8 @@ const birthdayMessage = () => {
                             <Image src="/Birthday/Webcam.png" width={84} height={73}/>
                         </div>
                         <div className='bg-[#F7AFE7] w-full h-full col-start-4 row-start-2 col-span-1 rows-span-1 rounded-3xl space-y-1'>
-                            <p className='text-lg pl-5 pt-4'>Xiaovv <br /> Webcam</p>
-                            <p className='text-lg pl-5'>₱749.00</p>
+                            <p className='text-lg pl-5 sm:pl-1 pt-4'>Xiaovv <br /> Webcam</p>
+                            <p className='text-lg pl-5 sm:pl-1'>₱749.00</p>
                         </div>
                         {/* Message */}
                         <div className='bg-[#682AE9] w-full h-full row-start-3 col-span-1 row-span-2 rounded-3xl flex justify-center items-center'>
@@ -56,10 +65,10 @@ const birthdayMessage = () => {
                     </div>
                 </div>
             </section>
-            <section id='message' className='h-screen mx-12 font-secondary text-white'>
-                <div className='container mx-auto px-32'>
-                        <p className='mt-40 mb-4 font-bold text-3xl'>Leave a message for me.</p>
-                        <div className='bg-gray-300 h-full rounded-lg mx-auto py-5'>
+            <section id='message' className='h-screen w-full font-secondary text-white'>
+                <div className='container mx-auto px-32 sm:px-3'>
+                        <p className='mt-40 mb-4 font-bold text-3xl sm:text-lg'>Leave a message for me.</p>
+                        <div className='bg-gray-300 h-full w-full rounded-lg mx-auto py-5'>
                             <form className='flex flex-col items-center gap-y-1 sm:my-0'>
                                 <div className='flex flex-col gap-y-1 w-full px-6'>
                                     <label htmlFor="name" className='font-medium  ml-1 text-black text-xl'>Name</label>
@@ -68,8 +77,8 @@ const birthdayMessage = () => {
                                     type="text" id='name' placeholder='(Optional)' />
                                 </div>
                                 <div className='flex flex-col gap-y-1 w-full px-6'>
-                                    <label htmlFor="message" className='font-medium  ml-1 text-black text-xl'>Message*</label>
-                                    <textarea className='text-black placeholder-gray-400 bg-[#F6F8FC] outline-none rounded-md p-1' placeholder='Birthday Message' name="message" id="message" required cols={25} rows={8}></textarea>
+                                    <label htmlFor="birthdayMessage" className='font-medium  ml-1 text-black text-xl'>Message*</label>
+                                    <textarea className='text-black placeholder-gray-400 bg-[#F6F8FC] outline-none rounded-md p-1' placeholder='Birthday Message' name="birthdayMessage" id="birthdayMessage" required cols={25} rows={8}></textarea>
                                 </div>
                                 <div className='px-6 w-full mt-3'>
                                     <button type="button" onClick={notify} className='w-full  bg-blue-500 text-white h-9  rounded-sm transition-colors active:bg-blue-600 '>Submit</button>
