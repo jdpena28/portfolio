@@ -4,6 +4,7 @@ import { useWindowSize } from "usehooks-ts";
 
 const ConfettiEffect = () => {
   const [recycle, setRecycle] = useState<boolean>(true);
+  const [unMount, setUnMount] = useState<boolean>(false);
   useEffect(() => {
     setTimeout(() => {
       setRecycle(false);
@@ -11,13 +12,16 @@ const ConfettiEffect = () => {
   }, []);
   const { width, height } = useWindowSize();
   return (
-    <Confetti
-      className="!z-[54]"
-      recycle={recycle}
-      width={width - 18}
-      height={height}
-      numberOfPieces={250}
-    />
+    <>
+    {!unMount&&<Confetti
+        className="!z-[54]"
+        recycle={recycle}
+        width={width - 18}
+        height={height}
+        numberOfPieces={250}
+        onConfettiComplete={() => {setUnMount(true); console.log("Component Unmounted")}}
+      />}
+    </>
   );
 };
 

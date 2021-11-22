@@ -5,38 +5,41 @@ import 'react-toastify/dist/ReactToastify.min.css';
 import ConfettiEffect from '../src/components/ConfettiEffect';
 import {AiFillHome} from 'react-icons/ai'
 import Link from 'next/link';
+import { useIsFirstRender } from 'usehooks-ts';
+import Footer from '../src/components/Sections/Footer';
 
 
 const birthdayMessage = () => {
     const notify = () => toast.error("Sorry this Function is not Working :<");
+
     return (
-        <>
+        <div className='text-white font-primary'>
            <ConfettiEffect/>
-            <section id='wishlist' className='mx-12 sm:mx-3 text-white font-secondary'>
+            <section id='wishlist' className='mx-12 sm:mx-3 font-secondary'>
                 <div className='sm:hidden'>
                     <Navbar/>
                 </div>
                 <nav className='hidden sm:block relative p-10'>
                     <Link href='/'>
-                    <AiFillHome size={24} className='absolute top-1 right-2 cursor-pointer' />
+                        <AiFillHome size={24} className='absolute top-1 right-2 cursor-pointer' />
                     </Link>
                 </nav>
                 <div className='container mx-auto flex sm:flex-col sm:gap-y-12 sm:justify-between  items-center'>
-                    <div className='sm:flex '>
-                        <div>
-                            <h5 className='text-3xl sm:text-lg sm:w-[50%] font-bold'>Hi👋, Thank you for the Greetings</h5>
-                            <p className='text-xl sm:text-base font-light w-[88%] mb-8'>I have some extra wishes for my <b>Birthday</b>. This will help me to attain my dream <u>Career</u></p>
+                    <div className='sm:flex justify-between'>
+                        <div className='sm:w-[70%]'>
+                            <h5 className='text-3xl sm:text-lg font-bold'>Hi👋, Thank you for the Greetings</h5>
+                            <p className='text-xl sm:text-sm font-light sm:w-[60%] mb-8'>I have some extra wishes for my <b>Birthday</b>. This will help me to attain my dream <u>Career</u></p>
                         </div>
                         <Image src='/Birthday/Gcash.png' width={260} height={329}/>
                     </div>
-                    <div className='grid grid-cols-4 grid-rows-4 gap-3 w-full h-[87vh] text-black font-medium'>
+                    <div className='grid grid-cols-4 grid-rows-4 gap-3 sm:gap-1 w-full h-[87vh] text-black font-medium'>
                         {/* gift-box */}
                         <div className='bg-[#36F88A] w-full h-full col-span-2 row-span-2 rounded-3xl flex justify-center items-center'>
                             <Image src="/Birthday/gift-box.png" width={165} height={181}/>
                         </div>
                         {/* Keyboard */}
                         <div className='bg-[#543BFE] w-full h-full row-start-1 col-start-3 col-span-3 rows-span-1 rounded-3xl flex flex-col justify-around'>
-                            <Image className='object-contain' src="/Birthday/keyboard.png" width={214} height={70}/>
+                            <Image className='object-contain sm:object-fill' src="/Birthday/keyboard.png" width={214} height={70}/>
                             <div className='flex justify-around'>
                                 <p>Ajazz KB</p>
                                 <p>₱1079.00</p>
@@ -52,7 +55,7 @@ const birthdayMessage = () => {
                         </div>
                         {/* Message */}
                         <div className='bg-[#682AE9] w-full h-full row-start-3 col-span-1 row-span-2 rounded-3xl flex justify-center items-center'>
-                            <p className='text-gray-300 w-[80%] font-bold text-xl'>HAPPY TO HAVE ATLEAST ONE OF THESE</p>
+                            <p className='text-gray-300 w-[80%] sm:w-full font-bold text-xl sm:text-lg sm:ml-2'>HAPPY TO HAVE ATLEAST ONE OF THESE</p>
                         </div>
                         {/* Monitor */}
                         <div className='bg-[#DF398D] w-full h-full row-start-3 col-span-4 row-span-2 rounded-3xl flex flex-col justify-around'>
@@ -96,7 +99,8 @@ const birthdayMessage = () => {
                         </div>
                     </div>
             </section>
-        </>
+            <Footer/>
+        </div>
     )
 }
 
