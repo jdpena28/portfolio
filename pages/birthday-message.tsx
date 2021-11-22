@@ -2,12 +2,15 @@ import Navbar from '../src/components/Navbar'
 import Image from 'next/image'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
+import ConfettiEffect from '../src/components/ConfettiEffect';
+
 
 const birthdayMessage = () => {
     const notify = () => toast.error("Sorry this Function is not Working :<");
     return (
         <>
-            <section className='h-screen mx-12 text-white font-secondary'>
+           <ConfettiEffect/>
+            <section id='wishlist' className='h-screen mx-12 text-white font-secondary'>
                 <Navbar/>
                 <div className='container mx-auto flex sm:flex-col  items-center'>
                     <div className='sm:flex '>
@@ -53,15 +56,36 @@ const birthdayMessage = () => {
                     </div>
                 </div>
             </section>
-            <section className='h-screen mx-12 font-secondary text-white'>
-                <div className='container mx-auto'>
-                    <p className='font-bold text-3xl'>Leave a message for me.</p>
-                    <div className='bg-gray-300 w-full h-[50vh] rounded-lg mx-auto'>
-                        <form className='flex flex-col gap-y-1 my-auto sm:my-0'>
-                       
-                        </form>
+            <section id='message' className='h-screen mx-12 font-secondary text-white'>
+                <div className='container mx-auto px-32'>
+                        <p className='mt-40 mb-4 font-bold text-3xl'>Leave a message for me.</p>
+                        <div className='bg-gray-300 h-full rounded-lg mx-auto py-5'>
+                            <form className='flex flex-col items-center gap-y-1 sm:my-0'>
+                                <div className='flex flex-col gap-y-1 w-full px-6'>
+                                    <label htmlFor="name" className='font-medium  ml-1 text-black text-xl'>Name</label>
+                                    <input 
+                                    className='w-full h-12 pl-2 font-normal text-base outline-none text-black placeholder-gray-400 rounded-md bg-[#F6F8FC]'
+                                    type="text" id='name' placeholder='(Optional)' />
+                                </div>
+                                <div className='flex flex-col gap-y-1 w-full px-6'>
+                                    <label htmlFor="message" className='font-medium  ml-1 text-black text-xl'>Message*</label>
+                                    <textarea className='text-black placeholder-gray-400 bg-[#F6F8FC] outline-none rounded-md p-1' placeholder='Birthday Message' name="message" id="message" required cols={25} rows={8}></textarea>
+                                </div>
+                                <div className='px-6 w-full mt-3'>
+                                    <button type="button" onClick={notify} className='w-full  bg-blue-500 text-white h-9  rounded-sm transition-colors active:bg-blue-600 '>Submit</button>
+                                </div>
+                                <ToastContainer
+                                position="bottom-center"
+                                toastClassName={'sm:w-[90%] mx-auto'}
+                                autoClose={2000}
+                                closeOnClick
+                                pauseOnFocusLoss
+                                draggable
+                                pauseOnHover
+                                />
+                            </form>
+                        </div>
                     </div>
-                </div>
             </section>
         </>
     )
