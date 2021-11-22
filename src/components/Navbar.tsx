@@ -70,9 +70,7 @@ const Navbar: React.FC = () => {
 
 	
 	return (
-
-		
-		<nav className='sm:sticky top-0 z-50 bg-gray-900'>
+		<nav className='sm:sticky top-0 z-50 bg-gray-900 text-gray-200 mx-12 sm:mx-3'>
 			<div className='flex justify-between items-center text-lg py-3'>
 				<motion.svg  
 				variants={svgVariants}

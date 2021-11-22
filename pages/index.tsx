@@ -19,14 +19,16 @@ const App: React.FC = () => {
 	},[])
 
 	 return (
-		<div className='font-primary text-gray-200 mx-12 sm:mx-3 space-y-11'>
-			<Navbar />
+	 <>
+		<Navbar />
+		<div className='overflow-x-hidden font-primary text-gray-200 mx-12 sm:mx-3 space-y-11'>
 			<Home />
 			<About />
 			<Project />
 			<Contact />
 			<Footer />
 		</div>
+	</>
 	)
 }
 
