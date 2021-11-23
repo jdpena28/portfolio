@@ -2,12 +2,12 @@ import {initializeApp} from 'firebase/app';
 import {getFirestore} from 'firebase/firestore';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDqPmB95KEfi-iABS3CbWbUDWesRCqBrxk",
-    authDomain: "portfolio-database-70828.firebaseapp.com",
-    projectId: "portfolio-database-70828",
-    storageBucket: "portfolio-database-70828.appspot.com",
-    messagingSenderId: "752340857526",
-    appId: "1:752340857526:web:a06469bb8aa602a6222c17"
+    apiKey: process.env.NEXT_PUBLIC_APIKEY,
+    authDomain: process.env.NEXT_PUBLIC_AUTHDOMAIN,
+    projectId: process.env.NEXT_PUBLIC_PROJECTID,
+    storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_MESSAGE_ID,
+    appId: process.env.NEXT_PUBLIC_APPID,
 };
 
 const app = initializeApp(firebaseConfig);
