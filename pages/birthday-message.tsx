@@ -16,12 +16,12 @@ import { addDoc,collection } from "firebase/firestore";
 
 const birthdayMessage = () => {
   const sucessToast = () => toast.success("Message Sent");
-  const errorToast = () => toast.error("Message Not Sent");
+  const errorToast = () => toast.error("Aww sad :< Message not sent to celebrant");
   
   const [birthdayMessage, setBirthdayMessage] = useState<birthdayMessage|null>(null);
   const birthdayCollection = collection(db,"Birthday_Messages")
 
-  const addBirthdayMessage = async (e:FormEvent) => {
+  const addBirthdayMessage = async (e:FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     await addDoc(birthdayCollection,{birthday_name: birthdayMessage?.name,birthday_message: birthdayMessage?.message})
     .then(()=>{
