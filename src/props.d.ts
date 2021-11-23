@@ -30,3 +30,8 @@ interface EachProject {
     imgAOS: string
     textAOS:string
 }
+
+interface birthdayMessage {
+    name?: string,
+    message?: string,
+}
