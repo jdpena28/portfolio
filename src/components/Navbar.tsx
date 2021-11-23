@@ -70,8 +70,8 @@ const Navbar: React.FC = () => {
 
 	
 	return (
-		<nav className='sm:sticky top-0 z-50 bg-gray-900 text-gray-200 mx-12 sm:mx-3 overflow-x-hidden'>
-			<div className='flex justify-between items-center text-lg py-3'>
+		<nav className='sm:sticky top-0 z-50 bg-gray-900 text-gray-200 mx-12 sm:mx-3'>
+			<div className='flex justify-between items-center text-lg py-3 overflow-x-hidden'>
 				<motion.svg  
 				variants={svgVariants}
 				initial={'pathInitial'}
