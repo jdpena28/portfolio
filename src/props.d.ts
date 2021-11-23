@@ -35,3 +35,9 @@ interface birthdayMessage {
     name?: string,
     message?: string,
 }
+
+interface clientMessage {
+    clientName?: string,
+    clientEmail?: string,
+    clientMessage?: string,
+}
