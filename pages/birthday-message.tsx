@@ -52,18 +52,19 @@ const birthdayMessage = () => {
             />
           </Link>
         </nav>
-        <div className="container mx-auto flex sm:flex-col sm:gap-y-12 sm:justify-between items-center font-semibold">
+        <div className="container mx-auto flex sm:flex-col gap-x-6 sm:gap-y-12 sm:justify-between items-center font-semibold">
           <div className="sm:flex justify-between">
             <div className="sm:w-[70%]">
               <h5 className="text-3xl sm:text-lg font-bold">
                 Hi👋, Thank you for the Greetings
               </h5>
+              <br />
               <p className="text-xl sm:text-sm font-light sm:w-[60%] mb-8">
                 I have some extra wishes for my <b>Birthday</b>. This will help
                 me to attain my dream <u>Career</u>
               </p>
             </div>
-            <Image src="/Birthday/Gcash.png" width={260} height={329} />
+            <Image src="/Birthday/Gcash.png" width={275} height={348} />
           </div>
           <div className="grid grid-cols-4 grid-rows-4 gap-3 sm:gap-1 w-full h-[87vh] text-black font-medium">
             {/* gift-box */}
@@ -73,7 +74,7 @@ const birthdayMessage = () => {
             {/* Keyboard */}
             <div className="bg-[#543BFE] w-full h-full row-start-1 col-start-3 col-span-3 rows-span-1 rounded-3xl flex flex-col justify-around">
               <Image
-                className="object-contain sm:object-fill"
+                className="object-contain sm:object-none  "
                 src="/Birthday/keyboard.png"
                 width={214}
                 height={70}
@@ -95,7 +96,7 @@ const birthdayMessage = () => {
             </div>
             {/* Message */}
             <div className="bg-[#682AE9] w-full h-full row-start-3 col-span-1 row-span-2 rounded-3xl flex justify-center items-center">
-              <p className="text-gray-300 w-[80%] sm:w-full font-bold text-xl sm:text-lg sm:ml-2">
+              <p className="text-gray-300 w-[80%] sm:w-full font-bold text-xl sm:text-lg sm:ml-0.5">
                 HAPPY TO HAVE ATLEAST ONE OF THESE
               </p>
             </div>
