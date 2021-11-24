@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
 				variants={svgVariants}
 				initial={'pathInitial'}
 				animate={'pathVisible'}
-				className='stroke-current text-white'
+				className='stroke-current text-white z-[51]'
 				width="70" height="14" viewBox="0 0 70 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<motion.path variants={svgVariants} d="M9.03599 0.364014V8.96801C9.03599 10.3 8.65799 11.326 7.90199 12.046C7.15799 12.766 6.14999 13.126 4.87799 13.126C3.54599 13.126 2.47799 12.748 1.67399 11.992C0.869987 11.236 0.467987 10.162 0.467987 8.77001H3.52799C3.52799 9.29801 3.63599 9.70001 3.85199 9.97601C4.06799 10.24 4.37999 10.372 4.78799 10.372C5.15999 10.372 5.44799 10.252 5.65199 10.012C5.85599 9.77201 5.95799 9.42401 5.95799 8.96801V0.364014H9.03599Z"/>
 					<motion.path variants={svgVariants} d="M16.2562 0.364014C17.5882 0.364014 18.7522 0.628014 19.7482 1.15601C20.7442 1.68401 21.5122 2.42801 22.0522 3.38801C22.6042 4.33601 22.8802 5.43401 22.8802 6.68201C22.8802 7.91801 22.6042 9.01601 22.0522 9.97601C21.5122 10.936 20.7382 11.68 19.7302 12.208C18.7342 12.736 17.5762 13 16.2562 13H11.5222V0.364014H16.2562ZM16.0582 10.336C17.2222 10.336 18.1282 10.018 18.7762 9.38201C19.4242 8.74601 19.7482 7.84601 19.7482 6.68201C19.7482 5.51801 19.4242 4.61201 18.7762 3.96401C18.1282 3.31601 17.2222 2.99201 16.0582 2.99201H14.6002V10.336H16.0582Z" />
@@ -107,7 +107,7 @@ const Navbar: React.FC = () => {
 				initial="mobileHidden"
 				animate="mobileVisible"
 				exit="mobileExit"
-				className="hidden z-[3] absolute sm:flex flex-col text-center w-full h-[110vh] mx-auto text-lg backdrop-filter backdrop-blur-md bg-gray-900 bg-opacity-30">
+				className="hidden absolute sm:flex flex-col text-center w-full h-[110vh] mx-auto text-lg backdrop-filter backdrop-blur-md bg-gray-900 bg-opacity-30">
 					<div className='w-full sm:flex flex-col mx-auto'>
 					<NavLinks path={'/#home'} title={'Home'} className='py-2' onClick={onClick}/> 
 					<NavLinks path={'/#about'} title={'About'} className='py-2' onClick={onClick}/> 
