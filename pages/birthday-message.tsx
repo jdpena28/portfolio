@@ -75,7 +75,7 @@ const birthdayMessage = () => {
             <div className="bg-[#543BFE] w-full h-full row-start-1 col-start-3 col-span-3 rows-span-1 rounded-3xl flex flex-col justify-around">
               <Image
                 className="object-contain sm:object-none  "
-                src="/Birthday/keyboard.png"
+                src="/Birthday/Keyboard.png"
                 width={214}
                 height={70}
               />
