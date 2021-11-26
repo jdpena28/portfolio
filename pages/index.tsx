@@ -9,6 +9,7 @@ import Home from '../src/components/Sections/Home'
 import Project from '../src/components/Sections/Project'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import Layout from '../src/components/Layout'
 
 const App: React.FC = () => {
 	useEffect(() => {
@@ -19,7 +20,7 @@ const App: React.FC = () => {
 	},[])
 
 	 return (
-	 <>
+	 <Layout>
 		<Navbar />
 		<div className='overflow-x-hidden font-primary text-gray-200 mx-12 sm:mx-3 space-y-11'>
 			<Home />
@@ -28,7 +29,7 @@ const App: React.FC = () => {
 			<Contact />
 			<Footer />
 		</div>
-	</>
+	</Layout>
 	)
 }
 

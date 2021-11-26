@@ -15,6 +15,8 @@ import { AiFillHome } from "react-icons/ai";
 import { db } from "../src/firebase-config";
 import { addDoc, collection } from "firebase/firestore";
 
+import LayoutBirthday from "../src/components/LayoutBirthday";
+
 const birthdayMessage = () => {
   const sucessToast = () => toast.success("Message Sent");
   const errorToast = () =>
@@ -34,7 +36,7 @@ const birthdayMessage = () => {
         sucessToast();
         setBirthdayMessage(null);
         /*Shortcut to reset all input element in form and use the target
-      as htmlformelement since we declare it as formevent*/
+        as htmlformelement since we declare it as formevent*/
         (e.target as HTMLFormElement).reset();
       })
       .catch((err) => {
@@ -44,23 +46,7 @@ const birthdayMessage = () => {
   };
 
   return (
-    <>
-    <Head>
-      <title>🎉Hey its my Birthday!🎉</title>
-      <meta name="description" content="Hey thanks for your Greetings, Hope you can visit my website and leave some message for me this will be my forever memories." />
-      
-      <meta property="og:title" content="🎉Hey its my Birthday!🎉" />
-      <meta property="og:url" content="https://jdpena.me/birthday-message" />
-			<meta property="og:description" content="Hey thanks for your Greetings, Hope you can visit my website and leave some message for me this will be my forever memories." />
-			<meta property="og:image" content="https://user-images.githubusercontent.com/79455416/143589168-45a2e395-aea9-4d09-9d9d-7a59c8def301.jpg" />
-    
-      <meta property="twitter:card" content="summary_large_image" />
-			<meta property="twitter:url" content="https://jdpena.me/birthday-message" />
-			<meta property="twitter:title" content="🎉Hey its my Birthday!🎉" />
-			<meta property="twitter:description" content="Hey thanks for your Greetings, Hope you can visit my website and leave some message for me this will be my forever memories." />
-			<meta property="twitter:image" content="https://user-images.githubusercontent.com/79455416/143589168-45a2e395-aea9-4d09-9d9d-7a59c8def301.jpg" />
-    </Head>
-      <div className="text-white font-primary">
+    <LayoutBirthday>
         <ConfettiEffect />
         <section id="wishlist" className="mx-12 sm:mx-3 font-secondary">
           <div className="sm:hidden">
@@ -218,8 +204,7 @@ const birthdayMessage = () => {
           </div>
         </section>
         <Footer />
-      </div>
-    </>
+    </LayoutBirthday>
   );
 };
 
