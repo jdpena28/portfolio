@@ -46,8 +46,8 @@ const EachProject:React.FC<EachProject> = ({flex,title,desc,src,color,num,titleC
 						<div className={`${hoverClass} w-full h-full flex items-end justify-end sm:justify-between p-2  gap-x-7 sm:gap-x-0 sm:text-sm`}>
 							<p>{hoverDesc}</p>
 							<div className='flex gap-x-1'>
-								<a href={github}><VscGithub size ={26} /></a>
-								<a href={link}><BiLinkExternal size={26}/></a>
+								<a href={github} target='_blank'><VscGithub size ={26} /></a>
+								<a href={link} target='_blank'><BiLinkExternal size={26}/></a>
 							</div>
 						</div>
 					</motion.div>}
