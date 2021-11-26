@@ -49,16 +49,16 @@ const birthdayMessage = () => {
       <title>🎉Hey its my Birthday!🎉</title>
       <meta name="description" content="Hey thanks for your Greetings, Hope you can visit my website and leave some message for me this will be my forever memories." />
       
-      <meta property="og:title" content="🎉 Hey its my Birthday! 🎉" />
+      <meta property="og:title" content="🎉Hey its my Birthday!🎉" />
       <meta property="og:url" content="https://jdpena.me/birthday-message" />
 			<meta property="og:description" content="Hey thanks for your Greetings, Hope you can visit my website and leave some message for me this will be my forever memories." />
-			<meta property="og:image" content="https://user-images.githubusercontent.com/79455416/140276818-20d1721b-9380-4a51-9cad-e8d44cb41140.png" />
+			<meta property="og:image" content="https://user-images.githubusercontent.com/79455416/143589168-45a2e395-aea9-4d09-9d9d-7a59c8def301.jpg" />
     
       <meta property="twitter:card" content="summary_large_image" />
 			<meta property="twitter:url" content="https://jdpena.me/birthday-message" />
-			<meta property="twitter:title" content="🎉 Hey its my Birthday! 🎉" />
+			<meta property="twitter:title" content="🎉Hey its my Birthday!🎉" />
 			<meta property="twitter:description" content="Hey thanks for your Greetings, Hope you can visit my website and leave some message for me this will be my forever memories." />
-			<meta property="twitter:image" content="https://user-images.githubusercontent.com/79455416/140276818-20d1721b-9380-4a51-9cad-e8d44cb41140.png" />
+			<meta property="twitter:image" content="https://user-images.githubusercontent.com/79455416/143589168-45a2e395-aea9-4d09-9d9d-7a59c8def301.jpg" />
     </Head>
       <div className="text-white font-primary">
         <ConfettiEffect />
@@ -70,7 +70,7 @@ const birthdayMessage = () => {
             <Link href="/">
               <AiFillHome
                 size={24}
-                className="absolute top-1 right-2 cursor-pointer"
+                className="absolute top-3 right-3 cursor-pointer"
               />
             </Link>
           </nav>
