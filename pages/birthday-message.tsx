@@ -46,7 +46,7 @@ const birthdayMessage = () => {
   return (
     <>
     <Head>
-      <title>🎉 Hey its my Birthday! 🎉</title>
+      <title>🎉Hey its my Birthday!🎉</title>
       <meta name="description" content="Hey thanks for your Greetings, Hope you can visit my website and leave some message for me this will be my forever memories." />
       
       <meta property="og:title" content="🎉 Hey its my Birthday! 🎉" />

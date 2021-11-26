@@ -111,5 +111,18 @@ export const project = [
 		link:'https://stick-your-note.vercel.app',
 		imgAOS: 'fade-up-left',
 		textAOS: 'slide-left',
-	}
+	},
+	{
+		src: '/Projects/Spark.jpg',
+		title: 'Spark Services - Landing Page',
+		desc: 'A Static Website based on Desktop, landing page of a business services solution.',
+		color: 'white',
+		num:'03',
+		titleClass: 'top-[20%] left-[30%]',
+		hoverDesc: 'Vite, Vue.js, Tailwind, Vuetify',
+		github:'https://github.com/jdpena28/spark-landing-page',
+		link:'https://jdpena28.github.io/spark-landing-page/',
+		imgAOS: 'fade-up-right',
+		textAOS: 'slide-right',
+	},
 ]

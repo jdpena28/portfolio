@@ -8,6 +8,9 @@
 .yellow {
     color: #FAED27;
 }
+.white {
+    color:#ffff;
+}
 .flipImg {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
