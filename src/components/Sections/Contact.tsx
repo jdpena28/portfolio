@@ -59,14 +59,14 @@ const Contact = () => {
 					onSubmit={(e)=>addClientMessage(e)}
 					className='flex flex-col gap-y-1 my-auto sm:my-0 font-primary'>
 						<div className='flex flex-col gap-y-1'>
-							<label htmlFor="email" className='font-medium  ml-1'>Email*</label>
+							<label htmlFor="email" className='font-medium ml-1'>Email*</label>
 							<input 
 							className='w-72 sm:w-80 h-12 pl-2 font-light text-sm outline-none text-white placeholder-gray-300 rounded-md bg-transparent border-[1px] border-white'
 							type="email" id='email' required placeholder='johndoe@email.com' 
 							onChange={(e)=>{setClientMessage({...clientMessage,clientEmail:e.target.value})}}/>
 						</div>
 						<div className='flex flex-col gap-y-1'>
-							<label htmlFor="name" className='font-medium text-sm ml-1'>Name</label>
+							<label htmlFor="name" className='font-medium ml-1'>Name</label>
 							<input 
 							className='w-72 sm:w-80  h-12 pl-2 font-light text-sm outline-none text-white placeholder-gray-300 rounded-md bg-transparent border-[1px] border-white '
 							type="text" id='name' placeholder='John Doe ' 
