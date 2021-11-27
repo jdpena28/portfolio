@@ -9,10 +9,10 @@ const Footer = () => {
                 <p>All Rights Reserved.</p>
             </div>
             <div className="flex gap-x-2 sm:gap-x-4">
-                <a href="#" target = '_blank'><FaFacebookF size ={22}/></a>
-                <a href="#" target = '_blank'><FaLinkedinIn size ={22}/></a>
-                <a href="#" target = '_blank'><FaInstagram size ={22}/></a>
-                <a href="#" target = '_blank'><FaGithub size ={22}/></a>
+                <a href="https://www.facebook.com/Jang.Henrich" target = '_blank'><FaFacebookF size ={22}/></a>
+                <a href="https://www.linkedin.com/in/johnhenrichdelapena/" target = '_blank'><FaLinkedinIn size ={22}/></a>
+                <a href="https://www.instagram.com/jdpena28/" target = '_blank'><FaInstagram size ={22}/></a>
+                <a href="https://github.com/jdpena28" target = '_blank'><FaGithub size ={22}/></a>
             </div>
         </footer>
     )
