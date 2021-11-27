@@ -4,9 +4,13 @@ import {BiLinkExternal} from 'react-icons/bi'
 import {VscGithub} from 'react-icons/vsc'
 import Image from 'next/image'
 import {AnimatePresence, motion} from 'framer-motion'
+import { useWindowSize } from 'usehooks-ts'
 
 const EachProject:React.FC<EachProject> = ({flex,title,desc,src,color,num,titleClass,descClass,hoverClass,hoverDesc,github,link,imgAOS,textAOS}) => {
 	const [imgHover,setImgHover] = useState<boolean>(false)
+	const {width} = useWindowSize()
+
+
 
 	const variants = {
 		hidden: {
@@ -28,11 +32,11 @@ const EachProject:React.FC<EachProject> = ({flex,title,desc,src,color,num,titleC
 	return (
 		<div>
 			<div className = {`relative sm:block flex items-center gap-x-6 sm:space-y-3 ${flex}`}>
-				<div 
+				<div
 				data-aos={imgAOS}
 				className="relative z-20 h-full w-[full]" 
-				onMouseEnter={()=>setImgHover(true)} onMouseLeave={()=>setImgHover(false)} 
-				onClick ={()=>imgHover?setImgHover(false):setImgHover(true)}>
+				onMouseEnter={()=>(width>768)?setImgHover(true):setImgHover(false)} onMouseLeave={()=>setImgHover(false)} 
+				onClick={()=>imgHover?setImgHover(false):setImgHover(true)}>
 					<Image src={src} width={600} height={315}/>		
 					<AnimatePresence>			
 					{imgHover && 
