@@ -41,6 +41,13 @@ const Contact = () => {
 			errorToast();
 		})
 	}
+
+	const isEmpty = () => {
+		if(!!clientMessage?.clientMessage?.trim() && !!clientMessage?.clientEmail?.trim()) {
+			return false
+		}
+		return true
+	}
 	return (
 		<section className='w-full h-screen relative' id='contacts'>
 			<Parallax x={[-10, 3]}>
@@ -77,7 +84,10 @@ const Contact = () => {
 							<textarea className='text-black placeholder-gray-600 outline-none rounded-md p-1 text-size' placeholder='Your Message' name="message" id="message" required cols={25} rows={8}
 							onChange={(e)=>{setClientMessage({...clientMessage,clientMessage:e.target.value})}}/>
 						</div>
-						<button type="submit" className='w-72 sm:w-80  bg-blue-500 text-white h-9 font-medium rounded-sm mt-3 transition-colors active:bg-blue-600 '>Submit</button>
+						<button type="submit" 
+						disabled={isEmpty()}
+						className={`w-72 sm:w-80  bg-blue-500 text-white h-9 font-medium rounded-sm mt-3 transition-colors active:bg-blue-600 
+						${isEmpty()?'cursor-not-allowed opacity-70': 'opacity-100'}`}>Submit</button>
 						<ToastContainer
 						position="bottom-center"
 						toastClassName={'sm:w-[90%] mx-auto'}
