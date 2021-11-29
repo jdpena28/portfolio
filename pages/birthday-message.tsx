@@ -4,7 +4,7 @@ import Footer from "../src/components/Sections/Footer";
 
 import Image from "next/image";
 import Link from "next/link";
-import Head from "next/head";
+
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
@@ -19,13 +19,11 @@ import LayoutBirthday from "../src/components/LayoutBirthday";
 
 const birthdayMessage = () => {
   const sucessToast = () => toast.success("Message Sent");
-  const errorToast = () =>
-    toast.error("Aww sad :< Message not sent to celebrant");
+  const errorToast = () => toast.error("Aww sad :< Message not sent to celebrant");
 
-  const [birthdayMessage, setBirthdayMessage] =
-    useState<birthdayMessage | null>(null);
+  const [birthdayMessage, setBirthdayMessage] =  useState<birthdayMessage | null> (null);
   const birthdayCollection = collection(db, "Birthday_Messages");
-
+ 
   const addBirthdayMessage = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     await addDoc(birthdayCollection, {
@@ -45,6 +43,12 @@ const birthdayMessage = () => {
       });
   };
 
+  const isEmpty = () => {
+    if(!!birthdayMessage?.message?.trim()) {
+        return false
+    }
+    return true
+  }
   return (
     <LayoutBirthday>
         <ConfettiEffect />
@@ -182,11 +186,12 @@ const birthdayMessage = () => {
                     }
                   ></textarea>
                 </div>
+                
                 <div className="px-6 w-full mt-3">
-                  <button
-                    type="submit"
-                    className="w-full  bg-blue-500 text-white h-9  rounded-sm transition-colors active:bg-blue-600 "
-                  >
+                  <button type="submit" 
+                  disabled={isEmpty()}
+                  className={`w-full bg-blue-500 text-white h-9  rounded-sm transition-colors active:bg-blue-600
+                  ${isEmpty()?'cursor-not-allowed opacity-70':'opacity-100'}`}>
                     Submit
                   </button>
                 </div>
