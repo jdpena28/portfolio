@@ -9,3 +9,7 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+
+- name: Github Action Merge Dependabot
+  uses: fastify/github-action-merge-dependabot@v2.7.0
+
