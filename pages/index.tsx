@@ -1,7 +1,6 @@
 /** @format */
 
 import React,{useEffect} from 'react'
-import Navbar from '../src/components/Navbar'
 import About from '../src/components/Sections/About'
 import Contact from '../src/components/Sections/Contact'
 import Footer from '../src/components/Sections/Footer'
@@ -21,7 +20,6 @@ const App: React.FC = () => {
 
 	 return (
 	 <Layout>
-		<Navbar />
 		<div className='overflow-x-hidden font-primary text-gray-200 mx-12 sm:mx-3 space-y-11'>
 			<Home />
 			<About />
