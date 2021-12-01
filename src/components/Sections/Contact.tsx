@@ -12,7 +12,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
 import {db} from '../../firebase-config'
-import { addDoc, collection } from 'firebase/firestore'
+import { addDoc, collection,Timestamp } from 'firebase/firestore'
 
 
 
@@ -28,6 +28,8 @@ const Contact = () => {
 			client_message: clientMessage?.clientMessage,
 			client_name: clientMessage?.clientName,
 			email: clientMessage?.clientEmail,
+			time: Timestamp.now(),
+			mark_as_read: false
 		})
 		.then(()=>{
 		  sucessToast()
@@ -38,7 +40,7 @@ const Contact = () => {
 		})
 		.catch(err=>{
 			console.log(err.message)
-			errorToast();
+			errorToast()
 		})
 	}
 
