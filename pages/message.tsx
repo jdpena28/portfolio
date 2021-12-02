@@ -1,30 +1,30 @@
 import React, { FormEvent, useState } from 'react'
-import {getAuth, signInWithEmailAndPassword} from 'firebase/auth'
+import {signInWithEmailAndPassword} from 'firebase/auth'
 import Layout from '../src/components/Layout'
+import { auth } from '../src/firebase-config'
 
 const Message = () => {
     const [email,setEmail] = useState<string>('')
     const [password,setPassword] = useState<string>('')
 
-    const signIn = async (e:FormEvent<HTMLFormElement>) => {
+    const login = async (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        const auth = getAuth()
         await signInWithEmailAndPassword(auth,email, password)
         .then((user) => {
-            console.log(user)
-            console.log('sign in success')
+            alert('Login Successful')
         })
         .catch((error) => {
-            console.log(error)
-            console.log('sign in failed')
+            alert('Login Failed')
         })
     }
+
+    console.log(email, password)
 
     return (
         <Layout>
            <section className='w-full h-screen container mx-auto text-gray-200'>
                <form 
-               onSubmit={(e) => {signIn(e)}}
+               onSubmit={(e) => {login(e)}}
                className='flex flex-col gap-y-3 max-w-md  p-5 rounded-xl mx-auto mt-28 bg-gray-400'>
                    <label htmlFor="email">Email<br />
                        <input className='text-black placeholder-gray-600 pl-1 w-full' 
