@@ -1,5 +1,5 @@
 import React, { FormEvent, useState } from 'react'
-import {signInWithEmailAndPassword} from 'firebase/auth'
+import {signInWithEmailAndPassword,signOut} from 'firebase/auth'
 import Layout from '../src/components/Layout'
 import { auth } from '../src/firebase-config'
 
@@ -17,6 +17,13 @@ const Message = () => {
         })
         .catch((error) => {
             
+        })
+    }
+
+    const logout = async () => {
+        await signOut(auth)
+        .then(() => {
+            setOpenMessages(false)
         })
     }
 
@@ -39,7 +46,9 @@ const Message = () => {
                    <button type='submit' className='bg-blue-500'>Login</button>
                </form>}
                {openMessages && <>
-               <button className='w-36 h-12 my-auto bg-purple-500 rounded-xl'>Log Out</button>
+               <button className='w-36 h-12 my-auto bg-purple-500 rounded-xl'
+               onClick={logout}
+               >Log Out</button>
                <div className='mx-auto h-full max-w-md flex justify-around'>
                     <button className='h-12 w-36 my-auto bg-blue-500 rounded-xl'>Client Message</button>
                     <button className='w-36 h-12 my-auto bg-pink-500 rounded-xl'>Birthday Message</button>
