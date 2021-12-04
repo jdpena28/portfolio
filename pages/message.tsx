@@ -1,4 +1,5 @@
 import React, { FormEvent, useState } from 'react'
+import MessageCard from '../src/components/MessageCard'
 import {signInWithEmailAndPassword,signOut} from 'firebase/auth'
 import Layout from '../src/components/Layout'
 import { auth } from '../src/firebase-config'
@@ -55,9 +56,11 @@ const Message = () => {
                </div>
                </>
                }
+               <MessageCard/>
            </section>
         </Layout>
     )
 }
+
 
 export default Message
