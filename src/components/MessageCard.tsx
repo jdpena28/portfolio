@@ -5,7 +5,9 @@ const ToggleSwitch = () => {
   const [toggle, setToggle] = useState(true);
   return (
     <div
-      className={`w-12 h-6 flex ${toggle?'bg-blue-700':'bg-green-500'} items-center rounded-full p-1 cursor-pointer`}
+      className={`w-12 h-6 flex ${
+        toggle ? "bg-blue-700" : "bg-green-500"
+      } items-center rounded-full p-1 cursor-pointer`}
       onClick={() => {
         setToggle(!toggle);
       }}
@@ -14,12 +16,12 @@ const ToggleSwitch = () => {
       <div
         className={
           "bg-white h-4 w-4 rounded-full shadow-md transform" +
-          (toggle ? null :"transform translate-x-6")
+          (toggle ? null : "transform translate-x-6")
         }
       ></div>
     </div>
-  )
-}
+  );
+};
 
 const MessageCard = () => {
   return (
