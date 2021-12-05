@@ -3,6 +3,8 @@ import MessageCard from '../src/components/MessageCard'
 import {signInWithEmailAndPassword,signOut} from 'firebase/auth'
 import Layout from '../src/components/Layout'
 import { auth } from '../src/firebase-config'
+import {ToastContainer,toast} from 'react-toastify'
+import "react-toastify/dist/ReactToastify.min.css";
 
 const Message = () => {
     const [email,setEmail] = useState<string>('')
@@ -16,8 +18,8 @@ const Message = () => {
             (e.target as HTMLFormElement).reset()
             setOpenMessages(true)
         })
-        .catch((error) => {
-            
+        .catch(() => {
+            toast.error('Invalid credentials')
         })
     }
 
@@ -57,6 +59,15 @@ const Message = () => {
                </>
                }
                <MessageCard/>
+               <ToastContainer
+                  position="bottom-center"
+                  toastClassName={"sm:w-[90%] mx-auto"}
+                  autoClose={2000}
+                  closeOnClick
+                  pauseOnFocusLoss
+                  draggable
+                  pauseOnHover
+                />
            </section>
         </Layout>
     )
