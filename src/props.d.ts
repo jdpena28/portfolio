@@ -41,3 +41,5 @@ interface clientMessage {
     clientEmail?: string,
     clientMessage?: string,
 }
+
+type message = 'birthday_message' | 'client_message'
