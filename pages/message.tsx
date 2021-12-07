@@ -1,10 +1,10 @@
-import React, { FormEvent, useState } from "react";
+import React, { FormEvent, useEffect, useState } from "react";
 import MessageCard from "../src/components/MessageCard";
 import Layout from "../src/components/Layout";
 
 import {db} from "../src/firebase-config";
 import { auth } from "../src/firebase-config";
-import { collection, getDoc } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 
 
 import { ToastContainer, toast } from "react-toastify";
@@ -39,11 +39,20 @@ const Message = () => {
   };
 
 
-  const messageRef = collection(db, messages);
+  const messageRef = collection(db, messages)
 
-  const showMessages = async () => {
-    await getDoc(messageRef)
+  const getMessage = async () => {
+    const data = await getDocs(messageRef)
+    .then(data => {
+      console.log(data)
+    })
   }
+
+  useEffect(() => {
+    getMessage()
+  }, [openMessages == true])
+
+ 
 
   return (
     <Layout>
