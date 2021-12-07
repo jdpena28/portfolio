@@ -1,17 +1,24 @@
 import React, { FormEvent, useState } from "react";
 import MessageCard from "../src/components/MessageCard";
-import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 import Layout from "../src/components/Layout";
+
+import {db} from "../src/firebase-config";
 import { auth } from "../src/firebase-config";
+import { collection, getDoc } from "firebase/firestore";
+
+
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
+
+import { signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { async } from "@firebase/util";
 
 const Message = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [openMessages, setOpenMessages] = useState<boolean>(false);
 
-  const [messages, setMessages] = useState<message>('client_message');
+  const [messages, setMessages] = useState<message>('Client_Messages');
 
   const login = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -30,6 +37,13 @@ const Message = () => {
       setOpenMessages(false);
     });
   };
+
+
+  const messageRef = collection(db, messages);
+
+  const showMessages = async () => {
+    await getDoc(messageRef)
+  }
 
   return (
     <Layout>
@@ -79,12 +93,12 @@ const Message = () => {
                 Log Out
               </button>
               <div className="flex gap-x-3">
-                <button className={`h-10 w-24 rounded-lg font-semibold ${messages === 'client_message' ? 'bg-green-600' : 'bg-blue-600'}`} 
-                onClick={()=>setMessages("client_message")}>
+                <button className={`h-10 w-24 rounded-lg font-semibold ${messages === 'Client_Messages' ? 'bg-green-600' : 'bg-blue-600'}`} 
+                onClick={()=>setMessages("Client_Messages")}>
                   Client
                 </button>
-                <button className={`w-24 h-10 rounded-lg font-semibold ${messages === 'birthday_message'? 'bg-green-600' : 'bg-blue-600'}`}
-                onClick={()=>setMessages('birthday_message')}>
+                <button className={`w-24 h-10 rounded-lg font-semibold ${messages === 'Birthday_Messages'? 'bg-green-600' : 'bg-blue-600'}`}
+                onClick={()=>setMessages('Birthday_Messages')}>
                   Birthday
                 </button>
               </div>
