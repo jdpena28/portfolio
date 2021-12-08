@@ -41,5 +41,11 @@ interface clientMessage {
     clientEmail?: string,
     clientMessage?: string,
 }
-
+interface showMessages {
+    clientMessage: string,
+    clientName: string,
+    email: string,
+    mark_as_read: boolean,
+    time:any,
+}
 type message = 'Birthday_Messages' | 'Client_Messages'

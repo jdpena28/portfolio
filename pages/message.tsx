@@ -1,4 +1,4 @@
-import React, { FormEvent, useEffect, useState } from "react";
+import React, { FormEvent, useState, useEffect } from "react";
 import { useUpdateEffect } from "usehooks-ts";
 import MessageCard from "../src/components/MessageCard";
 import Layout from "../src/components/Layout";
@@ -20,6 +20,7 @@ const Message = () => {
   const [openMessages, setOpenMessages] = useState<boolean>(false);
 
   const [messages, setMessages] = useState<message>('Client_Messages');
+  const [showMessages, setShowMessages] = useState<showMessages[]|null>(null);
 
   const login = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -45,14 +46,18 @@ const Message = () => {
   const getMessage = async () => {
     const data = await getDocs(messageRef)
     .then(data => {
-      console.log(data.docs)
-    })
-  }
+        data.docs.map(doc => {
+          let message = []
+          message.push({...doc.data(), id: doc.id})
+          console.log(message)
+        }
+    )
+  }) }
 
   useUpdateEffect(() => {
     getMessage()
-  }, [openMessages])
-
+  }, [messages,openMessages])
+  
  
 
   return (
