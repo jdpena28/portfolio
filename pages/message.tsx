@@ -1,4 +1,5 @@
 import React, { FormEvent, useEffect, useState } from "react";
+import { useUpdateEffect } from "usehooks-ts";
 import MessageCard from "../src/components/MessageCard";
 import Layout from "../src/components/Layout";
 
@@ -11,7 +12,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 
 import { signInWithEmailAndPassword, signOut } from "firebase/auth";
-import { async } from "@firebase/util";
+
 
 const Message = () => {
   const [email, setEmail] = useState<string>("");
@@ -44,13 +45,13 @@ const Message = () => {
   const getMessage = async () => {
     const data = await getDocs(messageRef)
     .then(data => {
-      console.log(data)
+      console.log(data.docs)
     })
   }
 
-  useEffect(() => {
+  useUpdateEffect(() => {
     getMessage()
-  }, [openMessages == true])
+  }, [openMessages])
 
  
 
