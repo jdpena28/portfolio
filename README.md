@@ -19,8 +19,9 @@ This is a the source code for my portfolio.
 &emsp;&emsp; ☑️ Use firebase as Database\
 &emsp;&emsp; ☑️ Dedicated page for my Birthday\
 &emsp;&emsp; 🟦 Dedicated page for the showing the message in contact section\
-&emsp;&emsp; 🟦 Implement authentication using Firebase/Auth\
-&emsp;&emsp; 🟦 Custom page for showing message of client
+&emsp;&emsp; ☑️ Implement authentication using Firebase/Auth\
+&emsp;&emsp; 🟦 Custom page for showing message of client\
+&emsp;&emsp; 🟦 Create a proper design mock up for every projects
 
 
 #### Libraries Used
