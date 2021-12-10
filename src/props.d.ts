@@ -41,11 +41,13 @@ interface clientMessage {
     clientEmail?: string,
     clientMessage?: string,
 }
-interface showMessages {
-    clientMessage: string,
-    clientName: string,
+interface Messages {
+    id: string,
+    client_message: string,
+    client_name: string,
     email: string,
-    mark_as_read: boolean,
-    time:any,
+    mark_as_read?: boolean,
+    time?:any,
 }
-type message = 'Birthday_Messages' | 'Client_Messages'
+
+type messagesType = 'Birthday_Messages' | 'Client_Messages'

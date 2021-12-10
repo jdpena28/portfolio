@@ -19,8 +19,8 @@ const Message = () => {
   const [password, setPassword] = useState<string>("");
   const [openMessages, setOpenMessages] = useState<boolean>(false);
 
-  const [messages, setMessages] = useState<message>('Client_Messages');
-  const [showMessages, setShowMessages] = useState<showMessages[]|null>(null);
+  const [messagesType, setMessagesType] = useState<messagesType>('Client_Messages');
+  const [messages, setMessages] = useState<Messages[]>([]);
 
   const login = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -41,22 +41,24 @@ const Message = () => {
   };
 
 
-  const messageRef = collection(db, messages)
+ 
 
   const getMessage = async () => {
-    const data = await getDocs(messageRef)
+    let message:any[] = []
+    const messageRef = collection(db, messagesType)
+    await getDocs(messageRef)
     .then(data => {
         data.docs.map(doc => {
-          let message = []
-          message.push({...doc.data(), id: doc.id})
-          console.log(message)
+          console.log(doc.data())
+          message.push({...doc.data(), id: doc.id} as Messages)
         }
     )
-  }) }
+    setMessages(message)
+  })}
 
   useUpdateEffect(() => {
     getMessage()
-  }, [messages,openMessages])
+  }, [messagesType,openMessages])
   
  
 
@@ -108,17 +110,27 @@ const Message = () => {
                 Log Out
               </button>
               <div className="flex gap-x-3">
-                <button className={`h-10 w-24 rounded-lg font-semibold ${messages === 'Client_Messages' ? 'bg-green-600' : 'bg-blue-600'}`} 
-                onClick={()=>setMessages("Client_Messages")}>
+                <button className={`h-10 w-24 rounded-lg font-semibold ${messagesType === 'Client_Messages' ? 'bg-green-600' : 'bg-blue-600'}`} 
+                onClick={()=>setMessagesType("Client_Messages")}>
                   Client
                 </button>
-                <button className={`w-24 h-10 rounded-lg font-semibold ${messages === 'Birthday_Messages'? 'bg-green-600' : 'bg-blue-600'}`}
-                onClick={()=>setMessages('Birthday_Messages')}>
+                <button className={`w-24 h-10 rounded-lg font-semibold ${messagesType === 'Birthday_Messages'? 'bg-green-600' : 'bg-blue-600'}`}
+                onClick={()=>setMessagesType('Birthday_Messages')}>
                   Birthday
                 </button>
               </div>
+              <div>
+                {messages.map(m => {
+                  {console.log(m.time.toDate())}
+                  return (
+                  <MessageCard id = {m.id} client_name={m.client_name} 
+                  client_message={m.client_message} email={m.email} />)
+                })}
+              </div>
             </div>
-          )}
+          )
+          
+          }
           <ToastContainer
             position="bottom-center"
             toastClassName={"sm:w-[90%] mx-auto"}
@@ -129,6 +141,7 @@ const Message = () => {
             pauseOnHover
           />
         </div>
+     
       </section>
     </Layout>
   );
