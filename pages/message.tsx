@@ -121,10 +121,9 @@ const Message = () => {
               </div>
               <div>
                 {messages.map(m => {
-                  {console.log(m.time.toDate())}
                   return (
                   <MessageCard id = {m.id} client_name={m.client_name} 
-                  client_message={m.client_message} email={m.email} />)
+                  client_message={m.client_message} email={m.email} time={m.time.toDate().toDateString()} />)
                 })}
               </div>
             </div>
