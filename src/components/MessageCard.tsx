@@ -23,9 +23,9 @@ const ToggleSwitch = () => {
   );
 };
 
-const MessageCard:React.FC<Messages> = ({id,client_message,client_name,time,mark_as_read}) => {
+const MessageCard:React.FC<ClientMessages> = ({client_message,client_name,time,mark_as_read}) => {
   return (
-    <div key={id} className="relative h-max w-4/12 bg-[#E5E7EB] rounded-md text-black text-lg font-secondary p-2">
+    <div className="relative h-56 max-h-56 w-full bg-[#E5E7EB] rounded-md text-black text-lg font-secondary p-2">
       <div className="absolute top-1 right-2 flex items-center">
         <ToggleSwitch />
         <MdDelete
@@ -38,7 +38,7 @@ const MessageCard:React.FC<Messages> = ({id,client_message,client_name,time,mark
         <div className="bg-gray-400 w-3 h-3 rounded-[50%]"></div>
         <p>{time}</p>
       </div>
-      <p className="break-all overflow-ellipsis">
+      <p className="break-all overflow-ellipsis overflow-hidden">
         {client_message}
       </p>
     </div>
