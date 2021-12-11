@@ -41,7 +41,7 @@ interface clientMessage {
     clientEmail?: string,
     clientMessage?: string,
 }
-interface Messages {
+interface ClientMessages {
     id: string,
     client_message: string,
     client_name: string,
@@ -49,5 +49,6 @@ interface Messages {
     mark_as_read?: boolean,
     time?:any,
 }
+
 
 type messagesType = 'Birthday_Messages' | 'Client_Messages'

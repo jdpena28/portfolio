@@ -7,7 +7,6 @@ import {db} from "../src/firebase-config";
 import { auth } from "../src/firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 
-
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 
@@ -20,7 +19,7 @@ const Message = () => {
   const [openMessages, setOpenMessages] = useState<boolean>(false);
 
   const [messagesType, setMessagesType] = useState<messagesType>('Client_Messages');
-  const [messages, setMessages] = useState<Messages[]>([]);
+  const [messages, setMessages] = useState<ClientMessages[]>([]);
 
   const login = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -49,8 +48,7 @@ const Message = () => {
     await getDocs(messageRef)
     .then(data => {
         data.docs.map(doc => {
-          console.log(doc.data())
-          message.push({...doc.data(), id: doc.id} as Messages)
+          message.push({...doc.data(), id: doc.id} as ClientMessages)
         }
     )
     setMessages(message)
@@ -119,10 +117,10 @@ const Message = () => {
                   Birthday
                 </button>
               </div>
-              <div>
+              <div className="grid grid-cols-3 gap-3 mx-5">
                 {messages.map(m => {
                   return (
-                  <MessageCard id = {m.id} client_name={m.client_name} 
+                  <MessageCard key={m.id} id = {m.id} client_name={m.client_name} 
                   client_message={m.client_message} email={m.email} time={m.time.toDate().toDateString()} />)
                 })}
               </div>
@@ -139,8 +137,7 @@ const Message = () => {
             draggable
             pauseOnHover
           />
-        </div>
-     
+        </div>     
       </section>
     </Layout>
   );
