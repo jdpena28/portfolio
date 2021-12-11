@@ -1,33 +1,44 @@
+import { doc, updateDoc } from "firebase/firestore";
 import React, { useState } from "react";
 import { MdDelete } from "react-icons/md";
 
-const ToggleSwitch = () => {
-  const [toggle, setToggle] = useState(true);
+import {db} from '../firebase-config'
+
+interface toggleProps{
+  toggle: () => boolean
+}
+
+const ToggleSwitch = ({id}:{id:string}) => {
+  const [toggle, setToggle] = useState(false);
+  const ref = doc(db,'Client_Messages',id)
   return (
     <div
       className={`w-12 h-6 flex ${
-        toggle ? "bg-blue-700" : "bg-green-500"
+        !toggle ? "bg-blue-700" : "bg-green-500"
       } items-center rounded-full p-1 cursor-pointer`}
       onClick={() => {
         setToggle(!toggle);
+        updateDoc(ref, {mark_as_read: !toggle})
+        .then(() => console.log(id))
       }}
     >
       {/* Switch */}
       <div
         className={
           "bg-white h-4 w-4 rounded-full shadow-md transform" +
-          (toggle ? null : "transform translate-x-6")
+          (!toggle ? null : "transform translate-x-6")
         }
       ></div>
     </div>
   );
 };
 
-const MessageCard:React.FC<ClientMessages> = ({client_message,client_name,time,mark_as_read}) => {
+const MessageCard:React.FC<ClientMessages> = ({client_message,client_name,time,mark_as_read, id}) => {
+
   return (
     <div className="relative h-56 max-h-56 w-full bg-[#E5E7EB] rounded-md text-black text-lg font-secondary p-2 overflow-auto">
       <div className="absolute top-1 right-2 flex items-center">
-        <ToggleSwitch />
+        <ToggleSwitch id = {id} />
         <MdDelete
           className="fill-current text-blue-700 cursor-pointer"
           size={25}
