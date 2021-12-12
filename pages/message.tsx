@@ -1,6 +1,7 @@
 import React, { FormEvent, useState, useEffect } from "react";
 import { useUpdateEffect } from "usehooks-ts";
 import ClientCard from "../src/components/ClientCard";
+import BirthdayCard from "../src/components/BirthdayCard";
 
 import Layout from "../src/components/Layout";
 
@@ -15,13 +16,15 @@ import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 
 
+
 const Message = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [openMessages, setOpenMessages] = useState<boolean>(false);
 
   const [messagesType, setMessagesType] = useState<messagesType>('Client_Messages');
-  const [messages, setMessages] = useState<ClientMessages[]>([]);
+  const [clientMessages, setClientMessages] = useState<ClientMessages[]>([]);
+  const [birthdayMessages, setBirthdayMessages] = useState<BirthdayMessages[]>([]);
 
   const login = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -50,10 +53,18 @@ const Message = () => {
     await getDocs(messageRef)
     .then(data => {
         data.docs.map(doc => {
-          message.push({...doc.data(), id: doc.id} as ClientMessages)
+          if (messagesType === 'Client_Messages') {
+            message.push({...doc.data(), id: doc.id} as ClientMessages)
+          } else {
+            message.push({...doc.data(), id: doc.id} as BirthdayMessages)
+          }
         }
     )
-    setMessages(message)
+    if (messagesType === 'Client_Messages') {
+      setClientMessages(message)
+    } else {
+      setBirthdayMessages(message)
+    }
   })}
 
   useUpdateEffect(() => {
@@ -64,7 +75,7 @@ const Message = () => {
 
   return (
     <Layout>
-      <section className="w-full h-screen container mx-auto text-gray-100">
+      <section className="w-full min-h-screen pb-5 container mx-auto text-gray-100">
         <div className="container w-full h-full">
           {!openMessages && (
             <form
@@ -120,11 +131,15 @@ const Message = () => {
                 </button>
               </div>
               <div className="grid grid-cols-3 gap-3 mx-5">
-                {messages.map(m => {
+                {messagesType === 'Client_Messages' ? clientMessages.map(m => {
                   return (
                   <ClientCard key={m.id} id = {m.id} client_name={m.client_name} 
                   client_message={m.client_message} email={m.email} 
                   time={m.time.toDate().toDateString()} mark_as_read={m.mark_as_read} />)
+                }): birthdayMessages.map(m => {
+                  return (
+                    <BirthdayCard id={m.id} birthday_message={m.birthday_message} birthday_name= {m.birthday_name} />
+                  )
                 })}
               </div>
             </div>

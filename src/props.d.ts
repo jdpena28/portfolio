@@ -50,5 +50,11 @@ interface ClientMessages {
     time?:any,
 }
 
+interface BirthdayMessages {
+    birthday_message: string;
+    birthday_name: string;
+    id: string;
+}
+
 
 type messagesType = 'Birthday_Messages' | 'Client_Messages'
