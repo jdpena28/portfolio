@@ -1,5 +1,5 @@
 import { deleteDoc, doc, updateDoc } from "firebase/firestore";
-import React from "react";
+import React, { useState } from "react";
 import { MdDelete } from "react-icons/md";
 
 import {db} from '../firebase-config'
@@ -10,14 +10,16 @@ interface toggleProps{
 }
 
 const ToggleSwitch:React.FC<toggleProps> = ({id,mark_as_read}) => {
+  const [read,setRead] = useState(mark_as_read)
   const ref = doc(db,'Client_Messages',id)
   return (
     <div
       className={`w-12 h-6 flex ${
-        !mark_as_read ? "bg-blue-700" : "bg-green-500"
+        !read ? "bg-blue-700" : "bg-green-500"
       } items-center rounded-full p-1 cursor-pointer`}
       onClick={() => {
-        updateDoc(ref, {mark_as_read: !mark_as_read})
+        setRead(!read)
+        updateDoc(ref, {mark_as_read: !read})
         .then(() => console.log(id))
       }}
     >
@@ -25,7 +27,7 @@ const ToggleSwitch:React.FC<toggleProps> = ({id,mark_as_read}) => {
       <div
         className={
           "bg-white h-4 w-4 rounded-full shadow-md transform" +
-          (!mark_as_read ? null : "transform translate-x-6")
+          (!read? null : "transform translate-x-6")
         }
       ></div>
     </div>
