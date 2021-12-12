@@ -34,7 +34,7 @@ const ToggleSwitch:React.FC<toggleProps> = ({id,mark_as_read}) => {
   );
 };
 
-const MessageCard:React.FC<ClientMessages> = ({client_message,client_name,time, id,mark_as_read}) => {
+const ClientCard:React.FC<ClientMessages> = ({client_message,client_name,time, id,mark_as_read}) => {
   const deleteMessage = (id:string) => {
     const ref = doc(db,'Client_Messages',id)
     deleteDoc(ref)
@@ -61,4 +61,4 @@ const MessageCard:React.FC<ClientMessages> = ({client_message,client_name,time, 
   );
 };
 
-export default MessageCard;
+export default ClientCard;

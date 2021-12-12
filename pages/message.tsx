@@ -1,6 +1,7 @@
 import React, { FormEvent, useState, useEffect } from "react";
 import { useUpdateEffect } from "usehooks-ts";
-import MessageCard from "../src/components/MessageCard";
+import ClientCard from "../src/components/ClientCard";
+
 import Layout from "../src/components/Layout";
 
 import {db} from "../src/firebase-config";
@@ -11,6 +12,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 
 import { signInWithEmailAndPassword, signOut } from "firebase/auth";
+
 
 
 const Message = () => {
@@ -120,7 +122,7 @@ const Message = () => {
               <div className="grid grid-cols-3 gap-3 mx-5">
                 {messages.map(m => {
                   return (
-                  <MessageCard key={m.id} id = {m.id} client_name={m.client_name} 
+                  <ClientCard key={m.id} id = {m.id} client_name={m.client_name} 
                   client_message={m.client_message} email={m.email} 
                   time={m.time.toDate().toDateString()} mark_as_read={m.mark_as_read} />)
                 })}
