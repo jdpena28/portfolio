@@ -121,7 +121,8 @@ const Message = () => {
                 {messages.map(m => {
                   return (
                   <MessageCard key={m.id} id = {m.id} client_name={m.client_name} 
-                  client_message={m.client_message} email={m.email} time={m.time.toDate().toDateString()} />)
+                  client_message={m.client_message} email={m.email} 
+                  time={m.time.toDate().toDateString()} mark_as_read={m.mark_as_read} />)
                 })}
               </div>
             </div>
