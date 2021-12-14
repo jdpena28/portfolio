@@ -14,7 +14,7 @@ const ToggleSwitch:React.FC<toggleProps> = ({id,mark_as_read}) => {
   const ref = doc(db,'Client_Messages',id)
   return (
     <div
-      className={`w-12 h-6 flex ${
+      className={`w-12 sm:w-8 h-6 sm:h-5 flex ${
         !read ? "bg-blue-700" : "bg-green-500"
       } items-center rounded-full p-1 cursor-pointer`}
       onClick={() => {
@@ -26,8 +26,8 @@ const ToggleSwitch:React.FC<toggleProps> = ({id,mark_as_read}) => {
       {/* Switch */}
       <div
         className={
-          "bg-white h-4 w-4 rounded-full shadow-md transform" +
-          (!read? null : "transform translate-x-6")
+          "bg-white h-4 w-4 sm:h-3 sm:w-3 rounded-full shadow-md transform" +
+          (!read? null : "transform translate-x-6 sm:translate-x-3")
         }
       ></div>
     </div>
@@ -49,9 +49,9 @@ const ClientCard:React.FC<ClientMessages> = ({client_message,client_name,time, i
           onClick={() => {deleteMessage(id)}}
         />
       </div>
-      <div className="flex items-center gap-x-3">
+      <div className="flex sm:block items-center gap-x-3">
         <p className="font-semibold">{client_name}</p>
-        <div className="bg-gray-400 w-3 h-3 rounded-[50%]"></div>
+        <div className="bg-gray-400 w-3 h-3 rounded-[50%] sm:hidden"></div>
         <p>{time}</p>
       </div>
       <p className="whitespace-pre-line">

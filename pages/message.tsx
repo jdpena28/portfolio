@@ -130,7 +130,7 @@ const Message = () => {
                   Birthday
                 </button>
               </div>
-              <div className="grid grid-cols-3 gap-3 mx-5">
+              <div className="grid grid-cols-3 sm:grid-cols-2 gap-3 mx-5 sm:mx-2">
                 {messagesType === 'Client_Messages' ? clientMessages.map(m => {
                   return (
                   <ClientCard key={m.id} id = {m.id} client_name={m.client_name} 
