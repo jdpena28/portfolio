@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const error = () => {
     return (
@@ -10,7 +11,9 @@ const error = () => {
                         <h6 className='text-3xl font-semibold'>Somethings wrong here ...</h6>
                         <p className='text-lg font-light'>I think I did not create this link ?<br/> For betterment, please head back to home</p>
                         <div className ="w-max h-max p-1 bg-gradient-to-r from-[#ACACAC] to-[#7B3DFD]">
-                        <button className='w-32 h-12 bg-purple-900 font-bold'>HOME</button>
+                        <Link href={'/'} >
+                            <button className='w-32 h-12 bg-indigo-900 font-bold'>HOME</button>
+                        </Link>
                         </div>
                     </div>
                     <Image src={'/404_Character.png'} height={558} width={774}/>
