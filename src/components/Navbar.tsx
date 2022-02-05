@@ -11,7 +11,7 @@ const NavLinks: React.FC<NavLinks> = ({ path, title, onClick,delay}) => {
 			initial = {{y: -50}}
 			animate={{y:0}}
 			transition={{type:'spring', duration:.8 ,delay:delay, bounce:.5}}
-			className = 'hover:bg-gray-600 bg-opacity-10 rounded-lg p-1 cursor-pointer' 
+			className = 'hover:bg-gray-600 bg-opacity-10 rounded-lg p-2 cursor-pointer text-xl font-semibold' 
 			onClick = {onClick}>{title} </motion.a>
 		</Link>
 	)
