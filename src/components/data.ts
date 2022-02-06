@@ -119,7 +119,7 @@ export const project = [
 		color: 'white',
 		num:'03',
 		titleClass: 'top-[20%] left-[30%]',
-		hoverDesc: 'Vite, Vue.js, Tailwind, Vuetify',
+		hoverDesc: 'Vite, Vue.js, Tailwind',
 		github:'https://github.com/jdpena28/spark-landing-page',
 		link:'https://jdpena28.github.io/spark-landing-page/',
 		imgAOS: 'fade-up-right',
