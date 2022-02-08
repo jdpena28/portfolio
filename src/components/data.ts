@@ -113,10 +113,10 @@ export const project = [
 		textAOS: 'slide-left',
 	},
 	{
-		src: '/Projects/Spark.jpg',
+		src: '/Projects/spark-landing-page.jpg',
 		title: 'Spark Services - Landing Page',
 		desc: 'A Static Website based on Desktop, landing page of a business services solution.',
-		color: 'white',
+		color: 'black',
 		num:'03',
 		titleClass: 'top-[20%] left-[30%]',
 		hoverDesc: 'Vite, Vue.js, Tailwind',

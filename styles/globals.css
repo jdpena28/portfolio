@@ -11,6 +11,9 @@
 .white {
     color:#ffff;
 }
+.black {
+    color: #c49102;
+}
 .flipImg {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
