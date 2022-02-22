@@ -77,7 +77,11 @@ export const techStacks = [
 			{
 				url: '/TechStacks/database&others/github.svg',
 				tooltipTitle:'Github',
-			},		
+			},	
+			{
+				url: '/TechStacks/database&others/firebase.svg',
+				tooltipTitle:'Firebase',
+			},	
         ],
     }
 ]
