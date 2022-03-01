@@ -9,7 +9,8 @@ module.exports = {
         secondary: "'Ubuntu', sans-serif",
       },
       screens: {
-        sm:{'max':'768px'},
+        'sm':{'max':'768px'},
+        '2xl':{'min':'1440px'},
       }
     },
   },

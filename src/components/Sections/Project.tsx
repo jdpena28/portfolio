@@ -16,7 +16,7 @@ const Project = () => {
 				projects
 			</h3>
 			</Parallax>
-			<div className='container h-full flex flex-col gap-y-32 pt-28'>
+			<div className='container h-full  mx-auto flex flex-col gap-y-32 pt-28'>
 				{project.map(e => {
 					return (
 						<EachProject

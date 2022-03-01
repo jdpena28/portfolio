@@ -18,7 +18,7 @@ const About = () => {
 			</h3>
 			</Parallax>
 			
-			<div className='container h-full flex flex-col  space-y-12'>
+			<div className='container h-full flex  mx-auto flex-col  space-y-12'>
 				<p 
 				data-aos='slide-right'
 				className='w-[75%] ml-11 sm:mx-auto text-justify sm:text-left text-xl sm:text-base mt-14'>
@@ -28,7 +28,7 @@ const About = () => {
 					Guitarist 🎸. Expertise at .NET framework integrated with MSAccess and
 					Oracle Database. Currently, I am learning Front-End Development.
 					Aspiring to be one of the Developers soon... Such as thus Programming
-					isn't about what you know; it's about what you can figure out.
+					isn&apos;t about what you know; it&apos;s about what you can figure out.
 				</p>
 				<h2 
 				data-aos='slide-right'

@@ -59,8 +59,8 @@ const Contact = () => {
 			</Parallax>
 			<div 
 			data-aos='fade-up'
-			className='container mt-14 h-full mx-auto flex items-center justify-center'>
-				<div className='bg-gray-500 opacity-90 w-[75%] sm:w-full h-[71%] sm:h-auto sm:py-10 z-30 rounded-3xl relative flex sm:flex-col sm:items-center sm:gap-y-4 justify-around'>
+			className='container mt-14 h-full  mx-auto flex items-center justify-center'>
+				<div className='bg-gray-500 opacity-90 w-[75%] sm:w-full h-[71%] 2xl:h-[max-content] 2xl:py-32 sm:h-auto sm:py-10 z-30 rounded-3xl relative flex sm:flex-col sm:items-center sm:gap-y-4 justify-around'>
 					<div className='sm:hidden font-light absolute -bottom-3 right-0 w-80 h-80 flipImg'>
 						<Image src={'/contact-us.svg'} layout='fill' />
 					</div>
@@ -70,7 +70,7 @@ const Contact = () => {
 						<div className='flex flex-col gap-y-1'>
 							<label htmlFor="email" className='font-medium ml-1'>Email*</label>
 							<input 
-							className='w-72 sm:w-80 h-12 pl-2 font-light text-sm outline-none text-white placeholder-gray-300 rounded-md bg-transparent border-[1px] border-white'
+							className='w-72 sm:w-80  h-12 pl-2 font-light text-sm outline-none text-white placeholder-gray-300 rounded-md bg-transparent border-[1px] border-white'
 							type="email" id='email' required placeholder='johndoe@email.com' 
 							onChange={(e)=>{setClientMessage({...clientMessage,clientEmail:e.target.value})}}/>
 						</div>

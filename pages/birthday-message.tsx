@@ -121,7 +121,7 @@ const birthdayMessage = () => {
                   height={172}
                 />
                 <div className="flex justify-around text-lg">
-                  <p>Xiaomi 1C 23"</p>
+                  <p>Xiaomi 1C 23</p>
                   <p>₱6999.00</p>
                 </div>
               </div>
