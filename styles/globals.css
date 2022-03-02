@@ -21,6 +21,16 @@
 html {
     scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+ width: .4rem;
+}
+::-webkit-scrollbar-track {
+    background: rgba(17, 24, 39, 1);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(124, 58, 237, 1);
+    border-radius: 100vw;
+}
 
 @layer utilities {
     .text-size::placeholder{

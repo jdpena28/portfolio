@@ -10,8 +10,6 @@ const EachProject:React.FC<EachProject> = ({flex,title,desc,src,color,num,titleC
 	const [imgHover,setImgHover] = useState<boolean>(false)
 	const {width} = useWindowSize()
 
-
-
 	const variants = {
 		hidden: {
 				scale: 0
@@ -28,13 +26,12 @@ const EachProject:React.FC<EachProject> = ({flex,title,desc,src,color,num,titleC
 			scale:0,
 		}
 	}
-
 	return (
 		<div>
 			<div className = {`relative sm:block flex items-center gap-x-6 sm:space-y-3 ${flex}`}>
 				<div
 				data-aos={imgAOS}
-				className="relative z-20 h-full w-[full]" 
+				className="relative z-20 h-full" 
 				onMouseEnter={()=>(width>768)?setImgHover(true):setImgHover(false)} onMouseLeave={()=>setImgHover(false)} 
 				onClick={()=>imgHover?setImgHover(false):setImgHover(true)}>
 					<Image src={src} width={600} height={315}/>		
@@ -47,7 +44,7 @@ const EachProject:React.FC<EachProject> = ({flex,title,desc,src,color,num,titleC
 						exit ='exit'
 						key = {link}
 						className = 'absolute top-0 w-full h-full bg-gray-700 bg-opacity-60'>
-						<div className={`${hoverClass} w-full h-full flex items-end justify-end sm:justify-between p-2  gap-x-7 sm:gap-x-0 sm:text-sm`}>
+						<div className={`${hoverClass} w-fzull h-full flex items-end justify-end sm:justify-between p-2  gap-x-7 sm:gap-x-0 sm:text-sm`}>
 							<p>{hoverDesc}</p>
 							<div className='flex gap-x-1'>
 								<a href={github} target='_blank'><VscGithub size ={26} /></a>
